@@ -2,4 +2,4 @@
 
 ### No primeiro semestre da faculdade nós começamos o aprendizado na linguagem C
 
-<img src="https://giphy.com/gifs/nike-hcmROgfF2ax0c" alt="drawing" width="100%"/>
+<img src="https://miro.medium.com/max/1838/1*vJjJ3Mdok6Rvxx85IIRqBQ.gif" alt="drawing" width="100%"/>
