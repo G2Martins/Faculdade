@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+// gcc -lm -o (saida) (nome_do_arquivo.c)//           
+
+int main(){
+ 
+  printf("Ola Turma! Bom Dia \n");
+
+  printf("A Raiz quadrada de 4 é: %.2f\n", sqrt(4));
+  
+  return 0; 
