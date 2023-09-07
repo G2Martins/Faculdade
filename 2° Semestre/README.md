@@ -3,6 +3,7 @@
 ### No Segundo Semestre da faculdade focamos em nos aprofundar mais na linguagem de programação C:
 
 - Ponteiros ( Aritméticas de ponteiros, percorrendo byte a byte de cada tipo de variável como int, float e char para alterar cores em uma matriz e etc)
+
 - Funções
 - Recursividade
 
