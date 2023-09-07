@@ -16,3 +16,7 @@ aos canais R, G e B média de seus valores, como por exemplo:
 unsigned char cinza = (pchar[1] + pchar[2] + pchar[3])/3;
 pchar[1] = cinza; pchar[2] = cinza; pchar[3] = cinza.
 ### +--------------------------------------------------------------------------+
+
+
+
+<img src="https://media0.giphy.com/media/oZTV8RLSf0cGQ/giphy.gif?cid=ecf05e47jl5io4dzlfl9mso4jla6e5kbbi52ug3fhmm2hmhi&rid=giphy.gif&ct=g" alt="drawing" width="100%"/>
