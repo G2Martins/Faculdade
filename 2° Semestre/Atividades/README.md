@@ -15,4 +15,4 @@ transformá-la em uma imagem em escala de cinza. A escala de cinza pode ser defi
 aos canais R, G e B média de seus valores, como por exemplo:
 unsigned char cinza = (pchar[1] + pchar[2] + pchar[3])/3;
 pchar[1] = cinza; pchar[2] = cinza; pchar[3] = cinza.
-# +----------------------------------------------------------------------------------------------+
+# +--------------------------------------------------------------------------+
