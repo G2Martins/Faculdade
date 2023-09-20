@@ -3,17 +3,44 @@ Folder destinado ao armazenamento do Desafio de Projeto em java com o seguinte t
 "Desafios Java: Organizando seus ativos"
 
 # 📚 Documentação
+- [Documento Desafio](https://drive.google.com/file/d/1QPfMSDmYqXUgdrzvZy64xmP2iHzWYb35/view?pli=1)
 
 ## Descrição
-Após uma análise cuidadosa realizada pela equipe de desenvolvimento de uma empresa bancaria, foi identificado a necessidade de uma nova funcionalidade para otimizar os processos e melhorias da experiência dos usuários. Agora, sua tarefa é implementar uma solução que organize em ordem alfabética uma lista de ativos que será informada pelos usuários. Os ativos são representados por strings que representam seus tipos, como por exemplo: Reservas de liquidez, Ativos intangiveis e dentre outros.
+Implemente um jogo de adivinhação, onde o usuário deve adivinhar um número aleatório entre 1 a
+100. Enquanto o usuário não acertar o número, deverá ser informado ao usuário que o palpite do
+usuário foi muito alto ou muito baixo. Caso o usuário acertar o número, deverá ser informado que ele
+acertou em determinado número de tentativas.
 
 ## Entrada
-A primeira entrada consiste em um número inteiro que representa a  quantidade de ativos que o usuário possui. Em seguida, o usuário deverá  informar, em linhas separadas, os tipos (strings) dos respectivos ativos.
-Regra de Formatação: Considere apenas uma casa decimal para esse desafio.
+Para a construção do jogo, considere elaborar as seguintes funções:
+- void novoJogo(); - Que inicializa um novo jogo, conforme a lógica do fluxograma.
+- int gerarNumeroAleatorio(int min, int max); - Que retorna um número aleatório entre 1 a 100.
+- int receberPalpite(); - Que solicita ao usuário um número inteiro e o retorne como palpite para afunção novoJogo() receber esse valor.
+- int verificarPalpite(int palpite, int numeroAleatorio); - Que compara o palpite com o numeroAleatorio, e retorna um valor de acordo com os seguintes casos:
+  - Caso o palpite for maior que o número aleatório, retorna 1
+  - Caso o palpite for igual ao número aleatório, retorna 0
+  - Caso o palpite for menor que o número aleatório, retorna -1
+  - void limparTela(); - que limpa a tela do usuário e posiciona o cursor no início do console.
 
 ## Saída
-Seu programa deve exibir a lista de Ativos organizada em ordem alfabética. Cada ativo deve ser apresentado em uma linha separada.
 
+```c
+Bem-vindo ao jogo da adivinhação!
+Estou pensando em um número entre 1 e 100.
+Qual é o seu palpite? 50
+Muito baixo, tente novamente!
+Qual é o seu palpite? 75
+Muito alto, tente novamente!
+Qual é o seu palpite? 60
+Muito baixo, tente novamente!
+Qual é o seu palpite? 65
+Muito baixo, tente novamente!
+Qual é o seu palpite? 67
+Muito baixo, tente novamente!
+Qual é o seu palpite? 70
+Parabéns, você acertou o número após 6 tentativas!
+Gostaria de jogar novamente? (s/n):
+```
 
 
 <h4 align="center">
