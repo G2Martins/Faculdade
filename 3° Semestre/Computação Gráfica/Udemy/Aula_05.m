@@ -1,0 +1,22 @@
+numero = 4.87593487
+
+
+%% FORMATO CURTO, COM ATÉ 4 CASAS DECIMAIS [PADRÃO]
+format short
+
+
+%% FORMATO LONGO, COM ATÉ 14 CASAS DECIMAIS
+format long
+
+
+%% FORMATO MONETÁRIO COM ATÉ 2 CASAS DECIMAIS
+format bank
+
+
+%% FORMATO HEXADECIMAL
+format hex
+
+
+%% FORMATO RACIONAL (RAZÃO DE DOIS INTEIROS)
+format rat
+
