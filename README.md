@@ -3,7 +3,7 @@
 #### -🎯Repositório destinado para guardar meus projetos desenvolvidos durante a Faculdade e documentar minha evolução e progresso durante esse processo
 
 #### -🧑🏽‍💻Meu Objetivo --> Torna-me Futuramente um Full-Stack Developer e trabalhar no exterior .
-#### - Busco me aprofundar cada vez mais no ramo da computação visando estabelecer Pilares através de linguagens como Java, Phyton, C e C++
+#### - Busco me aprofundar cada vez mais no ramo da computação visando adquirir possuir uma base estável que permita chegar aonde eu quiser
 
 #### -🎶  Drake Desires 𓅓 :)
 
