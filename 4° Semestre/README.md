@@ -9,10 +9,8 @@ Este repositório contém os projetos e exercícios desenvolvidos durante a disc
 
 | Desafios | Links Disponíveis |
 |-------|---------|
-| 1° Desafio | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/4%C2%B0%20Semestre/POO/Desafios/Parte_1) |
-| 2° Desafio | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/4%C2%B0%20Semestre/POO/Desafios/Parte_2) |
-| 3° Desafio | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/3%C2%B0%20Semestre) |
-| 4° Desafio | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/4%C2%B0%20Semestre) |
+| 1° Desafios | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/4%C2%B0%20Semestre/POO/Desafios/Parte_1) |
+| 2° Desafios | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/4%C2%B0%20Semestre/POO/Desafios/Parte_2) |
 
 ## Objetivos
 
