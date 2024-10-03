@@ -1,0 +1,266 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 5,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 2,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 9,
+			"com.tldraw.shape.note": 7,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 0,
+			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 4,
+			"com.tldraw.shape.video": 2,
+			"com.tldraw.binding.arrow": 0
+		}
+	},
+	"records": [
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"x": 6.9750665766643465,
+			"y": -332.47421968143345,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:iiJdl8klX_x8u_4o1qrZz",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "l",
+				"w": 210.60000610351562,
+				"text": "Pilares POO",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": -81.93965599642638,
+			"y": -246.26759163255167,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:w1mPlK_gIBFyAFEi5ElXE",
+			"type": "line",
+			"props": {
+				"dash": "draw",
+				"size": "s",
+				"color": "black",
+				"spline": "cubic",
+				"points": {
+					"a1": {
+						"id": "a1",
+						"index": "a1",
+						"x": -32.43411320300754,
+						"y": 16.688084282953213
+					},
+					"a2A9i": {
+						"id": "a2A9i",
+						"index": "a2A9i",
+						"x": 405.2970345680165,
+						"y": 18.31804887832078
+					},
+					"a1eOu": {
+						"id": "a1eOu",
+						"index": "a1eOu",
+						"x": 194.61297826932724,
+						"y": -31.72331965092627
+					}
+				},
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a27CQ",
+			"typeName": "shape"
+		},
+		{
+			"x": -111.8136645954907,
+			"y": -221.98314646770018,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:JLaFgtFgyTof-e0oJIteF",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 433.38751220703125,
+				"text": "• Encapsulamento    • Herança\n\n• Abstração             • Polimorfismo",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a3BMh",
+			"typeName": "shape"
+		},
+		{
+			"x": -116.52401328420225,
+			"y": -229.46945821813011,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:dFRPnK-PtePfIjIQOVRdF",
+			"type": "geo",
+			"props": {
+				"w": 443.9840318478789,
+				"h": 116.27831370142582,
+				"geo": "rectangle",
+				"color": "red",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"text": "",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a44eg",
+			"typeName": "shape"
+		},
+		{
+			"x": -111.02593669487072,
+			"y": -85.70080173437128,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ZFajUOQ5MkmYMw95mKRxg",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 738.5250244140625,
+				"text": "• Superclasse (Classe Mãe): Nível mais abstrato\n\n• Subclasse (classe filho): Herda atributos e \nmétodos da classe mãe\n\nQuando usar herança: \"É um\" versus \"Tem um\":\n• Sempre que estiver considerando usar herança, \né preciso avaliar se a classe que herdará é do \nmesmo tipo que a classe que está sendo herdada.\n\n• Ou seja, verificar se há um relacionamento do tipo\n\"É um\".\n\n• É um:\n   descreve o relacionamento no qual uma classe \né considerada do mesmo tipo que outra\n\n• Tem um:\n  descreve o relacionamento no qual uma classe contém\numa instância de outra clase \n\nHierarquia de herança:\n• Uma hierarquia de herança é um mapeamento em forma \nde árvore de relacionamentos que se formam entre classes\ncomo resultado de herança.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a50M9",
+			"typeName": "shape"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 71.00324615540296,
+			"y": 754.9509898757833,
+			"lastActivityTimestamp": 1727911445026,
+			"meta": {}
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1249.5999755859375,
+				"h": 702.4000244140625
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1.25,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"editingShapeId": "shape:ZFajUOQ5MkmYMw95mKRxg",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:ZFajUOQ5MkmYMw95mKRxg"
+			],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 538.7558556051457,
+			"y": -276.50659071122504,
+			"z": 0.8544357902911563,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		}
+	]
+}
