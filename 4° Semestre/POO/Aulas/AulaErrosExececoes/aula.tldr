@@ -1,0 +1,315 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 5,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 2,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 9,
+			"com.tldraw.shape.note": 7,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 0,
+			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 4,
+			"com.tldraw.shape.video": 2,
+			"com.tldraw.binding.arrow": 0
+		}
+	},
+	"records": [
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 1745.2479281392807,
+			"y": 1794.6748188087458,
+			"lastActivityTimestamp": 1728516693444,
+			"meta": {}
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:size": "m",
+				"tldraw:textAlign": "start",
+				"tldraw:font": "draw"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1250.4000244140625,
+				"h": 702.4000244140625
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1.25,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": false,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:l0bomBpvrjCka4x_0eHIc"
+			],
+			"hoveredShapeId": "shape:l0bomBpvrjCka4x_0eHIc",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": -11.831839446963954,
+			"y": -716.3985748331016,
+			"z": 0.6655066738512906,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": -516.3763479627912,
+			"y": 96.77497345964139,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:rLBuMs6a2Juk1-2HzfyEH",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 923.9249877929688,
+				"text": "\n• Evento/ Resultado não esperado\n\n• Funcionalidade que não atende ao usuário (Erro de projeto)\n\n• É um comportamento não esperado do sistema\n\n• Pode ocorrer por causas técnicas, humanas, de sistema, de hardware\n\n• Por isso que a poo tem uma alta relação com a engenharia de software\n\n• Está mais ligado ao sistema operacional que o sistema está rodando \n(banco de dados, rede, segurança) → Pode não ser necessariamente falha \nde desenvolvimento\n\n• São falhas de codificação que não foram identificadas no processo de \ndesenvolvimento, testes e homologação",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 782.4580310023464,
+			"y": 97.33133610409232,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:fiexxiz8hCH0REXOPVzhW",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1389.3250732421875,
+				"text": "• o erro não é conhecido e a excessão é\n\n• O erro não conhece o que está dentro da fronteira\n\n• É uma abreviação da frase “evento excepcional”\n\n• Uma exceção é um evento que ocorre durante a \nexecução de um programa, que interrompe o fluxo normal das\n\n• Ela é conhecida, prevista e tratável.\n\n• O o bjeto, denominado objeto de exceção, contém informações \nsobre o erro, incluindo seu tipo e o estado do programa quando \no erro ocorreu\n\n• Criar um objeto de exceção e entregá-lo ao sistema de tempo \nde execução é chamado de lançar uma exceção",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a27ZX",
+			"typeName": "shape"
+		},
+		{
+			"x": -498.9062323040118,
+			"y": 60.67138930958242,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:OTzg3nV5iVP6WUbQqT0zd",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "l",
+				"w": 103.3499984741211,
+				"text": "ERRO",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a34EV",
+			"typeName": "shape"
+		},
+		{
+			"x": 797.537520610462,
+			"y": 28.795109650773384,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:-wvl35f0id4EDVs4eeDFs",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "l",
+				"w": 148.3125,
+				"text": "Exceção",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a47wY",
+			"typeName": "shape"
+		},
+		{
+			"x": -523.7832672006011,
+			"y": 718.6204107106843,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ZAGufWFEE6K-BCC43XJjO",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "l",
+				"w": 356.8000183105469,
+				"text": "Pilha de Chamadas",
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a54Ti",
+			"typeName": "shape"
+		},
+		{
+			"x": -524.2231435627169,
+			"y": 777.1171375260654,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:j4YGH84iYFibFiCP18OzF",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1215.050048828125,
+				"text": "• A pilha de chamadas em Java é uma estrutura utilizada pelo sistema \nem tempo de execução para rastrear os métodos que estão sendo chamados. \nQuando uma exceção ocorre, o sistema começa a procurar por um manipulador \nde exceção, que é um bloco de código capaz de tratar essa exceção. A pesquisa \ncomeça no método onde o erro ocorreu e segue em ordem inversa através da pilha \nde chamadas, ou seja, dos métodos mais recentes para os mais antigos.\n\n• Se o manipulador de exceção for encontrado em algum ponto da pilha, ele assume o \ncontrole e trata a exceção. Caso contrário, o erro continua a subir pela pilha. O stack trace \ngerado em um erro mostra a ordem dos métodos que estavam ativos no momento da exceção, \npermitindo entender a sequência de chamadas. O método mais no topo da pilha é o mais recente \ne o que tem maior chance de tratar a exceção.\n\n• Esse processo garante que a exceção seja tratada pelo método mais adequado, evitando \nque o programa falhe completamente sem tratamento adequado.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a6BRT",
+			"typeName": "shape"
+		},
+		{
+			"x": 1543.1258927161289,
+			"y": 1624.6608882898765,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:l0bomBpvrjCka4x_0eHIc",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1167.3125,
+				"text": "Em Java, existem três tipos principais de exceções:\n\n1. Exceções Verificadas (Checked Exceptions): Essas exceções são \nverificadas pelo compilador no momento da compilação. Elas representam \nsituações que o desenvolvedor deve prever e tratar, como erros de \nI/O (Input/Output) ou problemas de conexão. O código que pode gerar \numa exceção verificada deve estar dentro de um bloco `try-catch` \nou declarar que pode lançar a exceção usando `throws`. Exemplos incluem \n`IOException` e `SQLException`.\n\n2. Exceções Não Verificadas (Unchecked Exceptions): São exceções que ocorrem \nem tempo de execução e não são verificadas pelo compilador. Geralmente, são \nerros de lógica no programa que o desenvolvedor não consegue prever, como \n`NullPointerException`, `ArrayIndexOutOfBoundsException`, ou `ArithmeticException`. \nEssas exceções geralmente indicam erros de programação que devem ser corrigidos, \nem vez de serem tratadas no código.\n\n3. Erros (Errors): Embora sejam tecnicamente um subtipo de exceções, os erros \nsão situações mais graves que o programa não deve tentar capturar ou recuperar, \ncomo problemas de memória ou falhas no sistema. Exemplos comuns são `OutOfMemoryError` \ne `StackOverflowError`. Esses erros geralmente indicam falhas críticas no ambiente de \nexecução e não podem ser previstos ou tratados com blocos `try-catch`.\n\n•  As exceções não verificadas e os erros não precisam ser tratados explicitamente, \nmas a diferença crucial é que os erros são falhas de sistema imprevisíveis, enquanto \nas exceções não verificadas são, em sua maioria, falhas de lógica dentro do próprio código.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a7B2Q",
+			"typeName": "shape"
+		},
+		{
+			"x": 756.4453894138244,
+			"y": 721.6031150677126,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:JzuhZ3DISwmILx47TcGrn",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "l",
+				"w": 470.2250061035156,
+				"text": "Tipos de Exceção em java",
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a88FA",
+			"typeName": "shape"
+		}
+	]
+}
