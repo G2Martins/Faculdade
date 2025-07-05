@@ -19,20 +19,20 @@ Cada problema da maratona está organizado em sua própria subpasta, nomeada de 
 
 Aqui está a lista dos problemas presentes nesta maratona:
 
-* [Problema A - Aniversário](Problema%20A%20-%20Aniversário/README.md)
-* [Problema B - Baby Shark](Problema%20B%20-%20Baby%20Shark/README.md)
-* [Problema C - Campo Desminado](Problema%20C%20-%20Campo%20Desminado/README.md)
-* [Problema D - Descubra o Segredo](Problema%20D%20-%20Descubra%20o%20Segredo/README.md)
-* [Problema E - Enxugando Gelo no Sol](Problema%20E%20-%20Enxugando%20Gelo%20no%20Sol/README.md)
-* [Problema F - Fazenda do Nhô Lau](Problema%20F%20-%20Fazenda%20do%20Nhô%20Lau/README.md)
-* [Problema G - Gabarito](Problema%20G%20-%20Gabarito/README.md)
-* [Problema H - Hal Berto](Problema%20H%20-%20Hal%20Berto/README.md)
-* [Problema I - Imã Hacker](Problema%20I%20-%20Imã%20Hacker/README.md)
-* [Problema J - João e o Irrigador](Problema%20J%20-%20João%20e%20o%20Irrigador/README.md)
-* [Problema K - Kichute](Problema%20K%20-%20Kichute/README.md)
-* [Problema L - Lendas do Tesouro Perdido](Problema%20L%20-%20Lendas%20do%20Tesouro%20Perdido/README.md)
-* [Problema M - Mutação](Problema%20M%20-%20Mutação/README.md)
-* [Problema N - Números Balanceados](Problema%20N%20-%20Números%20Balanceados/README.md)
+* [Problema A - Aniversário](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20A%20-%20Anivers%C3%A1rio)
+* [Problema B - Baby Shark](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20B%20-%20Baby%20Shark)
+* [Problema C - Campo Desminado](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20C%20-%20Campo%20Desminado)
+* [Problema D - Descubra o Segredo](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20D%20-%20Descubra%20o%20Segredo)
+* [Problema E - Enxugando Gelo no Sol](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20E%20-%20Enxugando%20Gelo%20no%20Sol)
+* [Problema F - Fazenda do Nhô Lau](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20F%20-%20Fazenda%20do%20Nh%C3%B4%20Lau)
+* [Problema G - Gabarito](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20G%20-%20Gabarito)
+* [Problema H - Hal Berto](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20H%20-%20Hal%20Berto)
+* [Problema I - Imã Hacker](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20I%20-%20Im%C3%A3%20Hacker)
+* [Problema J - João e o Irrigador](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20J%20-%20Jo%C3%A3o%20e%20o%20Irrigador)
+* [Problema K - Kichute](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20K%20-%20Kichute)
+* [Problema L - Lendas do Tesouro Perdido](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20L%20-%20Lendas%20do%20Tesouro%20Perdido)
+* [Problema M - Mutação](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20M%20-%20Muta%C3%A7%C3%A3o)
+* [Problema N - Números Balanceados](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20N%20-%20N%C3%BAmeros%20Balanceados)
 
 ## Como Usar
 
