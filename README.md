@@ -7,6 +7,7 @@
 | 3° Semestre | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/3%C2%B0%20Semestre) |
 | 4° Semestre | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/4%C2%B0%20Semestre) |
 | 5° Semestre | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/5%C2%B0%20Semestre) |
+| 6° Semestre | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/6%C2%B0%20Semestre) |
 | Maratona Fraldinha 2023 | [Clique aqui](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023) |
 
 <br>
