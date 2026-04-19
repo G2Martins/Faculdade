@@ -1,41 +1,48 @@
-# Maratona Fraldinha de Programação IESB 2023
+# 🏁 Maratona Fraldinha de Programação IESB 2023
 
-Bem-vindo(a) ao diretório da Maratona Fraldinha de Programação IESB 2023!
+> Competição de programação universitária realizada no IESB em 2023. Resolvidos 14 problemas em Python, abrangendo lógica, matemática, estruturas de dados e algoritmos.
 
-Este repositório contém as soluções e a descrição de todos os problemas propostos durante a Maratona Fraldinha de Programação IESB 2023. Cada problema é apresentado em sua própria pasta, contendo um arquivo `README.md` detalhando o enunciado, exemplos e notas relevantes, além do código-fonte da solução (a ser adicionado).
+---
 
-## Sobre a Maratona
+## 📋 Problemas
 
-A Maratona Fraldinha de Programação IESB 2023 é um evento que visa estimular o desenvolvimento de habilidades em programação e resolução de problemas entre os estudantes. Os problemas abrangem diversas áreas da computação, como lógica, matemática, estruturas de dados e algoritmos.
+| # | Problema | Tema | Solução |
+|---|---------|------|---------|
+| A | [Aniversário](./Problema%20A%20-%20Aniversário) | Lógica numérica — idades invertidas | ✅ |
+| B | [Baby Shark](./Problema%20B%20-%20Baby%20Shark) | Lógica / Strings | ✅ |
+| C | [Campo Desminado](./Problema%20C%20-%20Campo%20Desminado) | Campo minado clássico | ✅ |
+| D | [Descubra o Segredo](./Problema%20D%20-%20Descubra%20o%20Segredo) | Reconhecimento de padrões | ✅ |
+| E | [Enxugando Gelo no Sol](./Problema%20E%20-%20Enxugando%20Gelo%20no%20Sol) | Simulação física | ✅ |
+| F | [Fazenda do Nhô Lau](./Problema%20F%20-%20Fazenda%20do%20Nhô%20Lau) | Gerenciamento de recursos | ✅ |
+| G | [Gabarito](./Problema%20G%20-%20Gabarito) | Validação / Contagem | ✅ |
+| H | [Hal Berto](./Problema%20H%20-%20Hal%20Berto) | Manipulação de strings | ✅ |
+| I | [Imã Hacker](./Problema%20I%20-%20Imã%20Hacker) | Cibersegurança temático | ✅ |
+| J | [João e o Irrigador](./Problema%20J%20-%20João%20e%20o%20Irrigador) | Otimização de irrigação | ✅ |
+| K | [Kichute](./Problema%20K%20-%20Kichute) | Esportes / Lógica | ✅ |
+| L | [Lendas do Tesouro Perdido](./Problema%20L%20-%20Lendas%20do%20Tesouro%20Perdido) | Busca / Pathfinding | ✅ |
+| M | [Mutação](./Problema%20M%20-%20Mutação) | Biologia / Genética computacional | ✅ |
+| N | [Números Balanceados](./Problema%20N%20-%20Números%20Balanceados) | Teoria dos números | ✅ |
 
-## Estrutura do Repositório
+---
 
-Cada problema da maratona está organizado em sua própria subpasta, nomeada de acordo com o problema e seu título. Dentro de cada subpasta, você encontrará:
+## 📂 Estrutura de Cada Problema
 
-- `README.md`: Contém o enunciado completo do problema, o limite de tempo, exemplos de entrada e saída, e quaisquer notas adicionais.
-- Arquivos de solução: Os arquivos de código-fonte com as soluções para o problema (ex: `solucao.cpp`, `solucao.py`)
+Cada pasta de problema contém:
+- `README.md` — enunciado completo, restrições, exemplos de entrada/saída
+- Arquivo `.py` — solução implementada em Python
 
-## Problemas
+---
 
-Aqui está a lista dos problemas presentes nesta maratona:
+## 🗝️ Áreas Abordadas
 
-* [Problema A - Aniversário](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20A%20-%20Anivers%C3%A1rio)
-* [Problema B - Baby Shark](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20B%20-%20Baby%20Shark)
-* [Problema C - Campo Desminado](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20C%20-%20Campo%20Desminado)
-* [Problema D - Descubra o Segredo](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20D%20-%20Descubra%20o%20Segredo)
-* [Problema E - Enxugando Gelo no Sol](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20E%20-%20Enxugando%20Gelo%20no%20Sol)
-* [Problema F - Fazenda do Nhô Lau](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20F%20-%20Fazenda%20do%20Nh%C3%B4%20Lau)
-* [Problema G - Gabarito](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20G%20-%20Gabarito)
-* [Problema H - Hal Berto](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20H%20-%20Hal%20Berto)
-* [Problema I - Imã Hacker](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20I%20-%20Im%C3%A3%20Hacker)
-* [Problema J - João e o Irrigador](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20J%20-%20Jo%C3%A3o%20e%20o%20Irrigador)
-* [Problema K - Kichute](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20K%20-%20Kichute)
-* [Problema L - Lendas do Tesouro Perdido](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20L%20-%20Lendas%20do%20Tesouro%20Perdido)
-* [Problema M - Mutação](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20M%20-%20Muta%C3%A7%C3%A3o)
-* [Problema N - Números Balanceados](https://github.com/G2Martins/Faculdade/tree/main/Maratona%20Fraldinha%202023/Problema%20N%20-%20N%C3%BAmeros%20Balanceados)
+- Lógica e matemática discreta
+- Manipulação de strings e padrões
+- Simulação e modelagem
+- Estruturas de dados básicas
+- Teoria dos números
+- Busca e otimização
 
-## Como Usar
+---
 
-Para visualizar os detalhes de um problema específico, navegue até a sua respectiva pasta e abra o arquivo `README.md`. As soluções estarão disponíveis nos arquivos de código dentro de cada pasta de problema.
-
-Fique à vontade para explorar as soluções, testá-las e aprender com elas!
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Competição](https://img.shields.io/badge/Maratona-IESB_2023-orange?style=flat)

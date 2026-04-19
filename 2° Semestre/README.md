@@ -1,12 +1,55 @@
-# 2º Semestre
+# 2° Semestre — Algoritmos e Programação de Computadores II
 
-### No Segundo Semestre da faculdade focamos em nos aprofundar mais na linguagem de programação C:
+> Aprofundamento na linguagem C com foco em ponteiros, aritmética de ponteiros, funções avançadas e recursividade. Sem práticas pré-definidas — trabalho mais livre e orientado a projetos.
 
-- Ponteiros ( Aritméticas de ponteiros, percorrendo byte a byte de cada tipo de variável como int, float e char para alterar cores em uma matriz e etc)
+---
 
-- Funções
-- Recursividade
+## 📂 Estrutura
 
-### Entretano nesse Semestre não tivemos práticas organizadas e pré-definidas como no Semestre passado.
+```
+2° Semestre/
+├── APC_ 2/           # Exercícios e projetos da disciplina
+│   ├── Algoritmo3.c  # Implementações de algoritmos
+│   ├── Algoritmo4.c
+│   ├── Algoritmo5.c
+│   ├── Algoritmo6.c
+│   ├── Projeto_2_1.c # Projeto principal
+│   ├── caixaTexto.c  # Interface de caixa de texto no console (3 versões)
+│   ├── consoante.c   # Detecção e manipulação de consoantes/vogais (3 versões)
+│   ├── media.c       # Média com aritmética de ponteiros
+│   └── resumo.c      # Resumo de conceitos
+├── Atividades/       # Projetos entregues
+│   ├── Projeto1.c    # Primeiro projeto avaliativo
+│   └── Projeto 2/    # Segundo projeto avaliativo
+├── Aula01/           # Material da primeira aula
+├── Aula02/           # Material da segunda aula
+├── Aula03/           # Material da terceira aula
+└── Aula04/           # Material da quarta aula
+```
 
-<img src="https://media0.giphy.com/media/oZTV8RLSf0cGQ/giphy.gif?cid=ecf05e47jl5io4dzlfl9mso4jla6e5kbbi52ug3fhmm2hmhi&rid=giphy.gif&ct=g" alt="drawing" width="100%"/>
+---
+
+## 📝 Destaques por Arquivo
+
+| Arquivo | Descrição |
+|---------|-----------|
+| `media.c` | Calcula média de números usando aritmética de ponteiros (percorre byte a byte) |
+| `caixaTexto.c` | Cria interface de caixa de texto no terminal com manipulação de strings |
+| `consoante.c` | Detecta e manipula consoantes/vogais em strings via ponteiros |
+| `Algoritmo3-6.c` | Implementações progressivas de algoritmos com uso de ponteiros |
+| `Projeto_2_1.c` | Projeto completo integrando os conceitos do semestre |
+
+---
+
+## 🗝️ Conceitos Aprendidos
+
+- **Ponteiros**: declaração, dereferenciação, aritmética de ponteiros
+- **Passagem por referência** em funções
+- **Manipulação de strings** com ponteiros (`char *`)
+- **Percurso byte a byte** por diferentes tipos de dados (`int`, `float`, `char`)
+- **Recursividade**: funções que chamam a si mesmas
+- **Alocação de memória** estática e dinâmica
+
+---
+
+![C](https://img.shields.io/badge/Linguagem-C-00599C?style=flat&logo=c&logoColor=white)
