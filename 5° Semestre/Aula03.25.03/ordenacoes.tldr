@@ -1,0 +1,1300 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 6,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 3,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 10,
+			"com.tldraw.shape.note": 9,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 0,
+			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 4,
+			"com.tldraw.shape.video": 2,
+			"com.tldraw.binding.arrow": 0
+		}
+	},
+	"records": [
+		{
+			"x": 3044.709571338547,
+			"y": -730.7362851484379,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:1r8-9LZdXKHq41MltaOt6",
+			"type": "geo",
+			"props": {
+				"w": 1301.653274330506,
+				"h": 446.69976641662646,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "xl",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a6",
+			"typeName": "shape"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": -4232.48542312547,
+			"y": -3664.36920880081,
+			"lastActivityTimestamp": 0,
+			"meta": {}
+		},
+		{
+			"x": 1134.6305102474134,
+			"y": -717.4511451563862,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:eBnMqGPmuPSA1hjcOhZOP",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 321.71235431954784,
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 2.5229249695443037,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "Quick Sort"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a8",
+			"typeName": "shape"
+		},
+		{
+			"x": 435.23119730487264,
+			"y": -315.7062075657272,
+			"rotation": 1.2836953722228372e-15,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:jJjtrq0nnPaaPZ86DsSK2",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1442.7700581127929,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1.7520934602601395,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Quanto mais desorganizado melhor.   • Valores menores que o pivô rearrajados antes dele e os maiores depois"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "•Melhor Caso: O(N log N)                      • Pior Caso (RARO) : 0(N^2)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Desvantagem: Como escolher o pivô?   • Recursivamente ordenas as 2 partições"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aD",
+			"typeName": "shape"
+		},
+		{
+			"x": -3792.099664473647,
+			"y": -585.7838722852923,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:OeXsLFRdn3lhG2fF7iqHO",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1082.3396990740744,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1.5903247556357298,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "O algoritmo de ordenação Selection Sort, ou ordenação por seleção, é um algoritmo simples e intuitivo. Ele funciona da seguinte maneira:"
+								}
+							]
+						},
+						{
+							"type": "paragraph"
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Encontre o menor elemento do array e troque-o com o elemento na primeira posição."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Encontre o segundo menor elemento e troque-o com o elemento na segunda posição."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Repita o processo até que o array esteja ordenado."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Sempre ruim."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Ineficiente par agrandes conjuntos de dados• Melhor caso: O(N^2)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Pior caso: O(N^2)"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": -771.3059114418429,
+			"y": -585.3502403455457,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Bhwn0wP2G8bRV7h7TagFa",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 717.5003422789202,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1.9449400680263123,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Eficiente para conjuntos de pequenos dados"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Estável: Não altera a ordem de dados iguais"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Capaz de ordenar dados em tempo real"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aI",
+			"typeName": "shape"
+		},
+		{
+			"x": 4232.48542312547,
+			"y": 3664.36920880081,
+			"z": 0.14972855857196388,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": -946.1719826934909,
+			"y": -1542.1050754739276,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:fu8EoYeuDskOyPkMalHoS",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "xl",
+				"w": 265.234375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 2.8335552178876107,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "Ordenações"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aM",
+			"typeName": "shape"
+		},
+		{
+			"x": 488.4957592357323,
+			"y": -633.8194026550991,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:dQ2pmb5MMG-psmljRcP5b",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1040.8590186061822,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 2.022113391601462,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "Quick Sort é um algoritmo de ordenação muito eficiente, inventado por C.A.R. Hoare. Ele utiliza a estratégia de divisão e conquista para ordenar elementos. O algoritmo divide a lista em sub-listas menores baseando-se em um “pivô”, e depois ordena essas sub-listas de forma recursiva."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a7",
+			"typeName": "shape"
+		},
+		{
+			"x": 4780.353230884869,
+			"y": -753.7341974227404,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:AJtyLYqtkX8CtXYiW2_oV",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 359.122601133572,
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 2.5229249695443037,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "Bubble Sort"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aB",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "asset:-1485495589",
+			"type": "image",
+			"typeName": "asset",
+			"props": {
+				"name": "tldrawFile",
+				"src": "asset:319712616",
+				"w": 1096,
+				"h": 393,
+				"fileSize": 322326,
+				"mimeType": "image/png",
+				"isAnimated": false
+			}
+		},
+		{
+			"x": 3443.27071376781,
+			"y": -740.3375894764238,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:PvYA5zvJIg_cMzyaOdI6c",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 140.8125,
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 2.5229249695443037,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "Merge Sort"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a5",
+			"typeName": "shape"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": -58.021287233063504,
+			"y": -1273.4339474124533,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:PnJHCY3Jbld25FEdIGG-9",
+			"type": "arrow",
+			"parentId": "page:page",
+			"index": "aL8",
+			"props": {
+				"dash": "draw",
+				"size": "xl",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": -325.30379956565434,
+				"start": {
+					"x": 250.9724644325181,
+					"y": -3.1316874548158466
+				},
+				"end": {
+					"x": 1368.1888506336763,
+					"y": 509.01206308122846
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"typeName": "shape"
+		},
+		{
+			"x": 4404.671999177153,
+			"y": -665.3132676446916,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:-xloGIVkVGafzC1OA4hN_",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 994.2840196588219,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1.30158754413457,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "Bubble Sort é um algoritmo de ordenação simples que percorre repetidamente a lista, compara elementos adjacentes e os troca se estiverem na ordem errada."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "Pior Caso: O(N^2)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "Melhor Caso: O(N)"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aA",
+			"typeName": "shape"
+		},
+		{
+			"x": -722.0700477355672,
+			"y": -1291.7464810742997,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:rcqRZMQUssSF4E2gvNjx-",
+			"type": "arrow",
+			"parentId": "page:page",
+			"index": "aLG",
+			"props": {
+				"dash": "draw",
+				"size": "xl",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": -65.17692883202884,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 149.27283813390432,
+					"y": 538.4920695819524
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"typeName": "shape"
+		},
+		{
+			"x": -1644.230436352088,
+			"y": 49.07223072258171,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:MGs2VSKNXZZ78S7-pjI6X",
+			"type": "image",
+			"props": {
+				"w": 1938.416299283021,
+				"h": 695.660350715926,
+				"assetId": "asset:-1485495589",
+				"playing": true,
+				"url": "",
+				"crop": null,
+				"flipX": false,
+				"flipY": false
+			},
+			"parentId": "page:page",
+			"index": "aK",
+			"typeName": "shape"
+		},
+		{
+			"x": 210.48781754532615,
+			"y": -1564.69930238929,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:PqQfD_YCnkO11TrHfwkjl",
+			"type": "arrow",
+			"parentId": "page:page",
+			"index": "aL4",
+			"props": {
+				"dash": "draw",
+				"size": "xl",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": -865.2415392482849,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 0,
+					"y": 0
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"typeName": "shape"
+		},
+		{
+			"typeName": "binding",
+			"id": "binding:AdjdPFUq-G0O8M0YlGZC0",
+			"type": "arrow",
+			"fromId": "shape:PqQfD_YCnkO11TrHfwkjl",
+			"toId": "shape:AJtyLYqtkX8CtXYiW2_oV",
+			"meta": {},
+			"props": {
+				"terminal": "end",
+				"normalizedAnchor": {
+					"x": 0.5,
+					"y": 0.5
+				},
+				"isExact": false,
+				"isPrecise": true
+			}
+		},
+		{
+			"x": -2966.47839073483,
+			"y": -734.3917042729988,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:UqhXxZO_HiQooWRqWFaV2",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 170.859375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 2.2976322315895583,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "Selection Sort"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a2",
+			"typeName": "shape"
+		},
+		{
+			"x": -1391.569048932356,
+			"y": -1293.2507935982867,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:WhEwY-LmNGeD5IbHLV938",
+			"type": "arrow",
+			"parentId": "page:page",
+			"index": "aLV",
+			"props": {
+				"dash": "draw",
+				"size": "xl",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 385.86370370227854,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": -1015.4029447682751,
+					"y": 471.65116645539933
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"typeName": "shape"
+		},
+		{
+			"x": -1651.5419718299318,
+			"y": -407.0174115779614,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:GTpQPpB0-URFfKlPaLvcg",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 906.5838356879035,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 2.064847038866451,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Tempo de execução Pior Caso: O(n²)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Tempo de execução Melhor Caso: O(N)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Bom para quando estiver quase todo ordenado"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Similiar a ordenação de cartas de baralho com as mãos"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Pega-se uma carta de cada vez e a coloca em seu devido"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "lugar, sempre deixando as cartas da mao em ordem"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aH",
+			"typeName": "shape"
+		},
+		{
+			"x": -3805.0452566642425,
+			"y": -731.9090352186138,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:syyLg6hc4OFSLvXBbm2PW",
+			"type": "geo",
+			"props": {
+				"w": 1709.9935765940982,
+				"h": 661.6139509754184,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "xl",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a3",
+			"typeName": "shape"
+		},
+		{
+			"x": 3047.63642394601,
+			"y": -653.8449503152799,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ndG4y9Z-TSxzec0RNRYGX",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1040.8590186061822,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1.2420551758364906,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "O algoritmo Merge Sort, ou ordenação por fusão, é um algoritmo de ordenação que utiliza a estratégia de dividir para conquistar. Ele funciona da seguinte maneira:"
+								}
+							]
+						},
+						{
+							"type": "paragraph"
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Divide o array em duas metades."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Ordena as duas metades recursivamente utilizando o Merge Sort."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Combina as duas metades em um único array ordenado."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• Usa muita memória "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "• sempre vai ser n log(n)"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a4",
+			"typeName": "shape"
+		},
+		{
+			"x": -1703.3206148205109,
+			"y": -728.5584937056108,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:F_fUg0UV2WSiBE9uMBymD",
+			"type": "geo",
+			"props": {
+				"w": 2084.2118232462935,
+				"h": 1500.3222642911649,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "xl",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aE",
+			"typeName": "shape"
+		},
+		{
+			"typeName": "binding",
+			"id": "binding:HSAz_oGfg1KwEG87D0Lcy",
+			"type": "arrow",
+			"fromId": "shape:PqQfD_YCnkO11TrHfwkjl",
+			"toId": "shape:N9zIzbxxXJ6GodNBQ8Q2G",
+			"meta": {},
+			"props": {
+				"terminal": "start",
+				"normalizedAnchor": {
+					"x": 0.9944245040250469,
+					"y": 0.038106127957762415
+				},
+				"isExact": false,
+				"isPrecise": false
+			}
+		},
+		{
+			"x": -1310.2247688880232,
+			"y": -1575.9389734217746,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:N9zIzbxxXJ6GodNBQ8Q2G",
+			"type": "geo",
+			"props": {
+				"w": 1529.2388514945994,
+				"h": 294.95704850786046,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "xl",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aL",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"typeName": "binding",
+			"id": "binding:Gvpyl_hMWhOF4qoDA5oDB",
+			"type": "arrow",
+			"fromId": "shape:WhEwY-LmNGeD5IbHLV938",
+			"toId": "shape:N9zIzbxxXJ6GodNBQ8Q2G",
+			"meta": {},
+			"props": {
+				"terminal": "start",
+				"normalizedAnchor": {
+					"x": 0.0017584349928562286,
+					"y": 0.597530864197531
+				},
+				"isExact": false,
+				"isPrecise": true
+			}
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1551,
+				"h": 918
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": null,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"x": 420.36484689920553,
+			"y": -723.7515494340698,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:iERljNU0DnjlxS4jLiYpY",
+			"type": "geo",
+			"props": {
+				"w": 2547.940562626162,
+				"h": 908.8772451554037,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "xl",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a9",
+			"typeName": "shape"
+		},
+		{
+			"x": 4382.46224040064,
+			"y": -744.1328930947545,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:alslCkYa1IGyUF_vlbxSj",
+			"type": "geo",
+			"props": {
+				"w": 1301.653274330506,
+				"h": 327.4870014819322,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "xl",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aC",
+			"typeName": "shape"
+		},
+		{
+			"x": -871.1972536210342,
+			"y": -703.0636886867826,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:PVZIaeSF_vEX_EtMqNOZq",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 520.2340571596245,
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 3.087728800724842,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "InsertionSort"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aF",
+			"typeName": "shape"
+		},
+		{
+			"x": 243.39521220491065,
+			"y": -1504.3692357608056,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:WOD-moJx6Q2kS6zuxDf54",
+			"type": "arrow",
+			"parentId": "page:page",
+			"index": "aN",
+			"props": {
+				"dash": "draw",
+				"size": "xl",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": -512.2583628285714,
+				"start": {
+					"x": 4.113450484795976,
+					"y": 109.69089709438344
+				},
+				"end": {
+					"x": 3486.799224012683,
+					"y": 740.4135553870874
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"typeName": "shape"
+		},
+		{
+			"typeName": "binding",
+			"id": "binding:k-FhMb2RQbytiiBV7wGtZ",
+			"type": "arrow",
+			"fromId": "shape:rcqRZMQUssSF4E2gvNjx-",
+			"toId": "shape:N9zIzbxxXJ6GodNBQ8Q2G",
+			"meta": {},
+			"props": {
+				"terminal": "start",
+				"normalizedAnchor": {
+					"x": 0.4384757823660094,
+					"y": 0.9696085688720969
+				},
+				"isExact": false,
+				"isPrecise": true
+			}
+		}
+	]
+}

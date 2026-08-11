@@ -1,5 +1,16 @@
-# 1º Semestre
+# 8° Semestre
 
-### No primeiro semestre da faculdade nós começamos o aprendizado na linguagem C
+> Conteúdo em desenvolvimento. Esta pasta será atualizada conforme o semestre avançar.
 
-<img src="https://media0.giphy.com/media/oZTV8RLSf0cGQ/giphy.gif?cid=ecf05e47jl5io4dzlfl9mso4jla6e5kbbi52ug3fhmm2hmhi&rid=giphy.gif&ct=g" alt="drawing" width="100%"/>
+---
+
+## 📋 Status
+
+| Campo | Informação |
+|-------|-----------|
+| Status | 🔄 Em andamento |
+| Conteúdo | A ser adicionado |
+
+---
+
+> **Nota**: Este semestre ainda está em progresso. Os arquivos e disciplinas serão documentados conforme forem desenvolvidos.
