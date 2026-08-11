@@ -27,6 +27,8 @@ Proposta de extensão da linguagem com duas novas palavras reservadas:
 
 ## Símbolos e palavras reservadas da linguagem
 
-**Palavras reservadas:** `declarar`, `mostrar`, `ler`, `aleatorio`, `se`, `entao`, `fim`
+**Palavras reservadas:** `declarar`, `mostrar`, `ler`, `aleatorio`, `se`, `entao`, `senao`, `fim`, `enquanto`, `faca`
 
-**Símbolos:** `=` (atribuição), `+`, `-`, `*`, `/` (operadores aritméticos), `>`, `<` (comparação), `,` (separador de variáveis), `" "` (delimitador de texto)
+**Símbolos:** `=` (atribuição), `+`, `-`, `*`, `/` (operadores aritméticos), `>`, `<`, `==`, `>=`, `<=` (comparação), `,` (separador de variáveis), `" "` (delimitador de texto), `( )` (agrupamento), `[ ]` (lista)
+
+**Extensões posteriores** (Aula01/Aula03): `senao` (condicional completa), `enquanto ... faca ... fim` (laço), listas com `tamanho(l)`, `contem(l, x)`, `remover_primeiro(l, x)`. Propostas pendentes: `!=`, `cancelar`.
