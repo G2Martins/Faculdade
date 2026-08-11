@@ -34,7 +34,7 @@ Provas individuais sem consulta; conteúdo = ementa dada até a data da prova. E
 Padrão: `AulaXX/Exercicio X.md` — um arquivo por exercício, código MineonScript em bloco ```.
 
 - `Aula01/` — Exercicio B.md (notas/conceito) · Exercicio C.md (jogo adivinhação) · Exercicio D.md (máquina R$ 5,00 com loop) · Exercicio E.md (fila com prioridades)
-- `Aula02/` — Sintaxe MineonScript.md · Exercicio A.md (3 produtos, soma+média) · Exercicio B.md (5 aleatórios, >10 e <20) · Fluxograma Tradutor Python.md (tradutor MineonScript→Python, Mermaid)
+- `Aula02/` — Sintaxe MineonScript.md · Exercicio A.md (3 produtos, soma+média) · Exercicio B.md (5 aleatórios, >10 e <20) · Fluxograma Tradutor Python.md (tradutor MineonScript→Python, Mermaid) · Questionario.md (gabarito comentado: fases da tradução, compilador vs interpretador)
 - `Aula03/` — Exercicio C.md (máquina refrigerante R$ 4,50)
 
 ## 5. MineonScript (linguagem da disciplina)
