@@ -5,7 +5,7 @@
 ## 1. Identificação
 
 - **Curso:** 2130 — Ciência da Computação (IESB) · **Ano/Semestre:** 2026/2
-- **Disciplina:** Compiladores · **CH:** 60h semestral
+- **Disciplina:** Compiladores — **MDC168** · **Turma:** ENGCDM4B · **CH:** 60h semestral
 - **Professor:** Roger Rocha Ferreira · roger.ferreira@iesb.br
 - **Material:** Google Sala de Aula (slides por encontro) + exercícios semanais pontuados
 
@@ -28,6 +28,29 @@ MF = max{ P3*0,4 + A2*0,6 ; A1*0,4 + P3*0,6 }
 ```
 
 Provas individuais sem consulta; conteúdo = ementa dada até a data da prova. Exercícios semanais contam na avaliação contínua.
+
+**Datas:** P1 **22/09/2026** · P2 **24/11/2026** · P3 **08/12/2026**
+
+### Cronograma de aulas
+
+| Data | Tópico | Assunto |
+|---|---|---|
+| 04/08 | Introdução e Arquitetura | Compilação vs interpretação, fases, pipeline de tradução |
+| 11/08 | Análise Léxica: Fundamentos | Tokens, lexemas, padrões; expressões regulares e autômatos finitos |
+| 18/08 | Análise Léxica: Implementação | Desenvolvimento de analisador léxico; tratamento/recuperação de erros léxicos |
+| 25/08 | Análise Sintática: Fundamentos | Gramáticas livres de contexto; árvores sintáticas e ambiguidade; top-down |
+| 08/09 | Análise Sintática: Estruturas | AST; mapeamento de regras gramaticais em nós |
+| 15/09 | Análise Sintática: Implementação | Analisador sintático preditivo por descida recursiva |
+| **22/09** | **Avaliação** | **P1** |
+| 29/09 | Tabela de Símbolos | Organização, gerenciamento, resolução de escopo |
+| 06/10 | Análise Semântica: Fundamentos | Checagem de tipos, verificação de declarações, regras de validação |
+| 20/10 | Análise Semântica: Implementação | Validação sobre a AST; integração com tabela de símbolos |
+| 27/10 | Gerência de Memória | Ambiente de execução, pilha, registradores de ativação, memória dinâmica |
+| 03/11 | Execução e Interpretação | Caminhamento em árvores sintáticas; avaliação e execução de código |
+| 10/11 | Integração do Tradutor | Conexão do pipeline e testes de integração |
+| 17/11 | Integração do Tradutor | Validação do fluxo completo |
+| **24/11** | **Avaliação** | **P2** |
+| **08/12** | **Avaliação** | **P3** (substitutiva) |
 
 ## 4. Organização da pasta
 
