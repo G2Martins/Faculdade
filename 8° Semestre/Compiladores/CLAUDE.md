@@ -58,7 +58,7 @@ Padrão: `AulaXX/Exercicio X.md` — um arquivo por exercício, código MineonSc
 
 - `Aula01/` — Exercicio B.md (notas/conceito) · Exercicio C.md (jogo adivinhação) · Exercicio D.md (máquina R$ 5,00 com loop) · Exercicio E.md (fila com prioridades)
 - `Aula02/` — Sintaxe MineonScript.md · Exercicio A.md (3 produtos, soma+média) · Exercicio B.md (5 aleatórios, >10 e <20) · Fluxograma Tradutor Python.md (tradutor MineonScript→Python, Mermaid) · Questionario.md (gabarito comentado: fases da tradução, compilador vs interpretador)
-- `Aula03/` — Exercicio C.md (máquina refrigerante R$ 4,50)
+- `Aula03/` — Aula03.pdf (slides BNF) · Exercicio BNF KK-102.md (gramática BNF da calculadora)
 
 ## 5. MineonScript (linguagem da disciplina)
 
@@ -120,6 +120,16 @@ Alto nível → [TRADUÇÃO] → Código Objeto → [LIGAÇÃO] → Assembly →
 | 3 | Análise Semântica (opcional) | Valida regras e variáveis |
 | 4 | Codificação / Geração de Código | Escreve o arquivo final |
 
+### Slide 3 — BNF (Backus–Naur Form)
+
+Criado em **1959 por John Backus**, aprimorado em **1960 por Peter Naur**; nasceu para definir a sintaxe do **ALGOL 60**. Gramática formal sem ambiguidades.
+
+**Notação:** cada linha = uma regra · `< >` = categoria (não-terminal) · `" "` = literal · `|` = "ou" · `{ }` = repetição.
+
+**Gramática MineonScript do slide (resumo):** `<programa> ::= <instrucoes> <retorno>`; instruções = atribuição | saída (`print`) | entrada (`input`) | condicional (`se`/`senao` com `{ }`) | loop (`enquanto`); expressões em camadas `<expressao>` → `<termo>` → `<fator>` (precedência de `* /` sobre `+ -`); `<condicao>` usa `==`, `<`, `>` e `!`; `<retorno> ::= "retorna" <numero>`. Slide também mostra início do LEXER em Python (`re` + lista `TOKENS_FONTE` de pares nome/regex).
+
+**Exercício resolvido:** BNF da calculadora KK-102 → `Aula03/Exercicio BNF KK-102.md` (versão com precedência embutida na gramática, melhor que a proposta do slide, que deixa `<operacao_binaria>` ambígua).
+
 ### Slide 1 — Fundamentos (SI, dados, fluxogramas)
 
 **Sistema de Informação (SI):** Hardware (CPU, memórias, E/S) → Dados → Software (aplicativos, utilitários, SO, ling. programação) → Processos → Peopleware (operadores, técnicos, administradores) → Rede.
@@ -165,6 +175,7 @@ Taxa transmissão ≠ taxa recebimento dessincronizadas = bug → solução: **b
 | C | Jogo adivinhação 1-100: maior/menor/bem maior/bem menor/acertou ("memória curta") | ✅ `Aula01/Exercicio C.md` |
 | D | Máquina refrigerante R$ 5,00 com loop: se insuficiente, aguarda inserção do restante. Extra: e se não tiver mais dinheiro? | ✅ `Aula01/Exercicio D.md` |
 | E | Fila de banco com prioridades G > I > P > N, desempate por chegada. Entrada `[P,I,G,N,I]` → ordem de atendimento. Extra: evitar espera eterna do Normal | ✅ `Aula01/Exercicio E.md` |
+| BNF | Escrever BNF da calculadora KK-102 (soma, sub, mult, div, exp, raiz, média, áreas) | ✅ `Aula03/Exercicio BNF KK-102.md` |
 
 Ao resolver exercício novo: criar `AulaXX/Exercicio X.md` no padrão existente, código em MineonScript, anotar extensões de sintaxe novas aqui e no `Aula02/Sintaxe MineonScript.md`.
 
