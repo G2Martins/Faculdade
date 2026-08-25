@@ -11,7 +11,7 @@
 
 Passar em Compiladores com nota e sair com um **transpilador MineonScript → Python** funcionando (Unidade IV). Todo exercício semanal resolvido aqui vale nota na avaliação contínua **e** é peça do tradutor final.
 
-**Placar:** 3 aulas registradas · 10 exercícios entregues · 0 pendentes · próxima prova **P1 em 22/09/2026**.
+**Placar:** 4 aulas registradas · 12 exercícios entregues · 0 pendentes · **lexer funcionando** (1ª fase do tradutor) · próxima prova **P1 em 22/09/2026**.
 
 ## 1. O que é
 
@@ -69,7 +69,8 @@ Padrão: `AulaXX/Exercicio X.md` — um arquivo por exercício, código MineonSc
 |---|---|---|
 | [Aula01/](Aula01) | Exercicio B (notas/conceito) · C (jogo adivinhação) · D (máquina R$ 5,00 com loop) · E (fila com prioridades) | 4 algoritmos em MineonScript; origem das extensões `senao`, `enquanto`, listas |
 | [Aula02/](Aula02) | [Sintaxe MineonScript.md](Aula02/Sintaxe%20MineonScript.md) · Exercicio A (3 produtos: soma+média) · B (5 aleatórios, >10 e <20) · C (máquina R$ 4,50) · [Fluxograma Tradutor Python.md](Aula02/Fluxograma%20Tradutor%20Python.md) · [Questionario.md](Aula02/Questionario.md) | **Definição da linguagem** + desenho do transpilador (Mermaid) + gabarito comentado (fases da tradução, compilador vs interpretador) |
-| [Aula03/](Aula03) | Aula03.pdf (slides BNF) · [Exercicio BNF KK-102.md](Aula03/Exercicio%20BNF%20KK-102.md) | Gramática BNF completa da calculadora, com precedência embutida |
+| [Aula03/](Aula03) | Aula03.pdf (slides BNF) · [Exercicio BNF KK-102.md](Aula03/Exercicio%20BNF%20KK-102.md) · [Questionario.md](Aula03/Questionario.md) | Gramática BNF completa da calculadora, com precedência embutida + gabarito comentado de BNF (notação, derivação, validação de instruções) |
+| [Aula04/](Aula04) | Aula 04.pdf (slides Lexer) · [Exercicio Lexer.md](Aula04/Exercicio%20Lexer.md) · **[lexer.py](Aula04/lexer.py)** · [exemplo.mines](Aula04/exemplo.mines) | **1ª fase do tradutor rodando** — 24 tokens, flag `-coment`, erro léxico com linha/coluna |
 
 **Fonte de verdade da linguagem** = `Aula02/Sintaxe MineonScript.md`. O §5 aqui é resumo; se divergir, o arquivo de sintaxe manda.
 
@@ -77,7 +78,7 @@ Padrão: `AulaXX/Exercicio X.md` — um arquivo por exercício, código MineonSc
 
 Herda tudo de [../../CLAUDE.md §4](../../CLAUDE.md). Específico desta disciplina:
 
-- **Exercício se resolve em MineonScript, não em Python.** O professor avalia a linguagem da disciplina; Python só aparece como **alvo** da tradução (Unidade IV), nunca como solução do enunciado.
+- **Exercício de *algoritmo* se resolve em MineonScript, não em Python.** O professor avalia a linguagem da disciplina. Python aparece em dois papéis legítimos e só nesses: **alvo** da tradução (Unidade IV) e **linguagem de implementação do tradutor** (lexer/parser — é em Python que os fragmentos do professor vêm escritos, ver [Aula04/lexer.py](Aula04/lexer.py)). Enunciado do tipo "escreva na linguagem MineonScript" → MineonScript; enunciado do tipo "implemente os fragmentos" → Python.
 - **Toda palavra reservada ou operador novo é extensão nossa até prova em contrário.** Antes de usar, registrar em `Aula02/Sintaxe MineonScript.md` com a justificativa, e anotar no §5 daqui. Sintaxe não documentada quebra o tradutor da Unidade IV, que vai ser escrito a partir dessa lista.
 - **Toda decisão de gramática é justificada por escrito.** Ambiguidade em gramática é exatamente o que a prova cobra; a seção "Decisões de projeto" de cada arquivo é o que se relê antes da P1.
 - **Extensão pendente é rastreada, não esquecida.** Se um exercício precisou de algo que a linguagem não tem e nós não formalizamos, entra na lista de pendências do §5 — hoje `!=` e `cancelar`.
@@ -104,7 +105,8 @@ mostrar r
 
 **Extensões propostas por nós** (todas documentadas nos arquivos de origem): `ler` (entrada), `aleatorio` (random), `se/entao/senao/fim` (condicional), `enquanto ... faca ... fim` (laço), `==`/`>=`/`<=`, listas com `tamanho(l)`, `contem(l, x)`, `remover_primeiro(l, x)` (Exercicio E).
 
-**Pendências de sintaxe:** `!=` (surgiu no Exercicio C) · `cancelar` (surgiu no Exercicio D). Formalizar antes de escrever o lexer.
+**Pendências de sintaxe:** `cancelar` (surgiu no Exercicio D). Formalizar antes de escrever o lexer.
+**Resolvida:** `!=` — o BNF do Material 3 tem `<condicao> ::= "!" <condicao>`, então `x != y` se escreve `!(x == y)`. Não precisa de operador dedicado.
 
 **Tabela de tradução → Python** (base do transpilador, ver [Aula02/Fluxograma Tradutor Python.md](Aula02/Fluxograma%20Tradutor%20Python.md)):
 
@@ -123,6 +125,10 @@ Antes de "consertar" algo abaixo, saiba que é intencional / já resolvido:
 
 - **A BNF do KK-102 diverge da proposta do slide — de propósito.** O slide deixa `<operacao_binaria>` ambígua; a nossa embute precedência em camadas `<expressao>` → `<termo>` → `<potencia>` → `<fator>`, então `2 + 3 * 4` deriva sem regra extra de desambiguação. Exponenciação ficou associativa à direita (`2^3^2 = 512`), o resto à esquerda. Não "simplificar" de volta pro modelo do slide.
 - **`Aula02/Exercicio C.md` é a máquina de R$ 4,50; `Aula01/Exercicio D.md` é a de R$ 5,00 com loop.** São exercícios diferentes, de aulas diferentes, com o mesmo tema. Confundir os dois já causou erro de inventário neste arquivo (a versão anterior apontava a máquina de R$ 4,50 para `Aula03/`, pasta onde ela nunca esteve).
+- **Existem DOIS dialetos de MineonScript — não fundir.** (a) **Dialeto dos exercícios** (Aula01/Aula02, base dos slides 1–2): `mostrar`, `ler`, `se ... entao ... fim`, `enquanto ... faca ... fim`. (b) **Dialeto formal** (Material 3 em diante): blocos com `{ }`, `retorna <numero>` obrigatório no fim do programa. Ao responder questão sobre BNF ou escrever código do tradutor, vale **(b)**; ao resolver exercício de algoritmo das aulas anteriores, vale **(a)**. Derivação completa em [Aula03/Questionario.md](Aula03/Questionario.md).
+- **Saída/entrada no dialeto formal = `escreva`/`leia`, não `print`/`input`.** O BNF do Material 3 escreve `"print"` e `"input"` nas regras `<saida>`/`<entrada>`, mas **as duas listas de tokens do professor** (`TOKENS_FONTE` na Aula03 e `TOKENS` na Aula04) usam `ESCREVA` e `LEIA`. Como é o lexer que define o que a linguagem aceita de fato, o tradutor segue `escreva`/`leia` — o BNF é que está desatualizado. Em questão de prova sobre o BNF, responder pelo texto do BNF; em código, `escreva`/`leia`.
+- **A ordem da lista `TOKENS` em [Aula04/lexer.py](Aula04/lexer.py) é regra de desempate, não estética.** O laço para no **primeiro** padrão que casa (`break`), sem procurar o casamento mais longo. Logo, todo padrão que é **prefixo** de outro tem que vir **depois** dele: `COMENTARIO` (`//`) antes de `DIV` (`/`), `IGUALDADE` (`==`) antes de `IGUAL` (`=`), e `NOME` sempre por último (senão engole todas as palavras reservadas). Errar isso não dá erro no lexer — dá lixo silencioso no fluxo de tokens, que só estoura como "erro de sintaxe" numa linha correta. Ao acrescentar `>=` ou `<=` no futuro, entram **antes** de `MAIOR`/`MENOR`. Prova empírica na seção B de [Aula04/Exercicio Lexer.md](Aula04/Exercicio%20Lexer.md).
+- **No BNF do Material 3, `input` não é instrução isolada.** A única regra é `<entrada> ::= <identificador> "=" "input" "(" <string> ")"` — `input(x)` sozinho **não deriva**. E `<retorno> ::= "retorna" <numero>` aceita só literal numérico, nunca expressão (`retorna x + 1` é inválido). São as duas pegadinhas do questionário da Aula03.
 - **A numeração dos exercícios é do professor, não sequencial na pasta.** `Aula01` tem B, C, D, E (sem A); `Aula02` tem A, B, C. Não renomear pra "arrumar" — a letra é a referência usada em aula.
 - **Os slides não seguem a ordem das pastas.** O "Slide 1" (fundamentos: SI, dados, fluxogramas) é material de base, não conteúdo da Aula01. O mapeamento correto está no Anexo A.
 - **Caminho da pasta tem `°` e espaço** — todo comando de shell precisa de aspas duplas. Ver [../../CLAUDE.md §6](../../CLAUDE.md).
@@ -150,12 +156,16 @@ Antes de "consertar" algo abaixo, saiba que é intencional / já resolvido:
 | D | Máquina R$ 5,00 com loop: se insuficiente, aguarda o restante. Extra: e se não tiver mais dinheiro? | ✅ [Aula01/Exercicio D.md](Aula01/Exercicio%20D.md) |
 | E | Fila de banco com prioridades G > I > P > N, desempate por chegada. `[P,I,G,N,I]` → ordem de atendimento. Extra: evitar espera eterna do Normal | ✅ [Aula01/Exercicio E.md](Aula01/Exercicio%20E.md) |
 | BNF | Gramática BNF da calculadora KK-102 (soma, sub, mult, div, exp, raiz, média, áreas) | ✅ [Aula03/Exercicio BNF KK-102.md](Aula03/Exercicio%20BNF%20KK-102.md) |
+| Questionário BNF | 7 questões: notação (`" "`, `\|`, `{ }`), leitura de regra recursiva de soma, regra de identificador, regra de dígito, validação de instruções contra o BNF do Material 3 | ✅ [Aula03/Questionario.md](Aula03/Questionario.md) |
+| Lexer (A+B+C) | Montar os fragmentos do slide num tokenizer de arquivo `.mines`; acrescentar `//`, `*`, `/`, `leia`, `>`, `<`, `!`; flag `-coment` inclui comentários no fluxo | ✅ [Aula04/Exercicio Lexer.md](Aula04/Exercicio%20Lexer.md) + [lexer.py](Aula04/lexer.py) |
 
 ## 9. Índice de navegação
 
 - **Base teórica dos slides** → Anexo A (abaixo)
 - **Bibliografia** → Anexo B (abaixo)
 - **Definição da linguagem** → [Aula02/Sintaxe MineonScript.md](Aula02/Sintaxe%20MineonScript.md)
+- **Gramática formal (BNF)** → [Aula03/Questionario.md](Aula03/Questionario.md), seção "Gramática de referência"
+- **Tradutor — fase 1 (lexer)** → [Aula04/lexer.py](Aula04/lexer.py) · `python lexer.py exemplo.mines [-coment]`
 - **Desenho do transpilador** → [Aula02/Fluxograma Tradutor Python.md](Aula02/Fluxograma%20Tradutor%20Python.md)
 - **Regras do repositório** → [../../CLAUDE.md](../../CLAUDE.md)
 
@@ -207,7 +217,11 @@ Criado em **1959 por John Backus**, aprimorado em **1960 por Peter Naur**; nasce
 
 **Gramática MineonScript do slide (resumo):** `<programa> ::= <instrucoes> <retorno>`; instruções = atribuição | saída (`print`) | entrada (`input`) | condicional (`se`/`senao` com `{ }`) | loop (`enquanto`); expressões em camadas `<expressao>` → `<termo>` → `<fator>` (precedência de `*` `/` sobre `+` `-`); `<condicao>` usa `==`, `<`, `>` e `!`; `<retorno> ::= "retorna" <numero>`. O slide também mostra o início do LEXER em Python (`re` + lista `TOKENS_FONTE` de pares nome/regex).
 
+**Gramática completa transcrita do PDF** (não duplicar aqui) → [Aula03/Questionario.md](Aula03/Questionario.md), seção "Gramática de referência". É a fonte formal pra qualquer questão de BNF.
+
 **Exercício resolvido:** BNF da calculadora KK-102 → [Aula03/Exercicio BNF KK-102.md](Aula03/Exercicio%20BNF%20KK-102.md) (versão com precedência embutida na gramática, melhor que a proposta do slide, que deixa `<operacao_binaria>` ambígua).
+
+**Inconsistências do Material 3** (anotadas pro tradutor): `<string>` é usada em `<entrada>` mas nunca definida · o LEXER do slide usa os tokens `ESCREVA`/`LEIA` enquanto a gramática usa `"print"`/`"input"` · `<operador_relacional>` só tem `==`, `<`, `>`.
 
 ### Slide 1 — Fundamentos (SI, dados, fluxogramas)
 

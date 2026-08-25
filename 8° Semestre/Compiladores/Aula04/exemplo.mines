@@ -1,0 +1,33 @@
+// Arquivo de teste do lexer - exercita todos os 24 tokens.
+// Media de duas notas, com classificacao e contagem.
+
+leia(n1)
+leia(n2)
+media = (n1 + n2) / 2
+
+se media == 10 {
+    escreva("Nota maxima!")
+}
+
+se media > 7 {
+    escreva("Aprovado")
+} senao {
+    escreva("Recuperacao")
+}
+
+// laco de repeticao
+contador = 0
+enquanto contador < 3 {
+    contador = contador + 1
+    escreva("volta")
+}
+
+// negacao, multiplicacao e subtracao
+se !(contador == 0) {
+    dobro = contador * 2
+    resto = 10 - contador
+    escreva(dobro)
+    escreva(resto)
+}
+
+retorna 0
