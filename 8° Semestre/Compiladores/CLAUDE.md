@@ -2,7 +2,7 @@
 
 > **Spec viva.** Contexto da disciplina lido pelo agente em toda sessão. Atualizar no mesmo commit que adiciona aula, exercício ou extensão de sintaxe.
 >
-> **Última revisão:** 2026-08-25
+> **Última revisão:** 2026-09-11
 > **Regras do repositório inteiro:** [../../CLAUDE.md](../../CLAUDE.md) · **Linguagem da disciplina:** [Aula02/Sintaxe MineonScript.md](Aula02/Sintaxe%20MineonScript.md)
 
 ---
@@ -11,7 +11,7 @@
 
 Passar em Compiladores com nota e sair com um **transpilador MineonScript → Python** funcionando (Unidade IV). Todo exercício semanal resolvido aqui vale nota na avaliação contínua **e** é peça do tradutor final.
 
-**Placar:** 4 aulas registradas · 12 exercícios entregues · 0 pendentes · **lexer funcionando** (1ª fase do tradutor) · próxima prova **P1 em 22/09/2026**.
+**Placar:** 4 aulas registradas · 12 exercícios entregues · 0 pendentes · **lexer funcionando** (1ª fase do tradutor) · **Teste 1 = 35/38** ([gabarito](Aula01/Teste%201%20-%20Gabarito%20Comentado.md)) · **Teste 4 = 6/6** ([gabarito](Aula04/Teste%204%20-%20Gabarito.md)) · próxima prova **P1 em 22/09/2026**.
 
 ## 1. O que é
 
@@ -67,10 +67,10 @@ Padrão: `AulaXX/Exercicio X.md` — um arquivo por exercício, código MineonSc
 
 | Pasta | Conteúdo | Saída |
 |---|---|---|
-| [Aula01/](Aula01) | Exercicio B (notas/conceito) · C (jogo adivinhação) · D (máquina R$ 5,00 com loop) · E (fila com prioridades) | 4 algoritmos em MineonScript; origem das extensões `senao`, `enquanto`, listas |
+| [Aula01/](Aula01) | Exercicio B (notas/conceito) · C (jogo adivinhação) · D (máquina R$ 5,00 com loop) · E (fila com prioridades) · [Teste 1 - Gabarito Comentado.md](Aula01/Teste%201%20-%20Gabarito%20Comentado.md) | 4 algoritmos em MineonScript; origem das extensões `senao`, `enquanto`, listas; gabarito do Teste 1 (35/38) com os 3 erros dissecados |
 | [Aula02/](Aula02) | [Sintaxe MineonScript.md](Aula02/Sintaxe%20MineonScript.md) · Exercicio A (3 produtos: soma+média) · B (5 aleatórios, >10 e <20) · C (máquina R$ 4,50) · [Fluxograma Tradutor Python.md](Aula02/Fluxograma%20Tradutor%20Python.md) · [Questionario.md](Aula02/Questionario.md) | **Definição da linguagem** + desenho do transpilador (Mermaid) + gabarito comentado (fases da tradução, compilador vs interpretador) |
 | [Aula03/](Aula03) | Aula03.pdf (slides BNF) · [Exercicio BNF KK-102.md](Aula03/Exercicio%20BNF%20KK-102.md) · [Questionario.md](Aula03/Questionario.md) | Gramática BNF completa da calculadora, com precedência embutida + gabarito comentado de BNF (notação, derivação, validação de instruções) |
-| [Aula04/](Aula04) | Aula 04.pdf (slides Lexer) · [Exercicio Lexer.md](Aula04/Exercicio%20Lexer.md) · **[lexer.py](Aula04/lexer.py)** · [exemplo.mines](Aula04/exemplo.mines) | **1ª fase do tradutor rodando** — 24 tokens, flag `-coment`, erro léxico com linha/coluna |
+| [Aula04/](Aula04) | Aula 04.pdf (slides Lexer) · [Exercicio Lexer.md](Aula04/Exercicio%20Lexer.md) · **[lexer.py](Aula04/lexer.py)** · [exemplo.mines](Aula04/exemplo.mines) · [Teste 4 - Gabarito.md](Aula04/Teste%204%20-%20Gabarito.md) | **1ª fase do tradutor rodando** — 24 tokens, flag `-coment`, erro léxico com linha/coluna |
 
 **Fonte de verdade da linguagem** = `Aula02/Sintaxe MineonScript.md`. O §5 aqui é resumo; se divergir, o arquivo de sintaxe manda.
 
@@ -130,6 +130,9 @@ Antes de "consertar" algo abaixo, saiba que é intencional / já resolvido:
 - **A ordem da lista `TOKENS` em [Aula04/lexer.py](Aula04/lexer.py) é regra de desempate, não estética.** O laço para no **primeiro** padrão que casa (`break`), sem procurar o casamento mais longo. Logo, todo padrão que é **prefixo** de outro tem que vir **depois** dele: `COMENTARIO` (`//`) antes de `DIV` (`/`), `IGUALDADE` (`==`) antes de `IGUAL` (`=`), e `NOME` sempre por último (senão engole todas as palavras reservadas). Errar isso não dá erro no lexer — dá lixo silencioso no fluxo de tokens, que só estoura como "erro de sintaxe" numa linha correta. Ao acrescentar `>=` ou `<=` no futuro, entram **antes** de `MAIOR`/`MENOR`. Prova empírica na seção B de [Aula04/Exercicio Lexer.md](Aula04/Exercicio%20Lexer.md).
 - **No BNF do Material 3, `input` não é instrução isolada.** A única regra é `<entrada> ::= <identificador> "=" "input" "(" <string> ")"` — `input(x)` sozinho **não deriva**. E `<retorno> ::= "retorna" <numero>` aceita só literal numérico, nunca expressão (`retorna x + 1` é inválido). São as duas pegadinhas do questionário da Aula03.
 - **A numeração dos exercícios é do professor, não sequencial na pasta.** `Aula01` tem B, C, D, E (sem A); `Aula02` tem A, B, C. Não renomear pra "arrumar" — a letra é a referência usada em aula.
+- **O lexer descarta DOIS tokens: `ESPACO` e `COMENTARIO`.** O fragmento do slide (Material 3, p.4) mostra só `if tipo != "ESPACO"` e induz ao erro — mas aquele é o tradutor incompleto, antes do item B do exercício acrescentar o comentário de linha. No lexer terminado, comentário é descartado junto com espaço, e a flag `-coment` é que o traz de volta. O Teste 4 cobrou exatamente isso em caixa de seleção, com enunciado no singular ("qual é o token ignorado"): marcar só `ESPACO` dá zero. Ver [Aula04/Teste 4 - Gabarito.md](Aula04/Teste%204%20-%20Gabarito.md).
+- **A cadeia do professor NÃO é a pirâmide DIKW.** No Slide 1 vale **Dado → Informação → Inteligência → Conhecimento**: um conjunto de informações forma uma **inteligência**, não um conhecimento. Toda outra fonte (DIKW clássica: *data, information, knowledge, wisdom*) põe conhecimento logo depois de informação — e foi exatamente essa troca que custou 1 ponto no Teste 1. Na prova, responder pela cadeia do professor. Ver [Aula01/Teste 1 - Gabarito Comentado.md](Aula01/Teste%201%20-%20Gabarito%20Comentado.md).
+- **Hardware básico inclui as DUAS pontas de E/S.** "Hardware (CPU, memórias, E/S)" do Anexo A significa CPU + memória principal + dispositivo de entrada + dispositivo de saída. Marcar só a entrada zera a questão; Sistema Operacional nunca entra, porque é software. Também custou 1 ponto no Teste 1.
 - **Os slides não seguem a ordem das pastas.** O "Slide 1" (fundamentos: SI, dados, fluxogramas) é material de base, não conteúdo da Aula01. O mapeamento correto está no Anexo A.
 - **Caminho da pasta tem `°` e espaço** — todo comando de shell precisa de aspas duplas. Ver [../../CLAUDE.md §6](../../CLAUDE.md).
 
@@ -157,6 +160,8 @@ Antes de "consertar" algo abaixo, saiba que é intencional / já resolvido:
 | E | Fila de banco com prioridades G > I > P > N, desempate por chegada. `[P,I,G,N,I]` → ordem de atendimento. Extra: evitar espera eterna do Normal | ✅ [Aula01/Exercicio E.md](Aula01/Exercicio%20E.md) |
 | BNF | Gramática BNF da calculadora KK-102 (soma, sub, mult, div, exp, raiz, média, áreas) | ✅ [Aula03/Exercicio BNF KK-102.md](Aula03/Exercicio%20BNF%20KK-102.md) |
 | Questionário BNF | 7 questões: notação (`" "`, `\|`, `{ }`), leitura de regra recursiva de soma, regra de identificador, regra de dígito, validação de instruções contra o BNF do Material 3 | ✅ [Aula03/Questionario.md](Aula03/Questionario.md) |
+| Teste 1 | Teste de Conceitos Fundamentais (Slide 1) no Google Forms — 35/38, com os 3 erros analisados contra o Anexo A | ✅ [Aula01/Teste 1 - Gabarito Comentado.md](Aula01/Teste%201%20-%20Gabarito%20Comentado.md) |
+| Teste 4 | Teste de Tokenizer (Material 3) no Google Forms — 6/6, gabarito com a pegadinha do token ignorado | ✅ [Aula04/Teste 4 - Gabarito.md](Aula04/Teste%204%20-%20Gabarito.md) |
 | Lexer (A+B+C) | Montar os fragmentos do slide num tokenizer de arquivo `.mines`; acrescentar `//`, `*`, `/`, `leia`, `>`, `<`, `!`; flag `-coment` inclui comentários no fluxo | ✅ [Aula04/Exercicio Lexer.md](Aula04/Exercicio%20Lexer.md) + [lexer.py](Aula04/lexer.py) |
 
 ## 9. Índice de navegação
@@ -227,7 +232,7 @@ Criado em **1959 por John Backus**, aprimorado em **1960 por Peter Naur**; nasce
 
 **Sistema de Informação (SI):** Hardware (CPU, memórias, E/S) → Dados → Software (aplicativos, utilitários, SO, ling. programação) → Processos → Peopleware (operadores, técnicos, administradores) → Rede.
 
-**Dado vs Informação:** dado = símbolo isolado sem contexto (`a`, `1`, `Km`, `80`); informação = dado com contexto ("80 km/h na placa"). Cadeia da IA: **Dado → Informação → Inteligência → Conhecimento**. Computacional: bit ≅ dado; byte/word ≅ informação. Word = tamanho da palavra do sistema (8, 16, 32, 64 bits...).
+**Dado vs Informação:** dado = símbolo isolado sem contexto (`a`, `1`, `Km`, `80`); informação = dado com contexto ("80 km/h na placa"). Cadeia da IA: **Dado → Informação → Inteligência → Conhecimento** — conjunto de informações = **inteligência**; conjunto de inteligências = conhecimento. Não confundir com a pirâmide DIKW (ver Common Hurdles). Computacional: bit ≅ dado; byte/word ≅ informação. Word = tamanho da palavra do sistema (8, 16, 32, 64 bits...).
 
 **SIC (Sistema de Informação Computacional):** Central de processamento = CPU (registradores + cache) ↔ B.P. ↔ RAM, buffers de E/S, M.S. (memória secundária). Unidades: Hz, bps, B/s.
 
