@@ -3,9 +3,13 @@
 %  Espectrograma de uma senoide com frequencia linearmente crescente
 %  (chirp linear) analisada pelo algoritmo de STFT da atividade 13/ago.
 %
-%  Requer: meu_espectrograma.m (mesma pasta)
+%  Requer: meu_espectrograma.m (pasta da Atividade 13 Ago 26)
 % =====================================================================
 clear; close all; clc;
+
+% Torna visivel o algoritmo de espectrograma da Atividade de Lab. n. 01,
+% que mora na pasta daquela atividade.
+addpath(fullfile('..', 'Atividade 13 Ago 26'));
 
 %% --- i) Frequencia de amostragem ------------------------------------
 fs = 8000;                  % Hz
