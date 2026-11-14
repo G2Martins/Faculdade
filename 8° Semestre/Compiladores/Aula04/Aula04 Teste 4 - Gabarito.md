@@ -1,6 +1,6 @@
 # Teste 4 — Tokenizer (Google Forms) — Gabarito
 
-**Resultado:** 6/6 · conteúdo = [Aula 04.pdf](Aula%2004.pdf) (Material 3 — Tokenizer / Código Lexer) e o exercício entregue em [lexer.py](lexer.py).
+**Resultado:** 6/6 · conteúdo = [Aula 04.pdf](Aula%2004.pdf) (Material 3 — Tokenizer / Código Lexer) e o exercício entregue em [lexer.py](Aula04%20lexer.py).
 
 ---
 
@@ -23,7 +23,7 @@
 
 **Q6 — a pegadinha: são DOIS tokens, não um.** O enunciado usa singular ("qual é o token ignorado"), mas é caixa de seleção e exige `ESPACO` **e** `COMENTARIO`. Marcar só `ESPACO` dá 0/1.
 
-O fragmento do slide (página 4 do PDF) tem apenas `if tipo != "ESPACO"` e induz ao erro — mas aquele é o **tradutor incompleto**. O item C do próprio exercício manda reconhecer comentário de linha e exibi-lo somente com a flag `-coment`, o que significa que no comportamento padrão do lexer terminado o comentário também é descartado. É o que o nosso [lexer.py](lexer.py) faz:
+O fragmento do slide (página 4 do PDF) tem apenas `if tipo != "ESPACO"` e induz ao erro — mas aquele é o **tradutor incompleto**. O item C do próprio exercício manda reconhecer comentário de linha e exibi-lo somente com a flag `-coment`, o que significa que no comportamento padrão do lexer terminado o comentário também é descartado. É o que o nosso [lexer.py](Aula04%20lexer.py) faz:
 
 ```python
 DESCARTADOS = {"ESPACO", "COMENTARIO"}

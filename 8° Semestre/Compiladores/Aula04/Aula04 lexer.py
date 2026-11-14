@@ -2,7 +2,7 @@
 Analisador léxico (tokenizer) do MineonScript.
 
 Uso:
-    python lexer.py <arquivo.mines> [-coment]
+    python "Aula04 lexer.py" <arquivo.mines> [-coment]
 
 Sem o argumento -coment, os comentários de linha são descartados junto com os
 espaços em branco (comportamento padrão de um lexer). Com -coment, eles entram
@@ -96,7 +96,7 @@ def main():
     arquivos = [a for a in argumentos if not a.startswith("-")]
 
     if len(arquivos) != 1:
-        print("Uso: python lexer.py <arquivo.mines> [-coment]", file=sys.stderr)
+        print('Uso: python "Aula04 lexer.py" <arquivo.mines> [-coment]', file=sys.stderr)
         return 1
 
     try:

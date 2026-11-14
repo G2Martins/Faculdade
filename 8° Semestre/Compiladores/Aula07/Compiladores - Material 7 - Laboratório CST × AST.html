@@ -1,0 +1,676 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Laboratório CST × AST</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600;800&display=swap">
+<style>
+/* Layout: cabeçalho curto; editor + exemplos lado a lado; abas (Árvores | Terminal | Refatoração); CST larga em cima, AST embaixo; tudo empilha no celular. */
+:root {
+  --bg: #f3f5f9; --panel: #ffffff; --ink: #17223a; --muted: #5a667e; --line: #d6dde8; --soft: #eef2f8;
+  --accent: #1155cc; --accent-ink: #ffffff;
+  --nt-bg: #dce9f7; --nt-bd: #1155cc; --nt-ink: #0d2a5c;
+  --tk-bg: #fff2cc; --tk-bd: #b45f06; --tk-ink: #5b3a10; --lex: #980000;
+  --ast-bg: #dcefd5; --ast-bd: #38761d; --ast-ink: #1f3d12;
+  --edge: #8b96a8; --hl: #f2a900; --hl-soft: rgba(242, 169, 0, .22);
+  --ok: #2e7d32; --err: #c62828; --err-soft: #fdecea; --com: #6a8f4e;
+  --term-bg: #121823; --term-ink: #d9ead3; --term-head: #ffd966;
+  --font-display: "Bricolage Grotesque", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e131b; --panel: #161d29; --ink: #e4eaf3; --muted: #95a2b8; --line: #2a3445; --soft: #1c2533;
+    --accent: #7aa7f0; --accent-ink: #0e131b;
+    --nt-bg: #1b2c47; --nt-bd: #6e9be6; --nt-ink: #d6e4fb;
+    --tk-bg: #3a2d10; --tk-bd: #d19a3a; --tk-ink: #f3dfb8; --lex: #ff8a80;
+    --ast-bg: #1b3320; --ast-bd: #7bc47f; --ast-ink: #d4efd2;
+    --edge: #5d6a80; --hl: #ffc940; --hl-soft: rgba(255, 201, 64, .18);
+    --ok: #6fcf7a; --err: #ff6b6b; --err-soft: #3a1c1f; --com: #9cc47e;
+    --term-bg: #0a0e14; --term-ink: #d9ead3; --term-head: #ffd966;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e131b; --panel: #161d29; --ink: #e4eaf3; --muted: #95a2b8; --line: #2a3445; --soft: #1c2533;
+  --accent: #7aa7f0; --accent-ink: #0e131b;
+  --nt-bg: #1b2c47; --nt-bd: #6e9be6; --nt-ink: #d6e4fb;
+  --tk-bg: #3a2d10; --tk-bd: #d19a3a; --tk-ink: #f3dfb8; --lex: #ff8a80;
+  --ast-bg: #1b3320; --ast-bd: #7bc47f; --ast-ink: #d4efd2;
+  --edge: #5d6a80; --hl: #ffc940; --hl-soft: rgba(255, 201, 64, .18);
+  --ok: #6fcf7a; --err: #ff6b6b; --err-soft: #3a1c1f; --com: #9cc47e;
+  --term-bg: #0a0e14; --term-ink: #d9ead3; --term-head: #ffd966;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-block: 20px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 18px; }
+header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 24px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(28px, 4.2vw, 44px); line-height: 1.05; margin: 2px 0 0; text-wrap: balance; letter-spacing: -.01em; }
+h1 .x { color: var(--accent); font-weight: 600; padding: 0 .12em; }
+.lead { color: var(--muted); max-width: 62ch; margin: 0; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+.top { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 18px; }
+@media (max-width: 860px) { .top { grid-template-columns: 1fr; } }
+.editor { padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.editor label { font-weight: 700; font-size: 13px; }
+textarea { width: 100%; min-height: 168px; resize: vertical; font-family: var(--font-mono); font-size: 15px; line-height: 1.55;
+  background: var(--soft); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; tab-size: 4; }
+textarea:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.mode { font-size: 13px; color: var(--muted); }
+.mode b { color: var(--ink); }
+.side { padding: 14px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.stat { background: var(--soft); border-radius: 8px; padding: 8px 10px; }
+.stat .n { font-family: var(--font-display); font-weight: 800; font-size: 28px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat .l { font-size: 12px; color: var(--muted); }
+.stat.cst .n { color: var(--nt-bd); }
+.stat.ast .n { color: var(--ast-bd); }
+.badge { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; border-radius: 999px; padding: 3px 10px; }
+.badge.ok { color: var(--ok); background: color-mix(in srgb, var(--ok) 14%, transparent); }
+.badge.no { color: var(--err); background: color-mix(in srgb, var(--err) 14%, transparent); }
+.gone { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.gone .g { font-family: var(--font-mono); font-size: 12px; background: var(--tk-bg); color: var(--tk-ink); border: 1px solid var(--tk-bd); border-radius: 6px; padding: 0 6px; }
+.err { display: none; background: var(--err-soft); color: var(--err); border: 1px solid var(--err); border-radius: 8px; padding: 10px 12px; font-family: var(--font-mono); font-size: 14px; }
+.err.on { display: block; }
+.err small { display: block; font-family: var(--font-body); color: var(--muted); margin-top: 4px; }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.tab { font: inherit; font-weight: 700; font-size: 14px; background: none; border: 0; border-bottom: 3px solid transparent; color: var(--muted); padding: 8px 14px; cursor: pointer; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.view { display: flex; flex-direction: column; gap: 14px; }
+.card { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.card-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 14px; }
+.card-head h2 { font-family: var(--font-display); font-weight: 800; font-size: 20px; margin: 0; }
+.card-head h2 .sub { font-family: var(--font-body); font-weight: 400; font-size: 14px; color: var(--muted); margin-left: 6px; }
+.tools { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
+.source { font-family: var(--font-mono); font-size: 15px; line-height: 1.9; white-space: pre-wrap; word-break: break-word; background: var(--soft); border-radius: 8px; padding: 8px 12px; margin: 0; }
+.source .t { border-bottom: 2px solid var(--line); border-radius: 2px; cursor: default; }
+.source .t.hl { background: var(--hl-soft); border-bottom-color: var(--hl); }
+.source .t.bad { background: var(--err-soft); border-bottom-color: var(--err); color: var(--err); }
+.source .c { color: var(--com); font-style: italic; }
+.treebox { overflow-x: auto; border-radius: 8px; background: var(--soft); }
+.treebox svg { display: block; margin: 0 auto; }
+.treebox.fit svg { max-width: 100%; height: auto; }
+.status { min-height: 44px; font-size: 14px; background: var(--soft); border-left: 4px solid var(--hl); border-radius: 4px; padding: 8px 12px; }
+.status code { font-family: var(--font-mono); font-size: 13px; }
+.status .hint { color: var(--muted); }
+svg .edge { stroke: var(--edge); stroke-width: 1.3; fill: none; }
+svg .node rect { stroke-width: 1.2; }
+svg .node { cursor: pointer; }
+svg .nt rect { fill: var(--nt-bg); stroke: var(--nt-bd); }
+svg .nt text { fill: var(--nt-ink); font-family: var(--font-mono); font-weight: 600; font-size: 12px; }
+svg .tk rect { fill: var(--tk-bg); stroke: var(--tk-bd); }
+svg .tk .ty { fill: var(--tk-ink); font-family: var(--font-body); font-size: 10px; letter-spacing: .03em; }
+svg .tk .lx { fill: var(--lex); font-family: var(--font-mono); font-weight: 800; font-size: 14px; }
+svg .an rect { fill: var(--ast-bg); stroke: var(--ast-bd); }
+svg .an .ty { fill: var(--ast-ink); font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: .03em; }
+svg .an .lx { fill: var(--lex); font-family: var(--font-mono); font-weight: 800; font-size: 14px; }
+svg .dim { opacity: .28; }
+svg .node.hl rect { stroke: var(--hl); stroke-width: 3; }
+svg .node.org rect { stroke: var(--hl); stroke-width: 4; }
+svg .edge.hl { stroke: var(--hl); stroke-width: 2.4; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: var(--muted); align-items: center; }
+.sw { display: inline-block; width: 22px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: 5px; border: 1.5px solid; }
+.sw.nt { background: var(--nt-bg); border-color: var(--nt-bd); }
+.sw.tk { background: var(--tk-bg); border-color: var(--tk-bd); }
+.sw.an { background: var(--ast-bg); border-color: var(--ast-bd); }
+.sw.hl { background: transparent; border-color: var(--hl); border-width: 3px; }
+.term { background: var(--term-bg); color: var(--term-ink); font-family: var(--font-mono); font-size: 13.5px; line-height: 1.45; border-radius: 8px; padding: 12px 14px; margin: 0; overflow-x: auto; white-space: pre; }
+.term .h { color: var(--term-head); font-weight: 600; }
+.term .e { color: #ea9999; }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+@media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
+.ren { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
+.ren label { display: flex; flex-direction: column; font-size: 13px; font-weight: 700; gap: 3px; }
+.ren input { font-family: var(--font-mono); font-size: 15px; width: 9em; padding: 6px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--soft); color: var(--ink); }
+.btn { font: inherit; font-weight: 700; background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+.code { font-family: var(--font-mono); font-size: 14px; line-height: 1.6; white-space: pre; background: var(--soft); border-radius: 8px; padding: 10px 12px; margin: 0; overflow-x: auto; }
+.code mark { background: var(--hl-soft); color: var(--lex); font-weight: 800; border-radius: 3px; outline: 1px solid var(--hl); }
+.code .c { color: var(--com); font-style: italic; }
+.note { font-size: 14px; color: var(--muted); margin: 0; max-width: 75ch; }
+footer { font-size: 13px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { svg .node rect, .source .t { transition: stroke .12s, background .12s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">Compiladores · Material 7 · MineonScript</div>
+      <h1>Laboratório CST <span class="x">×</span> AST</h1>
+    </div>
+    <p class="lead">Digite uma instrução ou um programa. A árvore concreta guarda cada token; a abstrata guarda só o significado. Passe o mouse (ou toque) em qualquer nó para ver de onde ele vem e para onde vai.</p>
+  </header>
+
+  <section class="top">
+    <div class="panel editor">
+      <label for="src">Código MineonScript</label>
+      <textarea id="src" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+      <div class="chips" id="presets" aria-label="Exemplos"></div>
+      <div class="mode" id="mode"></div>
+    </div>
+    <div class="panel side">
+      <div class="stats">
+        <div class="stat cst"><div class="n" id="nCst">0</div><div class="l">nós na CST</div></div>
+        <div class="stat ast"><div class="n" id="nAst">0</div><div class="l">nós na AST</div></div>
+        <div class="stat"><div class="n" id="nRed">0%</div><div class="l">menor na AST</div></div>
+      </div>
+      <div class="mode" id="split"></div>
+      <div><span class="badge ok" id="lossless">✓ A CST devolve o texto original</span></div>
+      <div class="gone" id="gone"></div>
+      <div class="err" id="err" role="alert"></div>
+    </div>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-arv" aria-selected="true" aria-controls="v-arv">Árvores</button>
+    <button class="tab" role="tab" id="t-ter" aria-selected="false" aria-controls="v-ter">Terminal</button>
+    <button class="tab" role="tab" id="t-ref" aria-selected="false" aria-controls="v-ref">Refatoração</button>
+  </div>
+
+  <section class="view" id="v-arv" role="tabpanel" aria-labelledby="t-arv">
+    <div class="panel card">
+      <div class="card-head"><h2>Fonte<span class="sub">cada token sublinhado vira uma folha da CST</span></h2></div>
+      <pre class="source" id="source"></pre>
+    </div>
+    <div class="status" id="status" aria-live="polite"><span class="hint">Passe o mouse sobre um nó da CST, da AST ou sobre um token da fonte. Clique para fixar o destaque.</span></div>
+    <div class="panel card">
+      <div class="card-head">
+        <h2>CST<span class="sub">árvore de sintaxe concreta (parse tree)</span></h2>
+        <label class="tools"><input type="checkbox" id="fit" checked> ajustar à largura</label>
+      </div>
+      <div class="treebox fit" id="cstBox"></div>
+      <div class="legend">
+        <span><span class="sw nt"></span>não-terminal (regra da BNF)</span>
+        <span><span class="sw tk"></span>folha: tipo do token e lexema</span>
+        <span><span class="sw hl"></span>destaque</span>
+      </div>
+    </div>
+    <div class="panel card">
+      <div class="card-head"><h2>AST<span class="sub">árvore sintática abstrata, a mesma NoAST do Material 5</span></h2></div>
+      <div class="treebox fit" id="astBox"></div>
+      <div class="legend"><span><span class="sw an"></span>nó da AST: tipo e valor</span></div>
+    </div>
+  </section>
+
+  <section class="view" id="v-ter" role="tabpanel" aria-labelledby="t-ter" hidden>
+    <p class="note">A mesma saída do <code>cst_mineonscript.py</code>, para comparar com o que os alunos veem no terminal.</p>
+    <pre class="term" id="term"></pre>
+  </section>
+
+  <section class="view" id="v-ref" role="tabpanel" aria-labelledby="t-ref" hidden>
+    <div class="panel card">
+      <div class="card-head"><h2>Renomear pela CST</h2></div>
+      <p class="note">A refatoração troca só as folhas <code>NOME</code> e depois lê as folhas da esquerda para a direita, com o prefixo de cada uma. Espaços e comentários saem intactos, porque nunca foram jogados fora.</p>
+      <form class="ren" id="renForm">
+        <label for="renDe">Variável<input id="renDe" value="x"></label>
+        <label for="renPara">Novo nome<input id="renPara" value="valor"></label>
+        <button class="btn" type="submit">Renomear</button>
+      </form>
+      <div class="two">
+        <div><div class="eyebrow">Original</div><pre class="code" id="renA"></pre></div>
+        <div><div class="eyebrow" id="renLabel">Depois</div><pre class="code" id="renB"></pre></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Gramática, mensagens de erro e contagens idênticas às do programa da aula. Um <code>retorna</code> no texto ativa o modo programa; sem ele, o modo instrução (como <code>-e</code>).</footer>
+</div>
+
+<script>
+"use strict";
+// ------------------------------------------------------------------ 1. LEXER (igual ao Python: espaços e comentários vão para o prefixo)
+const TOKENS = [
+  ["COMENTARIO", /\/\/.*/y], ["ESPACO", /\s+/y],
+  ["SE", /\bse\b/y], ["SENAO", /\bsenao\b/y], ["ENQUANTO", /\benquanto\b/y],
+  ["ESCREVA", /\bescreva\b/y], ["LEIA", /\bleia\b/y], ["RETORNO", /\bretorna\b/y],
+  ["IGUALDADE", /==/y], ["IGUAL", /=/y], ["MAIOR", />/y], ["MENOR", /</y], ["NEGACAO", /!/y],
+  ["SOMA", /\+/y], ["SUB", /-/y], ["MUL", /\*/y], ["DIV", /\//y],
+  ["ABRE_CHAVE", /\{/y], ["FECHA_CHAVE", /\}/y], ["ABRE_PAR", /\(/y], ["FECHA_PAR", /\)/y],
+  ["NUMERO", /\d+/y], ["TEXTO", /".*?"/y], ["NOME", /[a-zA-Z_][a-zA-Z0-9_]*/y],
+];
+class ErroSintaxe extends Error { constructor(msg, pos) { super(msg); this.pos = pos; } }
+
+function lexer(codigo) {
+  const tokens = []; let pos = 0, prefixo = "";
+  while (pos < codigo.length) {
+    let achou = false;
+    for (const [tipo, re] of TOKENS) {
+      re.lastIndex = pos;
+      const m = re.exec(codigo);
+      if (m) {
+        if (tipo === "ESPACO" || tipo === "COMENTARIO") prefixo += m[0];
+        else { tokens.push({ tipo, texto: m[0], prefixo, ini: pos, idx: tokens.length }); prefixo = ""; }
+        pos = re.lastIndex; achou = true; break;
+      }
+    }
+    if (!achou) throw new ErroSintaxe(`Caractere inesperado: '${codigo[pos]}' na posição ${pos}`, pos);
+  }
+  tokens.push({ tipo: "EOF", texto: "", prefixo, ini: pos, idx: tokens.length });
+  return tokens;
+}
+
+// ------------------------------------------------------------------ 2/3. NoCST + ParserCST (um método por regra da BNF)
+let SEQ = 0;
+const no = (rotulo, filhos = [], token = null) => ({ id: "c" + (SEQ++), rotulo, filhos, token, pai: null });
+
+class ParserCST {
+  constructor(tokens) { this.tokens = tokens; this.pos = 0; }
+  atual(adiante = 0) { return this.tokens[Math.min(this.pos + adiante, this.tokens.length - 1)].tipo; }
+  consumir(tipo) {
+    const t = this.tokens[this.pos];
+    if (t.tipo !== tipo) throw new ErroSintaxe(`Erro Sintático: esperado '${tipo}', encontrado '${t.tipo}' ('${t.texto}')`, t.ini);
+    this.pos++; return no(t.tipo, [], t);
+  }
+  falha(msg) { throw new ErroSintaxe(msg, this.tokens[this.pos].ini); }
+  programa() { const n = no("<programa>", [this.instrucoes(), this.retorno()]); n.filhos.push(this.consumir("EOF")); return n; }
+  instrucoes() { const n = no("<instrucoes>"); while (!["FECHA_CHAVE", "RETORNO", "EOF"].includes(this.atual())) n.filhos.push(this.instrucao()); return n; }
+  instrucao() {
+    let f;
+    if (this.atual() === "NOME" && this.atual(2) === "LEIA") f = this.entrada();
+    else if (this.atual() === "NOME") f = this.atribuicao();
+    else if (this.atual() === "ESCREVA") f = this.saida();
+    else if (this.atual() === "SE") f = this.condicional();
+    else if (this.atual() === "ENQUANTO") f = this.loop();
+    else this.falha(`Instrução inválida iniciando com '${this.atual()}'`);
+    return no("<instrucao>", [f]);
+  }
+  atribuicao() { return no("<atribuicao>", [this.consumir("NOME"), this.consumir("IGUAL"), this.expressao()]); }
+  entrada() { return no("<entrada>", [this.consumir("NOME"), this.consumir("IGUAL"), this.consumir("LEIA"), this.consumir("ABRE_PAR"), this.consumir("TEXTO"), this.consumir("FECHA_PAR")]); }
+  saida() { return no("<saida>", [this.consumir("ESCREVA"), this.consumir("ABRE_PAR"), this.expressao(), this.consumir("FECHA_PAR")]); }
+  condicional() {
+    const n = no("<condicional>", [this.consumir("SE"), this.condicao(), this.consumir("ABRE_CHAVE"), this.instrucoes(), this.consumir("FECHA_CHAVE")]);
+    if (this.atual() === "SENAO") n.filhos.push(this.consumir("SENAO"), this.consumir("ABRE_CHAVE"), this.instrucoes(), this.consumir("FECHA_CHAVE"));
+    return n;
+  }
+  loop() { return no("<loop>", [this.consumir("ENQUANTO"), this.condicao(), this.consumir("ABRE_CHAVE"), this.instrucoes(), this.consumir("FECHA_CHAVE")]); }
+  condicao() {
+    if (this.atual() === "NEGACAO") return no("<condicao>", [this.consumir("NEGACAO"), this.condicao()]);
+    return no("<condicao>", [this.expressao(), this.operador_relacional(), this.expressao()]);
+  }
+  operador_relacional() {
+    if (!["IGUALDADE", "MENOR", "MAIOR"].includes(this.atual())) this.falha(`Operador relacional esperado, encontrado '${this.atual()}'`);
+    return no("<operador_relacional>", [this.consumir(this.atual())]);
+  }
+  expressao() { const n = no("<expressao>", [this.termo()]); while (["SOMA", "SUB"].includes(this.atual())) n.filhos.push(this.consumir(this.atual()), this.termo()); return n; }
+  termo() { const n = no("<termo>", [this.fator()]); while (["MUL", "DIV"].includes(this.atual())) n.filhos.push(this.consumir(this.atual()), this.fator()); return n; }
+  fator() {
+    if (["NUMERO", "NOME", "TEXTO"].includes(this.atual())) return no("<fator>", [this.consumir(this.atual())]);
+    if (this.atual() === "ABRE_PAR") return no("<fator>", [this.consumir("ABRE_PAR"), this.expressao(), this.consumir("FECHA_PAR")]);
+    this.falha(`Fator inesperado: '${this.atual()}'`);
+  }
+  retorno() { return no("<retorno>", [this.consumir("RETORNO"), this.consumir("NUMERO")]); }
+}
+
+// ------------------------------------------------------------------ 4. Folhas, texto, desenho em ├──
+function folhas(n, out = []) { if (n.token) out.push(n); else n.filhos.forEach(f => folhas(f, out)); return out; }
+const paraTexto = (cst, troca) => folhas(cst).map(f => f.token.prefixo + (troca && f.rotulo === "NOME" && f.token.texto === troca[0] ? troca[1] : f.token.texto)).join("");
+function descricao(n) {
+  if (!n.token) return n.rotulo;
+  let t = n.rotulo === "EOF" ? "EOF" : n.rotulo === "TEXTO" ? `TEXTO ${n.token.texto}` : `${n.rotulo} "${n.token.texto}"`;
+  const com = n.token.prefixo.match(/\/\/.*/g);
+  if (com) t += "   <- " + com.join(" ");
+  return t;
+}
+function desenhar(n, margem = "", ultimo = true, raiz = true) {
+  let linhas, nova;
+  if (raiz) { linhas = [descricao(n)]; nova = ""; }
+  else { linhas = [margem + (ultimo ? "└── " : "├── ") + descricao(n)]; nova = margem + (ultimo ? "    " : "│   "); }
+  n.filhos.forEach((f, i) => linhas.push(desenhar(f, nova, i === n.filhos.length - 1, false)));
+  return linhas.join("\n");
+}
+
+// ------------------------------------------------------------------ 5. CST -> AST (guardando de quais nós da CST cada nó veio)
+let ASEQ = 0;
+const A = (tipo, valor, filhos, origem) => ({ id: "a" + (ASEQ++), tipo, valor: valor ?? null, filhos: filhos || [], origem });
+function cstParaAst(n) {
+  const f = n.filhos;
+  switch (n.rotulo) {
+    case "<programa>": return A("PROGRAMA", null, [cstParaAst(f[0]), cstParaAst(f[1])], [n]);
+    case "<instrucoes>": return A("INSTRUCOES", null, f.map(cstParaAst), [n]);
+    case "<instrucao>": return cstParaAst(f[0]);
+    case "<atribuicao>": return A("ATRIBUICAO", "=", [A("IDENTIFICADOR", f[0].token.texto, [], [f[0]]), cstParaAst(f[2])], [n, f[1]]);
+    case "<entrada>": return A("ENTRADA", null, [A("IDENTIFICADOR", f[0].token.texto, [], [f[0]]), A("TEXTO", f[4].token.texto, [], [f[4]])], [n]);
+    case "<saida>": return A("SAIDA", null, [cstParaAst(f[2])], [n]);
+    case "<condicional>": { const k = [cstParaAst(f[1]), cstParaAst(f[3])]; if (f.length > 5) k.push(cstParaAst(f[7])); return A("CONDICIONAL", null, k, [n]); }
+    case "<loop>": return A("LOOP", null, [cstParaAst(f[1]), cstParaAst(f[3])], [n]);
+    case "<condicao>":
+      if (f[0].token) return A("CONDICAO", "!", [cstParaAst(f[1])], [n, f[0]]);
+      return A("CONDICAO", f[1].filhos[0].token.texto, [cstParaAst(f[0]), cstParaAst(f[2])], [n, f[1].filhos[0]]);
+    case "<expressao>": case "<termo>": {
+      let esq = cstParaAst(f[0]);
+      for (let i = 1; i < f.length; i += 2) esq = A("EXPRESSAO", f[i].token.texto, [esq, cstParaAst(f[i + 1])], [f[i]]);
+      return esq;
+    }
+    case "<fator>": {
+      if (f.length === 3) return cstParaAst(f[1]);
+      const t = f[0].token;
+      return A({ NUMERO: "NUMERO", NOME: "IDENTIFICADOR", TEXTO: "TEXTO" }[t.tipo], t.texto, [], [f[0]]);
+    }
+    case "<retorno>": return A("RETORNO", f[1].token.texto, [], [n, f[1]]);
+  }
+  throw new Error("Nó desconhecido: " + n.rotulo);
+}
+const contar = n => 1 + n.filhos.reduce((s, f) => s + contar(f), 0);
+function reprAst(n, l = 0) { let r = "  ".repeat(l) + "[" + n.tipo + (n.valor !== null ? ": " + n.valor : "") + "]\n"; n.filhos.forEach(f => r += reprAst(f, l + 1)); return r; }
+
+// ------------------------------------------------------------------ desenho das árvores (SVG)
+const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const curto = s => s.length > 16 ? s.slice(0, 14) + "…" + (s.endsWith('"') ? '"' : "") : s;
+function medir(n, tipo) {
+  if (tipo === "ast") {
+    const v = n.valor !== null ? curto(n.valor) : "";
+    return { w: Math.max(n.tipo.length * 7.4, v.length * 8.8) + 22, h: v ? 40 : 28, v };
+  }
+  if (!n.token) return { w: n.rotulo.length * 7.5 + 20, h: 28 };
+  if (n.rotulo === "EOF") return { w: 46, h: 28, v: "" };
+  const v = curto(n.token.texto);
+  return { w: Math.max(n.rotulo.length * 6.6, v.length * 8.8, 30) + 18, h: 40, v };
+}
+function desenharSVG(raiz, tipo) {
+  const GAP = 12, NIVEL = tipo === "ast" ? 66 : 58, PAD = 14;
+  let maxD = 0;
+  (function largura(n) {
+    n._m = medir(n, tipo);
+    const s = n.filhos.reduce((acc, f) => acc + largura(f), 0);
+    n._sw = Math.max(s, n._m.w + GAP);
+    return n._sw;
+  })(raiz);
+  (function posicionar(n, x0, d) {
+    n._d = d; maxD = Math.max(maxD, d);
+    if (!n.filhos.length) { n._x = x0 + n._sw / 2; return; }
+    const tot = n.filhos.reduce((a, f) => a + f._sw, 0);
+    let x = x0 + (n._sw - tot) / 2;
+    for (const f of n.filhos) { posicionar(f, x, d + 1); x += f._sw; }
+    n._x = (n.filhos[0]._x + n.filhos[n.filhos.length - 1]._x) / 2;
+  })(raiz, PAD, 0);
+  const W = raiz._sw + PAD * 2, H = (maxD + 1) * NIVEL + PAD;
+  const y = n => PAD + n._d * NIVEL;
+  const edges = [], nodes = [];
+  (function walk(n) {
+    for (const f of n.filhos) {
+      edges.push(`<line class="edge" data-from="${n.id}" data-to="${f.id}" x1="${n._x.toFixed(1)}" y1="${(y(n) + n._m.h).toFixed(1)}" x2="${f._x.toFixed(1)}" y2="${y(f).toFixed(1)}"/>`);
+      walk(f);
+    }
+    const { w, h, v } = n._m, x = n._x - w / 2, yy = y(n);
+    let cls, body, titulo;
+    if (tipo === "ast") {
+      cls = "an"; titulo = `[${n.tipo}${n.valor !== null ? ": " + n.valor : ""}]`;
+      body = v ? `<text class="ty" x="${n._x}" y="${yy + 15}" text-anchor="middle">${esc(n.tipo)}</text><text class="lx" x="${n._x}" y="${yy + 32}" text-anchor="middle">${esc(v)}</text>`
+               : `<text class="ty" x="${n._x}" y="${yy + 18}" text-anchor="middle">${esc(n.tipo)}</text>`;
+    } else if (!n.token) {
+      cls = "nt"; titulo = n.rotulo;
+      body = `<text x="${n._x}" y="${yy + 18}" text-anchor="middle">${esc(n.rotulo)}</text>`;
+    } else {
+      cls = "tk"; titulo = descricao(n);
+      body = n.rotulo === "EOF" ? `<text class="ty" x="${n._x}" y="${yy + 18}" text-anchor="middle">EOF</text>`
+        : `<text class="ty" x="${n._x}" y="${yy + 14}" text-anchor="middle">${esc(n.rotulo)}</text><text class="lx" x="${n._x}" y="${yy + 32}" text-anchor="middle">${esc(v)}</text>`;
+    }
+    nodes.push(`<g class="node ${cls}" data-id="${n.id}" tabindex="0"><title>${esc(titulo)}</title><rect x="${x.toFixed(1)}" y="${yy}" width="${w.toFixed(1)}" height="${h}" rx="${tipo === "ast" ? 9 : 5}"/>${body}</g>`);
+  })(raiz);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${Math.ceil(W)}" height="${Math.ceil(H)}" viewBox="0 0 ${Math.ceil(W)} ${Math.ceil(H)}" style="min-width:${Math.min(Math.ceil(W), Math.round(W * 0.62))}px" role="img" aria-label="${tipo === "ast" ? "AST" : "CST"}">${edges.join("")}${nodes.join("")}</svg>`;
+}
+
+// ------------------------------------------------------------------ estado e interface
+const EXEMPLOS = [
+  { nome: "x = 2 * (3 + 4)", codigo: "x = 2 * (3 + 4)" },
+  { nome: "escreva((a + b) * 2)", codigo: "escreva((a + b) * 2)" },
+  { nome: "Programa da aula", codigo: '// calcula o dobro de um valor positivo\nx = leia("Digite um valor: ")\nse x > 0 {\n    escreva(x * 2)   // dobro\n} senao {\n    escreva("VALOR INVALIDO")\n}\nretorna 0\n' },
+  { nome: "Laço enquanto", codigo: "i = 0\nenquanto i < 3 {\n    escreva(i)\n    i = i + 1   // incrementa\n}\nretorna 0\n" },
+  { nome: "a - b - c", codigo: "y = a - b - c" },
+  { nome: "Erro: falta )", codigo: "x = (2 + 3" },
+];
+const $ = id => document.getElementById(id);
+const S = { cst: null, ast: null, tokens: [], cstById: new Map(), astById: new Map(), astOf: new Map(), pinned: null, codigo: "" };
+
+function indexar() {
+  S.cstById.clear(); S.astById.clear(); S.astOf.clear();
+  let k = 0;
+  (function walk(n, pai) {
+    n.pai = pai; S.cstById.set(n.id, n);
+    if (n.token) { n.lo = n.hi = k++; }
+    else { n.lo = Infinity; n.hi = -Infinity; for (const f of n.filhos) { walk(f, n); n.lo = Math.min(n.lo, f.lo); n.hi = Math.max(n.hi, f.hi); } }
+  })(S.cst, null);
+  S.folhas = folhas(S.cst);
+  if (!S.ast) return;
+  (function walk(a) {
+    S.astById.set(a.id, a);
+    for (const o of a.origem) { if (!S.astOf.has(o.id)) S.astOf.set(o.id, []); S.astOf.get(o.id).push(a); }
+    a.filhos.forEach(walk);
+    let lo = Infinity, hi = -Infinity;
+    for (const o of a.origem) { lo = Math.min(lo, o.lo); hi = Math.max(hi, o.hi); }
+    for (const f of a.filhos) { lo = Math.min(lo, f.lo); hi = Math.max(hi, f.hi); }
+    a.lo = lo; a.hi = hi;
+  })(S.ast);
+}
+
+function analisar(codigo) {
+  SEQ = 0; ASEQ = 0;
+  const tokens = lexer(codigo);
+  const programa = tokens.some(t => t.tipo === "RETORNO");
+  const p = new ParserCST(tokens);
+  let cst;
+  if (programa) cst = p.programa();
+  else { cst = p.instrucao(); p.consumir("EOF"); }
+  return { tokens, cst, programa, ast: cstParaAst(cst) };
+}
+
+function renderFonte(tokens, ruim) {
+  const partes = [];
+  const pref = s => esc(s).replace(/\/\/.*/g, m => `<span class="c">${m}</span>`);
+  for (const t of tokens) {
+    partes.push(pref(t.prefixo));
+    if (t.tipo !== "EOF") partes.push(`<span class="t${ruim === t.idx ? " bad" : ""}" data-tok="${t.idx}" title="${esc(t.tipo)}">${esc(t.texto)}</span>`);
+  }
+  $("source").innerHTML = partes.join("") || " ";
+}
+
+function atualizar() {
+  const bruto = $("src").value;
+  try { localStorage.setItem("lab-cst-ast", bruto); } catch (e) {}
+  let codigo = bruto;
+  const err = $("err");
+  try {
+    const temRetorno = (() => { try { return lexer(bruto).some(t => t.tipo === "RETORNO"); } catch (e) { return false; } })();
+    if (!temRetorno) codigo = bruto.replace(/\s+$/, "");
+    const r = analisar(codigo);
+    Object.assign(S, { cst: r.cst, ast: r.ast, tokens: r.tokens, codigo, pinned: null });
+    indexar();
+    err.className = "err";
+    $("mode").innerHTML = r.programa ? "Modo <b>programa</b>: <code>&lt;programa&gt; ::= &lt;instrucoes&gt; &lt;retorno&gt;</code>"
+      : "Modo <b>instrução</b> (como <code>-e</code>). Para vários comandos, termine com <code>retorna 0</code>.";
+    renderFonte(r.tokens);
+    const nC = contar(r.cst), nA = contar(r.ast), nF = S.folhas.length;
+    $("nCst").textContent = nC; $("nAst").textContent = nA;
+    $("nRed").textContent = Math.round(100 * (1 - nA / nC)) + "%";
+    $("split").innerHTML = `CST: <b>${nF}</b> folhas (tokens) e <b>${nC - nF}</b> não-terminais.`;
+    const ok = paraTexto(r.cst) === codigo;
+    const b = $("lossless");
+    b.className = "badge " + (ok ? "ok" : "no");
+    b.textContent = ok ? "✓ A CST devolve o texto original, caractere por caractere" : "✗ O texto reconstruído difere do original";
+    const sumiu = {};
+    for (const f of S.folhas) if (!S.astOf.has(f.id)) sumiu[f.token.texto || "EOF"] = (sumiu[f.token.texto || "EOF"] || 0) + 1;
+    const ks = Object.keys(sumiu);
+    $("gone").innerHTML = ks.length ? "Tokens que somem na AST: " + ks.map(k => `<span class="g">${esc(k)}${sumiu[k] > 1 ? " ×" + sumiu[k] : ""}</span>`).join("") : "Nenhum token some na AST.";
+    $("cstBox").innerHTML = desenharSVG(r.cst, "cst");
+    $("astBox").innerHTML = desenharSVG(r.ast, "ast");
+    status(null);
+    $("term").innerHTML = terminal(r, codigo, nC, nA, ok);
+  } catch (e) {
+    if (!(e instanceof ErroSintaxe)) { console.error(e); }
+    let tokens = [];
+    try { tokens = lexer(codigo); } catch (e2) {}
+    const ruim = tokens.find(t => t.ini === e.pos);
+    renderFonte(tokens, ruim ? ruim.idx : -1);
+    const antes = codigo.slice(0, e.pos ?? 0).split("\n");
+    err.className = "err on";
+    err.innerHTML = esc(e.message) + `<small>Linha ${antes.length}, coluna ${antes[antes.length - 1].length + 1}. Corrija para ver as árvores.</small>`;
+    $("cstBox").innerHTML = ""; $("astBox").innerHTML = "";
+    ["nCst", "nAst"].forEach(i => $(i).textContent = "–"); $("nRed").textContent = "–"; $("split").textContent = "";
+    $("lossless").className = "badge no"; $("lossless").textContent = "Sem árvore: há um erro de sintaxe";
+    $("gone").textContent = "";
+    $("term").innerHTML = `<span class="h">1. CÓDIGO-FONTE</span>\n${esc(codigo)}\n\n<span class="e">${esc(e.message)}</span>`;
+    S.cst = null; S.ast = null;
+    status(null);
+  }
+  renomear();
+  marcarPreset();
+}
+
+function terminal(r, codigo, nC, nA, ok) {
+  const linha = "=".repeat(60);
+  const t = h => `\n<span class="h">${linha}\n${h}\n${linha}</span>\n`;
+  return t("1. CÓDIGO-FONTE") + esc(codigo) + "\n" +
+    t("2. CST - ÁRVORE DE SINTAXE CONCRETA") + esc(desenhar(r.cst)) + "\n" +
+    t("3. A CST DEVOLVE O TEXTO ORIGINAL?") + (ok ? "Sim, caractere por caractere." : "Não!") + "\n" +
+    t("4. AST - CONSTRUÍDA A PARTIR DA CST") + esc(reprAst(r.ast)) +
+    t("5. COMPARAÇÃO") + `CST: ${nC} nós   |   AST: ${nA} nós`;
+}
+
+// ------------------------------------------------------------------ destaque cruzado
+const PONT = { ABRE_PAR: "Parêntese: some na AST, porque a precedência já fica na forma da árvore.",
+  FECHA_PAR: "Parêntese: some na AST, porque a precedência já fica na forma da árvore.",
+  ABRE_CHAVE: "Chave: some na AST; o bloco vira um nó INSTRUCOES.", FECHA_CHAVE: "Chave: some na AST; o bloco vira um nó INSTRUCOES.",
+  EOF: "Fim do arquivo: guarda espaços e comentários finais no prefixo; some na AST." };
+const nomeA = a => `[${a.tipo}${a.valor !== null ? ": " + a.valor : ""}]`;
+function trecho(lo, hi) {
+  if (!(lo <= hi)) return "";
+  const fs = S.folhas.slice(lo, hi + 1);
+  const txt = fs.map((f, i) => (i ? f.token.prefixo : "") + f.token.texto).join("").replace(/\s+/g, " ").trim();
+  return txt.length > 60 ? txt.slice(0, 58) + "…" : txt;
+}
+function limpar() {
+  document.querySelectorAll(".hl, .org, .dim").forEach(e => e.classList.remove("hl", "org", "dim"));
+}
+function marcarCst(ids, fortes = []) {
+  const box = $("cstBox");
+  box.querySelectorAll(".node, .edge").forEach(e => e.classList.add("dim"));
+  for (const id of ids) {
+    const g = box.querySelector(`[data-id="${id}"]`); if (g) g.classList.remove("dim"), g.classList.add("hl");
+    box.querySelectorAll(`.edge[data-to="${id}"]`).forEach(e => { if (ids.has(S.cstById.get(id).pai?.id)) e.classList.remove("dim"), e.classList.add("hl"); });
+  }
+  for (const id of fortes) box.querySelector(`[data-id="${id}"]`)?.classList.add("org");
+}
+function marcarAst(ids) {
+  const box = $("astBox");
+  box.querySelectorAll(".node, .edge").forEach(e => e.classList.add("dim"));
+  for (const id of ids) {
+    const g = box.querySelector(`[data-id="${id}"]`); if (g) g.classList.remove("dim"), g.classList.add("hl");
+    box.querySelectorAll(`.edge[data-to="${id}"]`).forEach(e => { const pai = e.dataset.from; if (ids.has(pai)) e.classList.remove("dim"), e.classList.add("hl"); });
+  }
+}
+function marcarFonte(lo, hi) {
+  for (let i = lo; i <= hi; i++) { const f = S.folhas[i]; if (f && f.rotulo !== "EOF") document.querySelector(`.source .t[data-tok="${f.token.idx}"]`)?.classList.add("hl"); }
+}
+function subarvore(n, set = new Set()) { set.add(n.id); n.filhos.forEach(f => subarvore(f, set)); return set; }
+
+function focarCst(n) {
+  limpar();
+  const set = subarvore(n);
+  marcarCst(set, [n.id]);
+  if (n.lo <= n.hi) marcarFonte(n.lo, n.hi);
+  let alvo = [], cur = n;
+  while (cur && !(alvo = S.astOf.get(cur.id) || []).length) cur = cur.pai;
+  if (alvo.length) marcarAst(new Set(alvo.map(a => a.id)));
+  const direto = S.astOf.get(n.id) || [];
+  let msg;
+  const nome = n.token ? `folha <code>${esc(n.rotulo)}${n.rotulo !== "EOF" ? " " + esc(n.token.texto) : ""}</code>` : `<code>${esc(n.rotulo)}</code>`;
+  if (direto.length) msg = `${nome} vira ${direto.map(a => `<code>${esc(nomeA(a))}</code>`).join(" e ")} na AST.`;
+  else if (n.token && PONT[n.rotulo]) msg = `${nome}: ${PONT[n.rotulo]}`;
+  else if (n.token && n.rotulo === "IGUAL") msg = `${nome}: fica implícito no nó <code>ENTRADA</code>.`;
+  else if (n.token) msg = `${nome}: palavra-chave; some como token e vira o tipo do nó ${alvo.length ? `<code>${esc(alvo[0].tipo)}</code>` : "pai"}.`;
+  else if (n.filhos.length === 1) msg = `${nome}: cadeia unitária, só repassa o filho. Some na AST.`;
+  else if (n.rotulo === "<fator>") msg = `${nome} com parênteses: some; a AST guarda só a expressão de dentro.`;
+  else if (n.rotulo === "<instrucao>") msg = `${nome}: some na AST.`;
+  else if (n.rotulo === "<expressao>" || n.rotulo === "<termo>") msg = `${nome}: os operadores lado a lado viram nós <code>EXPRESSAO</code> encadeados à esquerda.`;
+  else msg = `${nome}: some na AST.`;
+  const com = n.token && n.token.prefixo.match(/\/\/.*/g);
+  if (com) msg += ` Guarda no prefixo o comentário <code>${esc(com.join(" "))}</code>.`;
+  if (!n.token && n.lo <= n.hi) msg += ` <span class="hint">Cobre: <code>${esc(trecho(n.lo, n.hi))}</code></span>`;
+  $("status").innerHTML = msg;
+}
+function focarAst(a) {
+  limpar();
+  marcarAst(subarvore(a));
+  const ids = new Set();
+  if (a.lo <= a.hi) for (const [id, c] of S.cstById) if (c.lo >= a.lo && c.hi <= a.hi && c.lo <= c.hi) ids.add(id);
+  a.origem.forEach(o => subarvore(o, ids));
+  marcarCst(ids, a.origem.map(o => o.id));
+  if (a.lo <= a.hi) marcarFonte(a.lo, a.hi);
+  $("status").innerHTML = `<code>${esc(nomeA(a))}</code> vem de ${a.origem.map(o => `<code>${esc(o.token ? o.rotulo + " " + o.token.texto : o.rotulo)}</code>`).join(" + ")} na CST. <span class="hint">Cobre: <code>${esc(trecho(a.lo, a.hi))}</code></span>`;
+}
+function status(x) {
+  limpar();
+  if (!S.cst) { $("status").innerHTML = '<span class="hint">Sem árvore para explorar enquanto houver erro de sintaxe.</span>'; return; }
+  $("status").innerHTML = '<span class="hint">Passe o mouse sobre um nó da CST, da AST ou sobre um token da fonte. Clique para fixar o destaque.</span>';
+}
+function alvoDe(ev) {
+  const g = ev.target.closest?.(".node, .source .t");
+  if (!g) return null;
+  if (g.dataset.tok !== undefined) { const f = S.folhas.find(f => f.token.idx === +g.dataset.tok); return f ? { k: "c", n: f } : null; }
+  const id = g.dataset.id;
+  return id[0] === "c" ? { k: "c", n: S.cstById.get(id) } : { k: "a", n: S.astById.get(id) };
+}
+function aplicar(t) { if (!t || !t.n) return; t.k === "c" ? focarCst(t.n) : focarAst(t.n); }
+for (const box of ["cstBox", "astBox", "source"]) {
+  const el = $(box);
+  el.addEventListener("mouseover", ev => { if (!S.cst || S.pinned) return; aplicar(alvoDe(ev)); });
+  el.addEventListener("mouseleave", () => { if (!S.cst || S.pinned) return; status(); });
+  el.addEventListener("click", ev => {
+    if (!S.cst) return;
+    const t = alvoDe(ev);
+    if (!t || (S.pinned && S.pinned.n === t.n)) { S.pinned = null; status(); return; }
+    S.pinned = t; aplicar(t);
+  });
+  el.addEventListener("focusin", ev => { if (S.cst) aplicar(alvoDe(ev)); });
+}
+
+// ------------------------------------------------------------------ refatoração
+function realce(texto, nome) {
+  return esc(texto).replace(/(\/\/.*)|\b([A-Za-z_]\w*)\b/g, (m, c, w) => c ? `<span class="c">${c}</span>` : (w === nome ? `<mark>${w}</mark>` : w));
+}
+function renomear(ev) {
+  if (ev) ev.preventDefault();
+  const de = $("renDe").value.trim(), para = $("renPara").value.trim() || de;
+  if (!S.cst) { $("renA").textContent = S.codigo || $("src").value; $("renB").textContent = "Corrija o erro de sintaxe primeiro."; return; }
+  const novo = paraTexto(S.cst, [de, para]);
+  const qtd = S.folhas.filter(f => f.rotulo === "NOME" && f.token.texto === de).length;
+  $("renA").innerHTML = realce(S.codigo, de);
+  $("renB").innerHTML = realce(novo, para);
+  $("renLabel").textContent = qtd ? `Depois: ${qtd} folha${qtd > 1 ? "s" : ""} NOME trocada${qtd > 1 ? "s" : ""}` : `Nenhuma folha NOME "${de}" encontrada`;
+}
+$("renForm").addEventListener("submit", renomear);
+
+// ------------------------------------------------------------------ abas, exemplos, ajuste
+const abas = [["t-arv", "v-arv"], ["t-ter", "v-ter"], ["t-ref", "v-ref"]];
+abas.forEach(([t, v]) => $(t).addEventListener("click", () => {
+  abas.forEach(([t2, v2]) => { $(t2).setAttribute("aria-selected", t2 === t); $(v2).hidden = v2 !== v; });
+}));
+const pres = $("presets");
+EXEMPLOS.forEach((ex, i) => {
+  const b = document.createElement("button");
+  b.className = "chip"; b.type = "button"; b.textContent = ex.nome; b.dataset.i = i;
+  b.addEventListener("click", () => { $("src").value = ex.codigo; atualizar(); });
+  pres.appendChild(b);
+});
+function marcarPreset() { pres.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", EXEMPLOS[b.dataset.i].codigo === $("src").value)); }
+$("fit").addEventListener("change", e => { $("cstBox").classList.toggle("fit", e.target.checked); $("astBox").classList.toggle("fit", e.target.checked); });
+let tm;
+$("src").addEventListener("input", () => { clearTimeout(tm); tm = setTimeout(atualizar, 180); });
+$("src").addEventListener("keydown", e => {
+  if (e.key === "Tab") { e.preventDefault(); const t = e.target, s = t.selectionStart; t.setRangeText("    ", s, t.selectionEnd, "end"); atualizar(); }
+});
+
+let inicial = EXEMPLOS[0].codigo;
+try { const s = localStorage.getItem("lab-cst-ast"); if (s && s.trim()) inicial = s; } catch (e) {}
+$("src").value = inicial;
+atualizar();
+</script>
+
+</body></html>

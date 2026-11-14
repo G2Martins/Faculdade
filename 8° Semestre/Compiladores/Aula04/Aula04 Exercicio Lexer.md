@@ -8,15 +8,15 @@
 >
 > **C.** Ao executar o programa, por intermédio do argumento `-coment`, ele deve considerar os Comentários de Linha de código.
 
-**Entrega:** [lexer.py](lexer.py) (tradutor) · [exemplo.mines](exemplo.mines) (arquivo de teste)
+**Entrega:** [lexer.py](Aula04%20lexer.py) (tradutor) · [exemplo.mines](Aula04%20exemplo.mines) (arquivo de teste)
 
 ---
 
 ## Como executar
 
 ```bash
-python lexer.py exemplo.mines            # comentários descartados (padrão)
-python lexer.py exemplo.mines -coment    # comentários entram no fluxo de tokens
+python "Aula04 lexer.py" "Aula04 exemplo.mines"            # comentários descartados (padrão)
+python "Aula04 lexer.py" "Aula04 exemplo.mines" -coment    # comentários entram no fluxo de tokens
 ```
 
 Saída: uma linha por token, com número da linha, tipo e lexema, e o total no fim.
@@ -29,7 +29,7 @@ O Material 3 traz três pedaços soltos. O tradutor junta os três e adiciona s�
 
 | Fragmento do slide | Onde ficou |
 |---|---|
-| Lista `TOKENS` (nome, padrão) | `TOKENS` em [lexer.py](lexer.py) |
+| Lista `TOKENS` (nome, padrão) | `TOKENS` em [lexer.py](Aula04%20lexer.py) |
 | `compilar_tokens()` — `re.compile` de cada padrão | `compilar_tokens()`, idêntico ao slide |
 | Laço `while pos < len(codigo)` com `padrao.match(codigo, pos)` | `analisar()` |
 
@@ -113,11 +113,11 @@ if tipo not in descartados:
 
 Repare que o comentário é **sempre reconhecido** — o que muda é só se ele é guardado. Tem que ser assim: se o padrão não fosse testado, o `//` cairia no `raise SyntaxError` e o programa morreria em qualquer arquivo comentado.
 
-Verificação no [exemplo.mines](exemplo.mines), que tem 4 comentários:
+Verificação no [exemplo.mines](Aula04%20exemplo.mines), que tem 4 comentários:
 
 ```
-python lexer.py exemplo.mines             →  91 tokens
-python lexer.py exemplo.mines -coment     →  95 tokens   (91 + 4 COMENTARIO)
+python "Aula04 lexer.py" "Aula04 exemplo.mines"             →  91 tokens
+python "Aula04 lexer.py" "Aula04 exemplo.mines" -coment     →  95 tokens   (91 + 4 COMENTARIO)
 ```
 
 ---
@@ -132,7 +132,7 @@ python lexer.py exemplo.mines -coment     →  95 tokens   (91 + 4 COMENTARIO)
 
 4. **Saída em tabela com número de linha.** É o que se olha para conferir a olho se o lexer acertou. Total no rodapé porque a verificação do item C é uma diferença de contagem.
 
-5. **Erros vão para `stderr` e o programa sai com código 1.** Permite encadear o lexer com o parser depois (`python lexer.py x.mines && python parser.py ...`) sem que uma falha passe despercebida.
+5. **Erros vão para `stderr` e o programa sai com código 1.** Permite encadear o lexer com o parser depois (`python "Aula04 lexer.py" x.mines && python parser.py ...`) sem que uma falha passe despercebida.
 
 ---
 
@@ -174,7 +174,7 @@ Casos verificados: os 24 tokens exercitados pelo `exemplo.mines` · `-coment` in
 
 ## Observações para as próximas aulas
 
-1. **`escreva`/`leia` é o dialeto oficial do lexer.** O BNF do Material 3 escreve as mesmas instruções como `print`/`input`, mas as duas listas de tokens do professor (Aula 03 e Aula 04) usam `ESCREVA`/`LEIA`. Para o tradutor, vale o lexer. Ver [Aula03/Questionario.md](../Aula03/Questionario.md), observação 2.
+1. **`escreva`/`leia` é o dialeto oficial do lexer.** O BNF do Material 3 escreve as mesmas instruções como `print`/`input`, mas as duas listas de tokens do professor (Aula 03 e Aula 04) usam `ESCREVA`/`LEIA`. Para o tradutor, vale o lexer. Ver [Aula03/Questionario.md](../Aula03/Aula03%20Questionario.md), observação 2.
 
 2. **Faltam tokens para fechar a gramática do Material 3.** O `<condicional>` do BNF usa `senao`, que está na lista, mas não há token para vírgula (`,`) nem para os operadores `>=` / `<=` (que também não existem no BNF — a gramática só tem `==`, `<`, `>`). Se a gramática crescer, `>=` e `<=` têm que entrar **antes** de `MAIOR` e `MENOR`, pela mesma regra de prefixo do `COMENTARIO`.
 
