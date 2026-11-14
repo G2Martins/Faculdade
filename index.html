@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faculdade · Árvore de Derivação</title>
+  <meta name="description" content="A graduação em Engenharia da Computação (IESB) inteira, semestre por semestre: disciplinas, aulas, exercícios, códigos e materiais, com o conteúdo real do repositório aberto para estudar.">
+  <meta property="og:title" content="Faculdade · Árvore de Derivação">
+  <meta property="og:description" content="8 semestres de Engenharia da Computação mapeados como uma árvore de derivação: cada disciplina um mini-site, cada arquivo uma folha.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f3eee3">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231c1a15'/%3E%3Cpath d='M32 12v14M32 26 18 40M32 26l14 14M18 40v10M46 40v10' stroke='%23f3eee3' stroke-width='5' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='32' cy='12' r='5' fill='%230e7c76'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site/style.css">
+  <script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <a class="pular" href="#app">Pular para o conteúdo</a>
+  <header class="topo">
+    <a class="marca" href="#/" aria-label="Início"><span class="nt">&lt;graduacao&gt;</span></a>
+    <nav class="acoes">
+      <button class="btn-busca" type="button" data-busca aria-label="Buscar no repositório"><span>Buscar</span> <kbd>/</kbd></button>
+      <button class="btn-icone" type="button" id="tema" aria-label="Alternar tema claro/escuro">◐</button>
+      <a class="btn-icone" href="https://github.com/G2Martins/Faculdade" target="_blank" rel="noopener" aria-label="Repositório no GitHub">GH</a>
+    </nav>
+  </header>
+  <nav class="trilha" id="trilha" aria-label="Caminho de derivação"></nav>
+  <main id="app" tabindex="-1">
+    <noscript><p class="vazio">Este site precisa de JavaScript para montar a árvore. O conteúdo completo está no <a href="https://github.com/G2Martins/Faculdade">repositório no GitHub</a>.</p></noscript>
+  </main>
+  <footer class="rodape" id="rodape"></footer>
+
+  <dialog class="busca" id="busca" aria-label="Busca">
+    <form method="dialog" class="busca-form">
+      <input id="busca-q" type="search" placeholder="Buscar semestre, disciplina, conceito ou arquivo…" autocomplete="off" aria-label="Termo de busca">
+      <button type="submit" class="btn-icone" aria-label="Fechar">esc</button>
+    </form>
+    <ol class="busca-res" id="busca-res"></ol>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/matlab.min.js"></script>
+  <script src="site/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,3935 @@
+{
+ "repo": "G2Martins/Faculdade",
+ "branch": "main",
+ "semestres": [
+  {
+   "id": "1",
+   "titulo": "1° Semestre",
+   "status": "concluido",
+   "resumo": "Introdução à programação em C.",
+   "disciplinas": [
+    {
+     "nome": "Algoritmos e Programação de Computadores (APC)",
+     "codigo": null,
+     "linguagens": [
+      "C"
+     ],
+     "resumo": "Introdução à programação imperativa em C: entrada/saída, operadores, condicionais, laços, vetores/matrizes, strings, structs e enums, funções e projetos finais em grupo (jogos e calculadora em modo texto).",
+     "conceitos": [
+      "variáveis e tipos",
+      "scanf/printf",
+      "if/else e switch",
+      "laços for/while/do-while",
+      "vetores e matrizes",
+      "strings",
+      "struct e enum",
+      "funções",
+      "projetos multi-arquivo"
+     ],
+     "topicos": [
+      {
+       "titulo": "Prática 1 — fórmulas e conversões",
+       "resumo": "10 exercícios de expressões aritméticas e conversões de unidades.",
+       "conceitos": [
+        "expressões aritméticas",
+        "math.h",
+        "conversão de unidades"
+       ],
+       "arquivos": [
+        {
+         "path": "1° Semestre/Prática 1/Aulas P1/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/Prática 1/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/Prática 1/Aulas P1/RaizQuadrada.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/Prática 1/p1.c",
+         "tipo": "c",
+         "resumo": "Média final ponderada (0,4·A1 + 0,6·A2)."
+        },
+        {
+         "path": "1° Semestre/Prática 1/p10.c",
+         "tipo": "c",
+         "resumo": "Decomposição em unidade/dezena/centena/milhar."
+        },
+        {
+         "path": "1° Semestre/Prática 1/p2.c",
+         "tipo": "c",
+         "resumo": "Área de triângulo."
+        },
+        {
+         "path": "1° Semestre/Prática 1/p3.c",
+         "tipo": "c",
+         "resumo": "Perímetro de circunferência (pizza), PI=3,1416."
+        },
+        {
+         "path": "1° Semestre/Prática 1/p4.c",
+         "tipo": "c",
+         "resumo": "Preço final com ICMS, COFINS e PIS/PASEP."
+        },
+        {
+         "path": "1° Semestre/Prática 1/p5.c",
+         "tipo": "c",
+         "resumo": "Conversão de GB para bytes."
+        },
+        {
+         "path": "1° Semestre/Prática 1/p6.c",
+         "tipo": "c",
+         "resumo": "Raízes de equação do 2º grau (Bhaskara)."
+        },
+        {
+         "path": "1° Semestre/Prática 1/p7.c",
+         "tipo": "c",
+         "resumo": "Altura atingida por avião usando seno do ângulo."
+        },
+        {
+         "path": "1° Semestre/Prática 1/p8.c",
+         "tipo": "c",
+         "resumo": "Segundos para horas/minutos/segundos."
+        },
+        {
+         "path": "1° Semestre/Prática 1/p9.c",
+         "tipo": "c",
+         "resumo": "Idade (anos/meses/dias) para dias."
+        }
+       ],
+       "slug": "pratica-1-formulas-e-conversoes"
+      },
+      {
+       "titulo": "Prática 2 — leitura de dados e cálculos",
+       "resumo": "10 exercícios com entrada via scanf: média, IMC, distância, tabuada.",
+       "conceitos": [
+        "scanf",
+        "tipos int/float",
+        "cálculo"
+       ],
+       "arquivos": [
+        {
+         "path": "1° Semestre/Prática 2/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/Prática 2/p1.c",
+         "tipo": "c",
+         "resumo": "Média aritmética de três reais."
+        },
+        {
+         "path": "1° Semestre/Prática 2/p10.c",
+         "tipo": "c",
+         "resumo": "Tabuada."
+        },
+        {
+         "path": "1° Semestre/Prática 2/p2.c",
+         "tipo": "c",
+         "resumo": "Quociente e resto da divisão."
+        },
+        {
+         "path": "1° Semestre/Prática 2/p3.c",
+         "tipo": "c",
+         "resumo": "Celsius para Fahrenheit."
+        },
+        {
+         "path": "1° Semestre/Prática 2/p4.c",
+         "tipo": "c",
+         "resumo": "Área de terreno."
+        },
+        {
+         "path": "1° Semestre/Prática 2/p5.c",
+         "tipo": "c",
+         "resumo": "Cálculo de IMC."
+        },
+        {
+         "path": "1° Semestre/Prática 2/p6.c",
+         "tipo": "c",
+         "resumo": "Depreciação de bem."
+        },
+        {
+         "path": "1° Semestre/Prática 2/p7.c",
+         "tipo": "c",
+         "resumo": "Salário por horas trabalhadas."
+        },
+        {
+         "path": "1° Semestre/Prática 2/p8.c",
+         "tipo": "c",
+         "resumo": "Distância entre dois pontos."
+        },
+        {
+         "path": "1° Semestre/Prática 2/p9.c",
+         "tipo": "c",
+         "resumo": "Caractere ASCII de um inteiro."
+        }
+       ],
+       "slug": "pratica-2-leitura-de-dados-e-calculos"
+      },
+      {
+       "titulo": "Práticas 3 — condicionais e laços",
+       "resumo": "10 exercícios: par/ímpar, faixas, bissexto, Fibonacci, fatorial, binário.",
+       "conceitos": [
+        "if/else",
+        "laços",
+        "Fibonacci",
+        "fatorial",
+        "base binária"
+       ],
+       "arquivos": [
+        {
+         "path": "1° Semestre/Práticas 3/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p1.c",
+         "tipo": "c",
+         "resumo": "Par ou ímpar."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p10.c",
+         "tipo": "c",
+         "resumo": "Decimal para binário."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p2.c",
+         "tipo": "c",
+         "resumo": "Desconto por faixa de valor."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p3.1.c",
+         "tipo": "c",
+         "resumo": "Variação do exercício 3."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p3.2.c",
+         "tipo": "c",
+         "resumo": "Variação do exercício 3."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p4.c",
+         "tipo": "c",
+         "resumo": "Classifica tecla: letra, dígito ou outro."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p5.c",
+         "tipo": "c",
+         "resumo": "Ano bissexto."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p6.c",
+         "tipo": "c",
+         "resumo": "Múltiplos de 3 entre 1 e 100."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p7.c",
+         "tipo": "c",
+         "resumo": "10 primeiros termos de Fibonacci."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p7_1.c",
+         "tipo": "c",
+         "resumo": "Variação de Fibonacci."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p8.c",
+         "tipo": "c",
+         "resumo": "Fatorial."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p9_1.c",
+         "tipo": "c",
+         "resumo": "Maior e menor de dez números."
+        },
+        {
+         "path": "1° Semestre/Práticas 3/p9_2.c",
+         "tipo": "c",
+         "resumo": "Variação do maior/menor."
+        }
+       ],
+       "slug": "praticas-3-condicionais-e-lacos"
+      },
+      {
+       "titulo": "Práticas 4 — vetores, strings, structs e enum",
+       "resumo": "10 exercícios com vetores, matrizes, strings, structs e enumeração.",
+       "conceitos": [
+        "vetores",
+        "matrizes",
+        "strings",
+        "struct",
+        "enum"
+       ],
+       "arquivos": [
+        {
+         "path": "1° Semestre/Práticas 4/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p10.c",
+         "tipo": "c",
+         "resumo": "Validação de mês com enumeração."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p1_1.c",
+         "tipo": "c",
+         "resumo": "Preenche vetor e localiza posição de um número."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p1_2.c",
+         "tipo": "c",
+         "resumo": "Variação do exercício 1."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p2.c",
+         "tipo": "c",
+         "resumo": "Notas de 10 alunos: média e quantos acima da média."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p3.c",
+         "tipo": "c",
+         "resumo": "Nota fiscal: total por produto e geral."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p4.c",
+         "tipo": "c",
+         "resumo": "Frase em matriz 6x5."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p5.c",
+         "tipo": "c",
+         "resumo": "String em maiúsculo e minúsculo."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p6.c",
+         "tipo": "c",
+         "resumo": "Conjugação de verbo no presente do indicativo."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p7.c",
+         "tipo": "c",
+         "resumo": "Struct de data em formato BR/US."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p8.c",
+         "tipo": "c",
+         "resumo": "Agenda de 10 contatos (struct)."
+        },
+        {
+         "path": "1° Semestre/Práticas 4/p9.c",
+         "tipo": "c",
+         "resumo": "Busca de e-mail por matrícula (struct)."
+        }
+       ],
+       "slug": "praticas-4-vetores-strings-structs-e-enum"
+      },
+      {
+       "titulo": "Projeto APC — Espetáculo (Elisa)",
+       "resumo": "Projeto em grupo em C (sistema de espetáculo/entretenimento, segundo o README).",
+       "conceitos": [
+        "strings",
+        "menu",
+        "unistd/time"
+       ],
+       "arquivos": [
+        {
+         "path": "1° Semestre/APC/Espetáculo By Elisa/espetaculo.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "projeto-apc-espetaculo-elisa"
+      },
+      {
+       "titulo": "Projeto APC — JacoMath (Ithalo)",
+       "resumo": "Calculadora matemática interativa em C.",
+       "conceitos": [
+        "operações matemáticas",
+        "menu",
+        "math.h"
+       ],
+       "arquivos": [
+        {
+         "path": "1° Semestre/APC/JacoMath By Ithalo/jacomath.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "projeto-apc-jacomath-ithalo"
+      },
+      {
+       "titulo": "Projeto APC — Magus Game (Diogo)",
+       "resumo": "Jogo de aventura em modo texto, com 3 versões iterativas.",
+       "conceitos": [
+        "jogo em texto",
+        "strings",
+        "sleep",
+        "validação de entrada"
+       ],
+       "arquivos": [
+        {
+         "path": "1° Semestre/APC/Magus Game By Diogo/magus.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/APC/Magus Game By Diogo/magus_1.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/APC/Magus Game By Diogo/magus_2.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "projeto-apc-magus-game-diogo"
+      },
+      {
+       "titulo": "Projeto APC — Pedra-Papel-Tesoura (G2)",
+       "resumo": "Jogo com placar, dividido em módulos: lógica, placar e tela.",
+       "conceitos": [
+        "modularização",
+        "placar",
+        "multi-arquivo"
+       ],
+       "arquivos": [
+        {
+         "path": "1° Semestre/APC/PaperRockScissor_Game_By _G2/PaperRockScissor.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/APC/PaperRockScissor_Game_By _G2/scoreboards.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/APC/PaperRockScissor_Game_By _G2/scoreboards_1.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/APC/PaperRockScissor_Game_By _G2/screen.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "1° Semestre/APC/PaperRockScissor_Game_By _G2/teste.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "projeto-apc-pedra-papel-tesoura-g2"
+      }
+     ],
+     "slug": "algoritmos-e-programacao-de-computadores"
+    }
+   ],
+   "readme": "1° Semestre/README.md"
+  },
+  {
+   "id": "2",
+   "titulo": "2° Semestre",
+   "status": "concluido",
+   "resumo": "C avançado: ponteiros e recursão.",
+   "disciplinas": [
+    {
+     "nome": "APC II — Ponteiros, Funções e Recursão",
+     "codigo": null,
+     "linguagens": [
+      "C"
+     ],
+     "resumo": "Aprofundamento em C: ponteiros, aritmética de ponteiros, acesso byte a byte (char*), vetores e matrizes via ponteiros, strings, funções por referência e projetos (manipulação de pixels RGBA e jogo de adivinhação).",
+     "conceitos": [
+      "ponteiros",
+      "aritmética de ponteiros",
+      "endereços",
+      "passagem por referência",
+      "char* e byte a byte",
+      "vetores/matrizes e ponteiros",
+      "strings",
+      "alocação de memória"
+     ],
+     "topicos": [
+      {
+       "titulo": "Aula 01 — variáveis e memória",
+       "resumo": "Introdução: leitura/escrita de variáveis.",
+       "conceitos": [
+        "variável",
+        "leitura/escrita"
+       ],
+       "arquivos": [
+        {
+         "path": "2° Semestre/Aula01/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula01/aula01.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-01-variaveis-e-memoria"
+      },
+      {
+       "titulo": "Aula 02 — ponteiros: endereço e conteúdo",
+       "resumo": "&, *, ponteiro para variável; exercícios de alterar valor via ponteiro.",
+       "conceitos": [
+        "ponteiros",
+        "&",
+        "*"
+       ],
+       "arquivos": [
+        {
+         "path": "2° Semestre/Aula02/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula02/Aula02_1.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula02/Aula02_2.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula02/Aula02_3.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula02/Aula02_4.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula02/Aula02_5.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula02/Ex02_1.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula02/Ex02_2.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-02-ponteiros-endereco-e-conteudo"
+      },
+      {
+       "titulo": "Aula 03 — ponteiros e bytes",
+       "resumo": "Acesso byte a byte via char*, ex.: canais RGBA de um inteiro.",
+       "conceitos": [
+        "char*",
+        "endianness",
+        "RGBA"
+       ],
+       "arquivos": [
+        {
+         "path": "2° Semestre/Aula03/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula03/Aula03_1.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula03/Ex03_1.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-03-ponteiros-e-bytes"
+      },
+      {
+       "titulo": "Aula 04 — vetores e matrizes com ponteiros",
+       "resumo": "Percurso de vetores e matrizes por aritmética de ponteiros.",
+       "conceitos": [
+        "vetor",
+        "matriz",
+        "aritmética de ponteiros"
+       ],
+       "arquivos": [
+        {
+         "path": "2° Semestre/Aula04/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula04/Aula04_1.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula04/Aula04_2.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Aula04/Aula04_3.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-04-vetores-e-matrizes-com-ponteiros"
+      },
+      {
+       "titulo": "APC 2 — algoritmos com ponteiros e strings",
+       "resumo": "Algoritmos 3–6, caixa de texto, consoantes, média, resumo de conceitos e jogo (Projeto_2_1).",
+       "conceitos": [
+        "strings com ponteiros",
+        "funções",
+        "caixa de texto",
+        "consoantes/vogais"
+       ],
+       "arquivos": [
+        {
+         "path": "2° Semestre/APC_ 2/Algoritmo3.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/Algoritmo4.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/Algoritmo5.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/Algoritmo6.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/caixaTexto.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/caixaTexto_2.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/caixaTexto_3.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/consoante.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/consoante_2.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/consoante_3.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/media.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/Projeto_2_1.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/APC_ 2/resumo.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "apc-2-algoritmos-com-ponteiros-e-strings"
+      },
+      {
+       "titulo": "Atividades — Projeto 1 e Projeto 2",
+       "resumo": "Projeto 1: manipular pixels de imagem 10x10 via ponteiro (remover vermelho, escala de cinza). Projeto 2: jogo de adivinhação 1–100 em C (o README fala em \"Desafio Conta Banco\" em Java, mas o main.c é o jogo).",
+       "conceitos": [
+        "pixels RGBA",
+        "escala de cinza",
+        "jogo de adivinhação",
+        "funções"
+       ],
+       "arquivos": [
+        {
+         "path": "2° Semestre/Atividades/Projeto 2/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Atividades/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Atividades/Projeto 2/main.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "2° Semestre/Atividades/Projeto1.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "atividades-projeto-1-e-projeto-2"
+      }
+     ],
+     "slug": "apc-ii"
+    }
+   ],
+   "readme": "2° Semestre/README.md"
+  },
+  {
+   "id": "3",
+   "titulo": "3° Semestre",
+   "status": "concluido",
+   "resumo": "Estruturas de dados (C/C++) e Computação Gráfica (MATLAB).",
+   "disciplinas": [
+    {
+     "nome": "Estrutura de Dados",
+     "codigo": null,
+     "linguagens": [
+      "C",
+      "C++"
+     ],
+     "resumo": "Implementação de estruturas clássicas em C (registro, pilha, fila, listas ligadas, árvores), algoritmos de ordenação e desafios de juízes online (BeeCrowd) e DIO (C e C++ com POO).",
+     "conceitos": [
+      "struct/registro",
+      "pilha",
+      "fila",
+      "lista ligada",
+      "lista duplamente ligada",
+      "lista circular",
+      "árvore binária",
+      "árvore AVL/balanceada",
+      "bubble/selection/insertion/merge/quick sort",
+      "TAD",
+      "POO em C++"
+     ],
+     "topicos": [
+      {
+       "titulo": "Registro (structs)",
+       "resumo": "Quatro versões de registro com lista encadeada (professor, G2 e variações).",
+       "conceitos": [
+        "struct",
+        "typedef",
+        "lista encadeada"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/Registro/registro_1.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Registro/registro_2.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Registro/registro_G2.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Registro/registro_prof.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "registro-structs"
+      },
+      {
+       "titulo": "Pilha",
+       "resumo": "Pilha com vetor e com lista; desafios do livro, Simulado P1 (fila e Papai Noel) e questão de prova.",
+       "conceitos": [
+        "pilha",
+        "push/pop",
+        "lista encadeada",
+        "simulado"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/Desafios_livro/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/SimuladoP1/Fila/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/SimuladoP1/PapaiNoel/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/Desafios_livro/padrao_xCy.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/SimuladoP1/Fila/fila.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/SimuladoP1/Fila/filaSimulado.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/SimuladoP1/PapaiNoel/papaiNoel.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/SimuladoP1/PapaiNoel/papaiNoel_p_prof.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Desafios/SimuladoP1/PapaiNoel/Pensamento.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Implementacao_pilha.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Pilha/Pilha_vetores.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "pilha"
+      },
+      {
+       "titulo": "Fila",
+       "resumo": "Fila encadeada (versão do professor).",
+       "conceitos": [
+        "fila",
+        "enqueue/dequeue"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/Fila/fila_prof.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "fila"
+      },
+      {
+       "titulo": "Lista ligada",
+       "resumo": "Lista simples e duplamente ligada.",
+       "conceitos": [
+        "lista ligada",
+        "lista duplamente ligada"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/Lista/Lista_duplamente_Ligada.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Lista/Lista_ligada.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Lista/Lista_Prof_DuplaLigada.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "lista-ligada"
+      },
+      {
+       "titulo": "Ordenações",
+       "resumo": "Bubble, selection, merge, quick sort, função de primo; desafios de sites e da faculdade.",
+       "conceitos": [
+        "bubble sort",
+        "selection sort",
+        "merge sort",
+        "quick sort",
+        "primos"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/Ordenaçoes/Desafios/faculdade/ehprimo.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Ordenaçoes/Desafios/sites/ordenar.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Ordenaçoes/Faculdade/bubble.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Ordenaçoes/Faculdade/prof_buble_quick.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Ordenaçoes/Faculdade/quicksort.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Ordenaçoes/função_primo.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Ordenaçoes/ordenacoes.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Ordenaçoes/Ordenacoes_teste_03_06.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Ordenaçoes/selection_merge_1.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "ordenacoes"
+      },
+      {
+       "titulo": "Árvores (anotações)",
+       "resumo": "Anotações tldraw de aulas e revisões sobre árvores (conteúdo dos .tldr não lido).",
+       "conceitos": [
+        "árvore binária"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/Arvore/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Arvore/Faculdade/aula_20_05.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Arvore/Faculdade/Revisao_09.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Arvore/Faculdade/Revisao_10_06.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Arvore/Gran/arvore.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        }
+       ],
+       "slug": "arvores-anotacoes"
+      },
+      {
+       "titulo": "BeeCrowd",
+       "resumo": "Desafios: cartas fora (pilha/fila, 6 soluções), fila do recreio, ida à feira, mate, pares/ímpares.",
+       "conceitos": [
+        "pilha/fila",
+        "vetores",
+        "strings"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_cartas_fora/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_Fila_Recreio/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_Mate/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_cartas_fora/carta_fora_caio.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_cartas_fora/cartas_fora_G2.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_cartas_fora/cartas_foras.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_cartas_fora/cartas_foras_diogo.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_cartas_fora/cartas_foras_eliso.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_cartas_fora/cartas_foras_mayron.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_Fila_Recreio/fila_recreio.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_Ida_Feira/idaFeira.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_Mate/mate.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_Mate/mate2.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_Mate/Mate_melhorado.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_pares_impares/pares_impares_vetor.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Beecrowd/Desafio_pares_impares/simplificado_vetor.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "beecrowd"
+      },
+      {
+       "titulo": "DIO — desafios em C",
+       "resumo": "Desafios temáticos: robôs, IA simples, calculadora, biblioteca virtual, loja de cogumelos, jogo da velha, tráfego de cidade inteligente.",
+       "conceitos": [
+        "lógica",
+        "structs",
+        "menus",
+        "simulação"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Biblioteca_Virtual/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Calculadora/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Conversa_ChatGPT/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Diabetes_IA/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Loja_Cogumelos/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Primeira_IA/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Primeiro_Robo/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Robo_Distancia/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Robo_fabrica/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Robo_Inteligente/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Trafego_Cidade_Inteligente/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Biblioteca_Virtual/biblioteca.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Calculadora/calculadora.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Conversa_ChatGPT/Conversa_ChatGPT.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Diabetes_IA/IA_Diabetes.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Jogo_da_velha/jogoDaVelha.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Loja_Cogumelos/loja_cogumelos.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Primeira_IA/IA.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Primeiro_Robo/Robo.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Robo_Distancia/RoboDistancia.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Robo_fabrica/roboFabrica.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Robo_Inteligente/RoboInteligente.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Desafios/Trafego_Cidade_Inteligente/trafego.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "dio-desafios-em-c"
+      },
+      {
+       "titulo": "DIO — C++ (desafios, estruturas e POO)",
+       "resumo": "Classes em C++, estruturas (pilha, fila, lista circular, árvore, árvore balanceada, jogo da velha) e desafios (controle de velocidade, loja virtual, exército de robôs).",
+       "conceitos": [
+        "classes C++",
+        "árvore balanceada",
+        "lista circular",
+        "herança"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/ControleVelocidade/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/DescubraCarta/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/Exercito_Robos/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/LojaVirtual/REAME.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/Primeiro_Desafio/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Estrutura_de_dados/Arvore_balanceada/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/ControleVelocidade/controleVelocidade.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/DescubraCarta/descubraCarta.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/Exercito_Robos/ExercitoRobos.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/LojaVirtual/lojaVirtual.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Desafios/Primeiro_Desafio/Desafio.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Estrutura_de_dados/arvore.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Estrutura_de_dados/Arvore_balanceada/arvoreBalanceada.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Estrutura_de_dados/fila.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Estrutura_de_dados/jogoDaVelha_CPP.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Estrutura_de_dados/listaCircular.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/Estrutura_de_dados/pilha.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/POO/cachorro.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/POO/carro.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/POO/contaBancaria.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/POO/contaBancaria_2.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/Dio/Cpp/POO/pessoa.cpp",
+         "tipo": "cpp",
+         "resumo": ""
+        }
+       ],
+       "slug": "dio-c-desafios-estruturas-e-poo"
+      },
+      {
+       "titulo": "Notas de tipagem e documentação",
+       "resumo": "tipagem.tldr (notas de tipos) e README da disciplina.",
+       "conceitos": [
+        "tipos de dados"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Estrutura de Dados/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Estrutura de Dados/tipagem.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        }
+       ],
+       "slug": "notas-de-tipagem-e-documentacao"
+      }
+     ],
+     "slug": "estrutura-de-dados"
+    },
+    {
+     "nome": "Computação Gráfica",
+     "codigo": null,
+     "linguagens": [
+      "MATLAB"
+     ],
+     "resumo": "Programação gráfica em MATLAB: trabalhos da faculdade (espectro de cores, rasterização, triângulo, destaque de cor) e curso complementar Udemy (fundamentos MATLAB, gráficos 2D/3D, visão computacional).",
+     "conceitos": [
+      "rasterização de segmentos",
+      "espectro de cores",
+      "matrizes",
+      "plot 2D/3D",
+      "processamento de imagem",
+      "histograma",
+      "homografia",
+      "funções MATLAB"
+     ],
+     "topicos": [
+      {
+       "titulo": "Trabalhos da faculdade",
+       "resumo": "criar_espectro, destacar_cor_mais_forte, rasterizar_segmento (Bresenham segundo o README), triângulo.",
+       "conceitos": [
+        "rasterização",
+        "cor",
+        "imagem"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Computação Gráfica/Faculdade/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Faculdade/criar_espectro.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Faculdade/destacar_cor_mais_forte.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Faculdade/rasterizar_segmento.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Faculdade/triangulo.m",
+         "tipo": "m",
+         "resumo": ""
+        }
+       ],
+       "slug": "trabalhos-da-faculdade"
+      },
+      {
+       "titulo": "Udemy — Introdução ao MATLAB",
+       "resumo": "Variáveis, formatos, strings, simbólicas, funções matemáticas, vetores, matrizes, operações, entrada de dados e funções próprias.",
+       "conceitos": [
+        "variáveis",
+        "matrizes",
+        "funções",
+        "programação"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Minhas Funções/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_03.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_04.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_05.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_06.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_07.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_08.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_09.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_10.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_11.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_12.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_13.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_14.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_15.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_16.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_17.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_18.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_19.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Aula_20.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Minhas Funções/area_circulo.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Minhas Funções/soma.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Introdução/Minhas Funções/soma_e_produto.m",
+         "tipo": "m",
+         "resumo": ""
+        }
+       ],
+       "slug": "udemy-introducao-ao-matlab"
+      },
+      {
+       "titulo": "Udemy — Gráficos 2D",
+       "resumo": "Parâmetros de gráfico, marcadores, função de transferência de circuito, fplot, bar, stem.",
+       "conceitos": [
+        "plot",
+        "fplot",
+        "bar",
+        "stem"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 2D/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 2D/Aula_01.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 2D/Aula_02.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 2D/Aula_03.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 2D/Aula_04.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 2D/Aula_05.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 2D/Aula_06.m",
+         "tipo": "m",
+         "resumo": ""
+        }
+       ],
+       "slug": "udemy-graficos-2d"
+      },
+      {
+       "titulo": "Udemy — Gráficos 3D",
+       "resumo": "Superfícies, contornos e dados topográficos (topo.mat).",
+       "conceitos": [
+        "surf/mesh",
+        "contorno"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 3D/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 3D/Aula_01.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 3D/Aula_02.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Gráficos 3D/topo.mat",
+         "tipo": "mat",
+         "resumo": ""
+        }
+       ],
+       "slug": "udemy-graficos-3d"
+      },
+      {
+       "titulo": "Udemy — Visão Computacional",
+       "resumo": "Leitura de imagem, histograma/ginput, conversão uint8/double, escala, homografia planar, brilho; banco de imagens.",
+       "conceitos": [
+        "imagem",
+        "histograma",
+        "homografia",
+        "brilho"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/0 - Banco de Imagens/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/0 - Banco de Imagens/arara.jpg",
+         "tipo": "jpg",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/0 - Banco de Imagens/Bolas.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/0 - Banco de Imagens/Bolas_2.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/0 - Banco de Imagens/castle.jpeg",
+         "tipo": "jpeg",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/0 - Banco de Imagens/matlab.mp4",
+         "tipo": "mp4",
+         "resumo": "Vídeo."
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/0 - Banco de Imagens/tomates.jpg",
+         "tipo": "jpg",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/ATVD_01_02_03.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/Aula_01.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/Aula_02.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/Aula_03.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/Aula_04.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/Aula_05.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/Aula_06.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/Introdução.rtf",
+         "tipo": "rtf",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Visão Computacional/video-saida.mp4",
+         "tipo": "mp4",
+         "resumo": "Vídeo."
+        }
+       ],
+       "slug": "udemy-visao-computacional"
+      },
+      {
+       "titulo": "Udemy — polinômios e documentação",
+       "resumo": "Polinomios.m e READMEs.",
+       "conceitos": [
+        "polinômios"
+       ],
+       "arquivos": [
+        {
+         "path": "3° Semestre/Computação Gráfica/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "3° Semestre/Computação Gráfica/Udemy/Polinomios.m",
+         "tipo": "m",
+         "resumo": ""
+        }
+       ],
+       "slug": "udemy-polinomios-e-documentacao"
+      }
+     ],
+     "slug": "computacao-grafica"
+    }
+   ],
+   "readme": "3° Semestre/README.md"
+  },
+  {
+   "id": "4",
+   "titulo": "4° Semestre",
+   "status": "concluido",
+   "resumo": "POO em Java e monitoria.",
+   "disciplinas": [
+    {
+     "nome": "Programação Orientada a Objetos",
+     "codigo": null,
+     "linguagens": [
+      "Java"
+     ],
+     "resumo": "POO em Java: classes, encapsulamento, herança, polimorfismo, classes abstratas, interfaces, exceções e UML, com projetos (hotel, clínica veterinária, TCC, veículos, e-commerce).",
+     "conceitos": [
+      "encapsulamento",
+      "herança",
+      "polimorfismo",
+      "classes abstratas",
+      "interfaces",
+      "exceções",
+      "UML",
+      "coleções",
+      "MVC"
+     ],
+     "topicos": [
+      {
+       "titulo": "Aulas (anotações tldraw)",
+       "resumo": "Compilação, erros/exceções, genéricos, herança, polimorfismo e UML (conteúdo dos .tldr não lido).",
+       "conceitos": [
+        "compilação Java",
+        "exceções",
+        "generics",
+        "herança",
+        "polimorfismo",
+        "UML"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/Aulas/AulaCompilacao/aula.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Aulas/AulaErrosExececoes/aula.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Aulas/AulaGenerica/aula.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Aulas/AulaHeranca/aula01.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Aulas/AulaPolimorfismo/aula.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Aulas/AulaUML/aula.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        }
+       ],
+       "slug": "aulas-anotacoes-tldraw"
+      },
+      {
+       "titulo": "Parte 1 e Parte 2 — desafios introdutórios",
+       "resumo": "5+5 desafios em Java: laços, leitura via Scanner, cálculos.",
+       "conceitos": [
+        "Scanner",
+        "while",
+        "cálculos"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_1/Desafio01.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_1/Desafio02.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_1/Desafio03.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_1/Desafio04.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_1/Desafio05.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_2/desafio_01.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_2/desafio_02.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_2/desafio_03.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_2/desafio_04.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/Parte_2/desafio_05.java",
+         "tipo": "java",
+         "resumo": ""
+        }
+       ],
+       "slug": "parte-1-e-parte-2-desafios-introdutorios"
+      },
+      {
+       "titulo": "AtividadeHotel / AtividadeAvaliativaDiogo — sistema hoteleiro",
+       "resumo": "Hotel, Quarto, Hospede, Reserva, Servico, Fatura, Frigobar.",
+       "conceitos": [
+        "associação de classes",
+        "encapsulamento"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativaDiogo/br/edu/POO2024/Fatura.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativaDiogo/br/edu/POO2024/Frigobar.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativaDiogo/br/edu/POO2024/Hospede.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativaDiogo/br/edu/POO2024/Hotel.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativaDiogo/br/edu/POO2024/Main.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativaDiogo/br/edu/POO2024/Quarto.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativaDiogo/br/edu/POO2024/Reserva.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativaDiogo/br/edu/POO2024/Servico.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeHotel/Fatura.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeHotel/Frigobar.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeHotel/Hospede.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeHotel/Hotel.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeHotel/Main.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeHotel/Quarto.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeHotel/Reserva.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeHotel/Servico.java",
+         "tipo": "java",
+         "resumo": ""
+        }
+       ],
+       "slug": "atividadehotel-atividadeavaliativadiogo-sistema"
+      },
+      {
+       "titulo": "AtividadeP1 / AtividadeAvaliativa1 / IesbPOO — clínica veterinária",
+       "resumo": "Animal, Pessoa, Cliente, Veterinario, Secretaria, Consulta, Agendamento (IesbPOO inclui exceções customizadas).",
+       "conceitos": [
+        "herança",
+        "exceções customizadas"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativa1/br/edu/iesb_poo2024_atividadeAvaliativa1/Agendamento.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativa1/br/edu/iesb_poo2024_atividadeAvaliativa1/Animal.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativa1/br/edu/iesb_poo2024_atividadeAvaliativa1/Cliente.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativa1/br/edu/iesb_poo2024_atividadeAvaliativa1/Consulta.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativa1/br/edu/iesb_poo2024_atividadeAvaliativa1/Main.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativa1/br/edu/iesb_poo2024_atividadeAvaliativa1/Pessoa.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativa1/br/edu/iesb_poo2024_atividadeAvaliativa1/Secretaria.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeAvaliativa1/br/edu/iesb_poo2024_atividadeAvaliativa1/Veterinario.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeP1/Agendamento.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeP1/Animal.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeP1/Cliente.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeP1/Consulta.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeP1/Main.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeP1/Pessoa.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeP1/Secretaria.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/AtividadeP1/Veterinario.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/Agendamento.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/Animal.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/Cliente.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/Consulta.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/exceptions/AgendamentoInvalidoException.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/exceptions/ClienteNaoEncontradoException.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/Main.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/Pessoa.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/Secretaria.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/br/edu/iesb_poo2024_atividadeAvaliativa1/Veterinario.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/IesbPOO/src/module-info.java",
+         "tipo": "java",
+         "resumo": ""
+        }
+       ],
+       "slug": "atividadep1-atividadeavaliativa1-iesbpoo-clinica"
+      },
+      {
+       "titulo": "DEVLab1 — gestão de TCC",
+       "resumo": "Pessoa → Aluno e Professor → ProfessorOrientadorTCC; alocação de TCC.",
+       "conceitos": [
+        "herança",
+        "associação"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab1/Aluno.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab1/CoordenadorCurso.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab1/LinhaPesquisaOrientacao.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab1/Pessoa.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab1/Professor.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab1/ProfessorOrientadorTCC.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab1/SistemaGestaoAlocacoesTccMain.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab1/TrabalhoConclusaoCurso.java",
+         "tipo": "java",
+         "resumo": ""
+        }
+       ],
+       "slug": "devlab1-gestao-de-tcc"
+      },
+      {
+       "titulo": "DEVLab3 — abstração e interfaces",
+       "resumo": "Classe abstrata, classes concretas e interface IGerenciaArquivo.",
+       "conceitos": [
+        "classe abstrata",
+        "interface"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab3/ClasseAbstrataOO.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab3/ClasseConcreta.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab3/ClasseConcreta2.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab3/ClasseConcreta3.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab3/IGerenciaArquivo.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab3/Main.java",
+         "tipo": "java",
+         "resumo": ""
+        }
+       ],
+       "slug": "devlab3-abstracao-e-interfaces"
+      },
+      {
+       "titulo": "DEVLab4 — frota de veículos",
+       "resumo": "Veiculo abstrato, subclasses, CarroSedan e 3 interfaces; polimorfismo.",
+       "conceitos": [
+        "polimorfismo",
+        "interfaces"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab4/CarroSedan.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab4/DevLabMain.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab4/IGerenciaConfiguracoesVeiculo.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab4/IGerenciaVeiculoRemotamente.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab4/IReportErrosInformacoes.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab4/Veiculo.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab4/VeiculoPasseio.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab4/VeiculoTransporte.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/DEVLab4/VeiculoUtilitario.java",
+         "tipo": "java",
+         "resumo": ""
+        }
+       ],
+       "slug": "devlab4-frota-de-veiculos"
+      },
+      {
+       "titulo": "ExercicioP1 — ordem de serviço",
+       "resumo": "OrdemServico, EntregaVeiculoCliente, Veiculo.",
+       "conceitos": [
+        "classes",
+        "associação"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/Desafios/ExercicioP1/EntregaVeiculoCliente.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/ExercicioP1/Main.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/ExercicioP1/OrdemServico.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/ExercicioP1/Veiculo.java",
+         "tipo": "java",
+         "resumo": ""
+        }
+       ],
+       "slug": "exerciciop1-ordem-de-servico"
+      },
+      {
+       "titulo": "Atividade Avaliativa 2 — e-commerce (MVC)",
+       "resumo": "Camadas controller/model/exceptions: Carrinho, Produto, Plano, Endereço, Frete, Usuário, Administrador; exceções CarrinhoVazio e CepInvalido.",
+       "conceitos": [
+        "MVC",
+        "exceções",
+        "controllers"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/controller/CarrinhoController.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/controller/EnderecoController.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/controller/PlanoController.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/controller/ProdutoController.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/exceptions/CarrinhoVazioException.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/exceptions/CepInvalidoException.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/model/Administrador.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/model/Carrinho.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/model/Endereco.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/model/Frete.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/model/Main.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/model/Pessoa.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/model/Plano.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/model/Produto.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/br/edu/iesb_poo2024_atividadeAvaliativa2/model/Usuario.java",
+         "tipo": "java",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/POO/Desafios/iesb_poo2024_atividadeAvaliativa2/src/module-info.java",
+         "tipo": "java",
+         "resumo": ""
+        }
+       ],
+       "slug": "atividade-avaliativa-2-e-commerce-mvc"
+      },
+      {
+       "titulo": "Documentação",
+       "resumo": "READMEs do semestre e da disciplina.",
+       "conceitos": [],
+       "arquivos": [
+        {
+         "path": "4° Semestre/POO/README.md",
+         "tipo": "md",
+         "resumo": ""
+        }
+       ],
+       "slug": "documentacao"
+      }
+     ],
+     "slug": "programacao-orientada-a-objetos"
+    },
+    {
+     "nome": "Monitoria",
+     "codigo": null,
+     "linguagens": [
+      "C"
+     ],
+     "resumo": "Exercícios de monitoria em C: gerenciamento de vagas, jogo da memória e uma revisão (tldraw).",
+     "conceitos": [
+      "structs",
+      "jogos",
+      "revisão de C"
+     ],
+     "topicos": [
+      {
+       "titulo": "Exercícios de monitoria",
+       "resumo": "Gerenciamento de vagas, jogo da memória, anotação Revisao_09.",
+       "conceitos": [
+        "C"
+       ],
+       "arquivos": [
+        {
+         "path": "4° Semestre/Monitoria/gerenciamento_vagas.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/Monitoria/jogomemoria_2.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "4° Semestre/Monitoria/Revisao_09.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        }
+       ],
+       "slug": "exercicios-de-monitoria"
+      }
+     ],
+     "slug": "monitoria"
+    }
+   ],
+   "readme": "4° Semestre/README.md"
+  },
+  {
+   "id": "5",
+   "titulo": "5° Semestre",
+   "status": "concluido",
+   "resumo": "Algoritmos, programação dinâmica e complexidade.",
+   "disciplinas": [
+    {
+     "nome": "Análise de Dados e Algoritmos Avançados",
+     "codigo": null,
+     "linguagens": [
+      "Python",
+      "C"
+     ],
+     "resumo": "Algoritmos de ordenação e busca, recursão, programação dinâmica (Fibonacci, mochila 0/1, LCS), pilha/fila em C e análise de complexidade (custo operacional, Big-O).",
+     "conceitos": [
+      "bubble sort",
+      "merge sort",
+      "busca binária",
+      "recursão",
+      "Fibonacci",
+      "programação dinâmica",
+      "mochila 0/1",
+      "LCS",
+      "Big-O",
+      "pilha",
+      "fila",
+      "números primos"
+     ],
+     "topicos": [
+      {
+       "titulo": "Análise de Dados — programação dinâmica",
+       "resumo": "Script com Fibonacci (recursivo/memoizado) e notas de PD (mochila 0/1, LCS).",
+       "conceitos": [
+        "memoização",
+        "tabulação",
+        "mochila",
+        "LCS"
+       ],
+       "arquivos": [
+        {
+         "path": "5° Semestre/Análise de Dados/ProgramçãoDinamica.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Análise de Dados/2312082034.py",
+         "tipo": "py",
+         "resumo": ""
+        }
+       ],
+       "slug": "analise-de-dados-programacao-dinamica"
+      },
+      {
+       "titulo": "Aula 01 (25/02)",
+       "resumo": "Programa em C com menu (exercício introdutório).",
+       "conceitos": [
+        "C",
+        "menu"
+       ],
+       "arquivos": [
+        {
+         "path": "5° Semestre/Aula01.25.02/2312082034.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-01-25-02"
+      },
+      {
+       "titulo": "Aula 02 (11/03)",
+       "resumo": "Bubble sort, Fibonacci e entrada em Python; tldr de tipagem.",
+       "conceitos": [
+        "bubble sort",
+        "Fibonacci",
+        "input"
+       ],
+       "arquivos": [
+        {
+         "path": "5° Semestre/Aula02.11.03/bubble.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula02.11.03/Fibonacci.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula02.11.03/input.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula02.11.03/tipagem.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-02-11-03"
+      },
+      {
+       "titulo": "Aula 03 (25/03)",
+       "resumo": "Busca binária, merge sort, ordenações em C, números primos.",
+       "conceitos": [
+        "busca binária",
+        "merge sort",
+        "primos"
+       ],
+       "arquivos": [
+        {
+         "path": "5° Semestre/Aula03.25.03/2312082034.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula03.25.03/aula03.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula03.25.03/buscaBinaria.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula03.25.03/ePrimo.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula03.25.03/merge_sort.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula03.25.03/ordenacoes.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula03.25.03/ordenacoes.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-03-25-03"
+      },
+      {
+       "titulo": "Aula 04 (01/04)",
+       "resumo": "Pilha e fila em C, is_prime em Python, respostas de complexidade e imagens.",
+       "conceitos": [
+        "pilha",
+        "fila",
+        "complexidade"
+       ],
+       "arquivos": [
+        {
+         "path": "5° Semestre/Aula04.01.04/13.1.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula04.01.04/13.2.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula04.01.04/2312082034.txt",
+         "tipo": "txt",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula04.01.04/aula04.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula04.01.04/fila.c",
+         "tipo": "c",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula04.01.04/is_prime.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Aula04.01.04/pilha.c",
+         "tipo": "c",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-04-01-04"
+      },
+      {
+       "titulo": "Exercícios — Custo Operacional",
+       "resumo": "Análise de complexidade: respostas O(...) numeradas e imagens de enunciados.",
+       "conceitos": [
+        "Big-O",
+        "custo operacional"
+       ],
+       "arquivos": [
+        {
+         "path": "5° Semestre/Exercícios/Custo Operacional/101.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Exercícios/Custo Operacional/104.jpeg",
+         "tipo": "jpeg",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Exercícios/Custo Operacional/105.jpeg",
+         "tipo": "jpeg",
+         "resumo": ""
+        },
+        {
+         "path": "5° Semestre/Exercícios/Custo Operacional/exercicio.txt",
+         "tipo": "txt",
+         "resumo": ""
+        }
+       ],
+       "slug": "exercicios-custo-operacional"
+      }
+     ],
+     "slug": "analise-de-dados-e-algoritmos-avancados"
+    }
+   ],
+   "readme": "5° Semestre/README.md"
+  },
+  {
+   "id": "6",
+   "titulo": "6° Semestre",
+   "status": "concluido",
+   "resumo": "Teoria dos Grafos em Python.",
+   "disciplinas": [
+    {
+     "nome": "Teoria dos Grafos",
+     "codigo": null,
+     "linguagens": [
+      "Python"
+     ],
+     "resumo": "Representação (lista/matriz de adjacência), propriedades, isomorfismo, coloração, caminhos mínimos (Dijkstra, Bellman-Ford), árvore geradora mínima (Kruskal) e atividades semanais com networkx.",
+     "conceitos": [
+      "lista de adjacência",
+      "matriz de adjacência",
+      "grafo simples/completo/nulo",
+      "subgrafo",
+      "isomorfismo",
+      "coloração",
+      "BFS/DFS",
+      "Dijkstra",
+      "Bellman-Ford",
+      "Kruskal",
+      "árvore geradora mínima",
+      "networkx"
+     ],
+     "topicos": [
+      {
+       "titulo": "Implementações de grafos",
+       "resumo": "GrafoEsparso (lista), GrafoDenso (matriz), isomorfos e coloração com classe abstrata Grafo.",
+       "conceitos": [
+        "TAD Grafo",
+        "isomorfismo",
+        "coloração"
+       ],
+       "arquivos": [
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Grafo Coloracao/GrafoEsparsoColoracao.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Grafo Denso/GrafoDenso.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Grafo Esparso/GrafoEsparso.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Grafo Isomorfo/Grafo Denso Iso/GrafoDensoIso.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Grafo Isomorfo/Grafo Esparso Iso/GrafoEsparsoIso.py",
+         "tipo": "py",
+         "resumo": ""
+        }
+       ],
+       "slug": "implementacoes-de-grafos"
+      },
+      {
+       "titulo": "Algoritmos Bellman-Ford e Kruskal",
+       "resumo": "Caminho mínimo com pesos negativos e MST com Union-Find.",
+       "conceitos": [
+        "Bellman-Ford",
+        "Kruskal",
+        "Union-Find"
+       ],
+       "arquivos": [
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Algoritmo de Bellman-Ford/Bellman-Ford.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Algoritmo de Kruskal/Kruskal.py",
+         "tipo": "py",
+         "resumo": ""
+        }
+       ],
+       "slug": "algoritmos-bellman-ford-e-kruskal"
+      },
+      {
+       "titulo": "Atividades 01–05, 11, 12",
+       "resumo": "Metrô (grafo), conectividade, exemplos com networkx, Dijkstra, Bellman-Ford, Kruskal esparso.",
+       "conceitos": [
+        "networkx",
+        "Dijkstra",
+        "Bellman-Ford"
+       ],
+       "arquivos": [
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 01/Metro Grafo.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 01/metro.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 02/Atividade 02.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 03/atividade03.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 03/exemplo01.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 03/exemplo02.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 03/grafoAtividade03.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 03/grafoExemplo.tldr",
+         "tipo": "tldr",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 04/Dijkstra.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 05/Bellman-Ford.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Atividade 11/Atividade 11.png",
+         "tipo": "png",
+         "resumo": ""
+        }
+       ],
+       "slug": "atividades-0105-11-12"
+      },
+      {
+       "titulo": "Material das aulas",
+       "resumo": "Slides: introdução, representação, tipos, coloração, percurso, árvores, caminho mínimo e parcial de árvores.",
+       "conceitos": [
+        "grafos",
+        "árvores"
+       ],
+       "arquivos": [
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Material/Aula-01-IntroducaoGrafos.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Material/Aula-02-representacao.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Material/Aula-03_Tipos_De_Grafos.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Material/Aula-04_Coloração de Grafos.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Material/Aula-05_Percurso em Grafos.pptx",
+         "tipo": "pptx",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Material/Aula-06_arvores.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Material/Aula-08_caminho-minimo.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "6° Semestre/Teoria dos Grafos/Material/Pacial-Arvores.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "material-das-aulas"
+      },
+      {
+       "titulo": "Documentação",
+       "resumo": "READMEs.",
+       "conceitos": [],
+       "arquivos": [
+        {
+         "path": "6° Semestre/Teoria dos Grafos/README.md",
+         "tipo": "md",
+         "resumo": ""
+        }
+       ],
+       "slug": "documentacao"
+      }
+     ],
+     "slug": "teoria-dos-grafos"
+    }
+   ],
+   "readme": "6° Semestre/README.md"
+  },
+  {
+   "id": "7",
+   "titulo": "7° Semestre",
+   "status": "andamento",
+   "resumo": "Apenas README (\"em desenvolvimento\"); sem disciplinas.",
+   "disciplinas": []
+  },
+  {
+   "id": "8",
+   "titulo": "8° Semestre",
+   "status": "andamento",
+   "resumo": "Compiladores, PSM e Sistemas Lineares.",
+   "disciplinas": [
+    {
+     "nome": "Compiladores",
+     "codigo": "MDC168",
+     "linguagens": [
+      "MineonScript",
+      "Python"
+     ],
+     "resumo": "Construção de um transpilador MineonScript→Python: BNF, lexer, AST, geração de código e CST. Avaliação contínua com exercícios em MineonScript, testes (Google Forms) e simulados da P2.",
+     "conceitos": [
+      "fases do compilador",
+      "compilador vs interpretador",
+      "BNF",
+      "análise léxica",
+      "tokenizer",
+      "AST",
+      "geração de código",
+      "CST",
+      "transpilador",
+      "MineonScript"
+     ],
+     "topicos": [
+      {
+       "titulo": "Aula 01 — conceitos fundamentais",
+       "resumo": "Exercícios B–E em MineonScript (notas, adivinhação, máquina de refrigerante, fila com prioridade) + Teste 1 (35/38).",
+       "conceitos": [
+        "MineonScript",
+        "conceitos de compilação"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/Compiladores/Aula01/Aula01  Exercicio D.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula01/Aula01 Exercicio B.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula01/Aula01 Exercicio C.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula01/Aula01 Exercicio E.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula01/Aula01 Teste 1 - Gabarito Comentado.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula01/Aula01 Compiladores - Material 1 - Conceitos Fundamentais.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula01/Aula01 Compiladores - Teste 1 - Conceitos Fundamentais.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-01-conceitos-fundamentais"
+      },
+      {
+       "titulo": "Aula 02 — sintaxe MineonScript e fluxograma",
+       "resumo": "Definição da linguagem, 3 exercícios, fluxograma Mermaid do tradutor e questionário.",
+       "conceitos": [
+        "sintaxe",
+        "pipeline de tradução"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/Compiladores/Aula02/Aula02 Exercicio A.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula02/Aula02 Exercicio B.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula02/Aula02 Exercicio C.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula02/Aula02 Fluxograma Tradutor Python.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula02/Aula02 Questionario.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula02/Aula02 Sintaxe MineonScript.md",
+         "tipo": "md",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-02-sintaxe-mineonscript-e-fluxograma"
+      },
+      {
+       "titulo": "Aula 03 — BNF",
+       "resumo": "Gramática BNF da calculadora KK-102 e questionário.",
+       "conceitos": [
+        "BNF",
+        "precedência",
+        "derivação"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/Compiladores/Aula03/Aula03 Exercicio BNF KK-102.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula03/Aula03 Questionario.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula03/Aula03 Compiladores - Material 3 - BNF.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula03/Aula03.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-03-bnf"
+      },
+      {
+       "titulo": "Aula 04 — Lexer/Tokenizer",
+       "resumo": "lexer.py (24 tokens, flag -coment, erros com linha/coluna), exemplo .mines e gabarito do Teste 4 (6/6).",
+       "conceitos": [
+        "lexer",
+        "tokens",
+        "erro léxico"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/Compiladores/Aula04/Aula04 Exercicio Lexer.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula04/Aula04 Teste 4 - Gabarito.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula04/Aula 04.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula04/Aula04 Compiladores - Teste 4 - Tokenizer.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula04/Aula04 exemplo.mines",
+         "tipo": "mines",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula04/Aula04 lexer.py",
+         "tipo": "py",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-04-lexer-tokenizer"
+      },
+      {
+       "titulo": "Aula 05 — AST",
+       "resumo": "Material 5 e Teste 5 (PDFs); sem resolução registrada.",
+       "conceitos": [
+        "AST",
+        "parser"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/Compiladores/Aula05/Aula05 Compiladores - Material 5 - AST.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula05/Aula05 Compiladores - Teste 5 - AST.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-05-ast"
+      },
+      {
+       "titulo": "Aula 06 — Geração de código",
+       "resumo": "Material 6 e Teste 6 (PDFs); transpilador AST→Python.",
+       "conceitos": [
+        "geração de código",
+        "transpilador"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/Compiladores/Aula06/Aula06 Compiladores - Material 6 - Geração de Código.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula06/Aula06 Compiladores - Teste 6 - Geração de Código.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-06-geracao-de-codigo"
+      },
+      {
+       "titulo": "Aula 07 — CST × AST",
+       "resumo": "Material 7 (PDF, código, laboratório HTML) e gabarito do Teste 7.",
+       "conceitos": [
+        "CST",
+        "conversão CST→AST"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/Compiladores/Aula07/Aula07 Teste 7 - Gabarito.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula07/Compiladores - Material 7 - CST (código).md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula07/Compiladores - Material 7 - CST.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula07/Compiladores - Material 7 - Laboratório CST × AST.html",
+         "tipo": "html",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula07/Compiladores - Teste 7 - CST - Gabarito.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula07/Compiladores - Teste 7 - CST.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-07-cst-ast"
+      },
+      {
+       "titulo": "Aula 08 — Simulados da P2",
+       "resumo": "3 simulados (PDF + transcrição); 16 questões, Material 6 e 7; P2 em 24/11/2026.",
+       "conceitos": [
+        "revisão P2"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/Compiladores/Aula08.SimuladoP2/Aula08 Resumo P2.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula08.SimuladoP2/Aula08 Simulado 1.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula08.SimuladoP2/Aula08 Simulado 2.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula08.SimuladoP2/Aula08 Simulado 3.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula08.SimuladoP2/Compiladores - P2 - Simulado 1.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula08.SimuladoP2/Compiladores - P2 - Simulado 2.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Compiladores/Aula08.SimuladoP2/Compiladores - P2 - Simulado 3.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "aula-08-simulados-da-p2"
+      }
+     ],
+     "slug": "compiladores"
+    },
+    {
+     "nome": "Processamento de Sinais Multimídia",
+     "codigo": "ENG149",
+     "linguagens": [
+      "MATLAB"
+     ],
+     "resumo": "Análise espectral de sinais de áudio: espectrograma via STFT, chirp, frequência média/mediana (MNF/MDF) e estimadores de Bartlett e Welch. Entregável: relatório + código .m.",
+     "conceitos": [
+      "STFT",
+      "espectrograma",
+      "chirp",
+      "MNF",
+      "MDF",
+      "Bartlett",
+      "Welch",
+      "periodograma",
+      "frequência de nota musical"
+     ],
+     "topicos": [
+      {
+       "titulo": "Atividade 13 Ago — Lab 01",
+       "resumo": "Espectrograma via STFT com nota de piano e voz; frequência de pico.",
+       "conceitos": [
+        "STFT",
+        "espectrograma"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Atividade 13 Ago 26/Enunciado - Atividade Lab 01 (13 ago).pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 13 Ago 26/freq_para_nota.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 13 Ago 26/meu_espectrograma.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 13 Ago 26/Resolucao - Atividade Lab 01 (13 ago).pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "atividade-13-ago-lab-01"
+      },
+      {
+       "titulo": "Atividade 20 Ago — chirp",
+       "resumo": "Espectrograma de chirp linear (fs=8 kHz, 2 s).",
+       "conceitos": [
+        "chirp",
+        "espectrograma"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Atividade 20 Ago 26/atividade_20ago.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 20 Ago 26/Enunciado - Exercicio chirp (20 ago).pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 20 Ago 26/previa_espectrograma_20ago.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 20 Ago 26/Resolucao - Exercicio chirp (20 ago).pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "atividade-20-ago-chirp"
+      },
+      {
+       "titulo": "Atividade 27 Ago — MNF/MDF teórico",
+       "resumo": "Exercício teórico; só enunciado, sem resolução.",
+       "conceitos": [
+        "MNF",
+        "MDF"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Atividade 27 Ago 26/Enunciado - Exercicio teorico MNF-MDF (27 ago).pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "atividade-27-ago-mnf-mdf-teorico"
+      },
+      {
+       "titulo": "Atividade 03 Set — Lab 02 parte 2",
+       "resumo": "Bartlett e Welch; MNF/MDF; relatório (md/docx), códigos e áudios.",
+       "conceitos": [
+        "Bartlett",
+        "Welch",
+        "MNF/MDF"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Atividade 03 Set 26/Resolucao - Atividade Lab 02 Parte 2 (03 set).md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 03 Set 26/atividade_03set.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 03 Set 26/audio_voz.wav",
+         "tipo": "wav",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 03 Set 26/Enunciado - Atividade Lab 02 Parte 2 (03 set).pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 03 Set 26/espectro_medio.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 03 Set 26/mnf_mdf.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 03 Set 26/piano.wav",
+         "tipo": "wav",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 03 Set 26/Resolucao - Atividade Lab 02 Parte 2 (03 set).docx",
+         "tipo": "docx",
+         "resumo": ""
+        }
+       ],
+       "slug": "atividade-03-set-lab-02-parte-2"
+      },
+      {
+       "titulo": "Docs Gerais e simulado",
+       "resumo": "Slides das aulas, plano de ensino e Simulado P1.",
+       "conceitos": [
+        "revisão"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Docs Gerais/Aula dia 01.10.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Docs Gerais/Aula dia 03.09.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Docs Gerais/Aula dia 08.10.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Docs Gerais/Aula dia 10.09.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Docs Gerais/Aula dia 13.08.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Docs Gerais/Aula dia 15.10.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Docs Gerais/Aula dia 20.08.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Docs Gerais/Aula dia 27.08.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Docs Gerais/Plano de Ensino.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Simulado P1/Simulado - P1 (2026-2).pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Simulado P1/Simulado - PSM - P1 (2026-2) - Gabarito.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Simulado P1/Simulado P1 - Resolucao.docx",
+         "tipo": "docx",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Simulado P1/Simulado P1 - Resolucao.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "docs-gerais-e-simulado"
+      },
+      {
+       "titulo": "Atividade 01 Out 26 Parte 1",
+       "slug": "atividade-01-out-26-parte-1",
+       "resumo": "",
+       "conceitos": [],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Atividade 01 Out 26 Parte 1/Atividade 05 - halftoning.docx",
+         "tipo": "docx",
+         "resumo": ""
+        }
+       ]
+      },
+      {
+       "titulo": "Atividade 01 Out 26 Parte 2",
+       "slug": "atividade-01-out-26-parte-2",
+       "resumo": "",
+       "conceitos": [],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Atividade 01 Out 26 Parte 2/Atividade 06 - filtro anti-aliasing.docx",
+         "tipo": "docx",
+         "resumo": ""
+        }
+       ]
+      },
+      {
+       "titulo": "Atividade 08 Out 26",
+       "slug": "atividade-08-out-26",
+       "resumo": "",
+       "conceitos": [],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Atividade 08 Out 26/PSM - Atividade 07 - Mosaico_261011_212009.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ]
+      },
+      {
+       "titulo": "Atividade 15 Out 26 Parte 1",
+       "slug": "atividade-15-out-26-parte-1",
+       "resumo": "",
+       "conceitos": [],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 1/Atividade 08 - redimensionamento.docx",
+         "tipo": "docx",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 1/comprime2.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 1/dilata2.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 1/img1_fotografia.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 1/img2_textura.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 1/img3_desenho.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 1/lab8_redimensionamento.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 1/LAB_08_-_PSM_-_2026-2_15-out.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ]
+      },
+      {
+       "titulo": "Atividade 15 Out 26 Parte 2",
+       "slug": "atividade-15-out-26-parte-2",
+       "resumo": "",
+       "conceitos": [],
+       "arquivos": [
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 2/Atividade 09 - quantizacao.docx",
+         "tipo": "docx",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 2/curva_quantizacao.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 2/img1_fotografia.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 2/img2_textura.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 2/img3_desenho.png",
+         "tipo": "png",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 2/lab9_quantizacao.m",
+         "tipo": "m",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 2/LAB_09_-_PSM_-_2026-2_15-out.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/PSM/Atividade 15 Out 26 Parte 2/quantiza.m",
+         "tipo": "m",
+         "resumo": ""
+        }
+       ]
+      }
+     ],
+     "slug": "processamento-de-sinais-multimidia"
+    },
+    {
+     "nome": "Sistemas Lineares",
+     "codigo": "ENG029",
+     "linguagens": [
+      "MATLAB/Octave (previsto)"
+     ],
+     "resumo": "Modelagem de sistemas LTI nos domínios do tempo, Laplace e frequência: EDOs, função de transferência, estabilidade por polos, filtros e amp op; discreto e transformada Z previstos.",
+     "conceitos": [
+      "sistemas LTI",
+      "EDO",
+      "transformada de Laplace",
+      "função de transferência",
+      "polos e estabilidade",
+      "resposta em frequência",
+      "impedâncias",
+      "amp op",
+      "transformada Z"
+     ],
+     "topicos": [
+      {
+       "titulo": "Docs — resumo, simulados e plano",
+       "resumo": "Resumo P1 (9 páginas), simulados P1 2025-2 e 2026-2 com gabarito, gabarito da P1 real e plano de ensino.",
+       "conceitos": [
+        "P1",
+        "revisão"
+       ],
+       "arquivos": [
+        {
+         "path": "8° Semestre/Sistemas Lineares/Docs/Gabarito - Sistemas Lineares - 2025-2 - P1 v.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Sistemas Lineares/Docs/Plano de Ensino Completo - Sistemas Lineares - 2026-2 - Ter-19h15 - ENG029-ENGNM3B.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Sistemas Lineares/Docs/Resumo P1.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Sistemas Lineares/Docs/Simulado P1 (B) - Sistemas Lineares 2026-2 - Gabarito.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Sistemas Lineares/Docs/Simulado P1 (B) - Sistemas Lineares 2026-2.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Sistemas Lineares/Docs/Simulado P1 - Sistemas Lineares 2025-2 - Gabarito.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "8° Semestre/Sistemas Lineares/Docs/Simulado P1 - Sistemas Lineares 2025-2.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        }
+       ],
+       "slug": "docs-resumo-simulados-e-plano"
+      }
+     ],
+     "slug": "sistemas-lineares"
+    }
+   ]
+  },
+  {
+   "id": "extras",
+   "titulo": "Extras",
+   "status": "concluido",
+   "resumo": "Maratona de programação e materiais fora das disciplinas.",
+   "disciplinas": [
+    {
+     "nome": "Maratona Fraldinha 2023",
+     "codigo": null,
+     "linguagens": [
+      "Python"
+     ],
+     "resumo": "14 problemas (A–N) de maratona de programação em Python, cada um com README do enunciado.",
+     "conceitos": [
+      "problemas de maratona",
+      "ad hoc",
+      "simulação"
+     ],
+     "topicos": [
+      {
+       "titulo": "Problemas A–N",
+       "resumo": "Aniversário, Baby Shark, Campo Desminado, Descubra o Segredo, Enxugando Gelo no Sol, Fazenda do Nhô Lau, Gabarito, Hal Berto, Imã Hacker, João e o Irrigador, Kichute, Lendas do Tesouro Perdido, Mutação, Números Balanceados.",
+       "conceitos": [
+        "algoritmos"
+       ],
+       "arquivos": [
+        {
+         "path": "Maratona Fraldinha 2023/Problema A - Aniversário/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema B - Baby Shark/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema C - Campo Desminado/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema D - Descubra o Segredo/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema E - Enxugando Gelo no Sol/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema F - Fazenda do Nhô Lau/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema G - Gabarito/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema H - Hal Berto/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema I - Imã Hacker/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema J - João e o Irrigador/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema K - Kichute/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema L - Lendas do Tesouro Perdido/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema M - Mutação/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema N - Números Balanceados/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/README.md",
+         "tipo": "md",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Maratona Fraldinha 2023.pdf",
+         "tipo": "pdf",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema A - Aniversário/aniversario.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema B - Baby Shark/Baby Shark.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema C - Campo Desminado/Campo Desminado.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema D - Descubra o Segredo/Descubra o Segredo.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema E - Enxugando Gelo no Sol/Enxugando Gelo no Sol.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema F - Fazenda do Nhô Lau/Fazenda do Nhô Lau.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema G - Gabarito/Gabarito.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema H - Hal Berto/Hal Berto.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema I - Imã Hacker/imã hacker.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema J - João e o Irrigador/João e o Irrigador.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema K - Kichute/kichute.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema L - Lendas do Tesouro Perdido/Lendas do Tesouro Perdido.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema M - Mutação/Mutação.py",
+         "tipo": "py",
+         "resumo": ""
+        },
+        {
+         "path": "Maratona Fraldinha 2023/Problema N - Números Balanceados/Números Balanceados.py",
+         "tipo": "py",
+         "resumo": ""
+        }
+       ],
+       "slug": "problemas-an"
+      }
+     ],
+     "slug": "maratona-fraldinha-2023"
+    }
+   ]
+  }
+ ],
+ "destaques": [
+  {
+   "titulo": "Transpilador MineonScript → Python",
+   "sem": "8",
+   "disc": "Compiladores",
+   "texto": "Uma linguagem criada em aula e o tradutor inteiro: BNF, lexer com regex, parser por descida recursiva, AST, gerador de código e CST sem perdas.",
+   "tags": [
+    "Python",
+    "BNF",
+    "AST",
+    "CST"
+   ]
+  },
+  {
+   "titulo": "Análise espectral de áudio",
+   "sem": "8",
+   "disc": "Processamento de Sinais Multimídia",
+   "texto": "Espectrograma via STFT, chirp, frequência média e mediana (MNF/MDF) e estimadores de Bartlett e Welch, com relatório e código.",
+   "tags": [
+    "MATLAB",
+    "STFT",
+    "Welch"
+   ]
+  },
+  {
+   "titulo": "Grafos de verdade",
+   "sem": "6",
+   "disc": "Teoria dos Grafos",
+   "texto": "Lista e matriz de adjacência, isomorfismo, coloração, Dijkstra, Bellman-Ford e Kruskal, com atividades semanais em networkx.",
+   "tags": [
+    "Python",
+    "networkx",
+    "Dijkstra"
+   ]
+  },
+  {
+   "titulo": "Programação dinâmica e complexidade",
+   "sem": "5",
+   "disc": "Análise de Dados e Algoritmos Avançados",
+   "texto": "Mochila 0/1, LCS, Fibonacci com memória, ordenação, busca binária e análise de custo em Big-O.",
+   "tags": [
+    "Python",
+    "C",
+    "Big-O"
+   ]
+  },
+  {
+   "titulo": "Sistemas orientados a objetos",
+   "sem": "4",
+   "disc": "Programação Orientada a Objetos",
+   "texto": "Herança, polimorfismo, interfaces, exceções e UML aplicados em projetos de hotel, clínica veterinária e e-commerce.",
+   "tags": [
+    "Java",
+    "UML",
+    "MVC"
+   ]
+  },
+  {
+   "titulo": "Estruturas de dados na unha",
+   "sem": "3",
+   "disc": "Estrutura de Dados",
+   "texto": "Pilha, fila, listas ligadas, árvores binárias e AVL e os algoritmos clássicos de ordenação, mais desafios do BeeCrowd.",
+   "tags": [
+    "C",
+    "C++",
+    "AVL"
+   ]
+  },
+  {
+   "titulo": "Computação gráfica em MATLAB",
+   "sem": "3",
+   "disc": "Computação Gráfica",
+   "texto": "Rasterização de segmentos, espectro de cores, processamento de imagem e gráficos 2D e 3D.",
+   "tags": [
+    "MATLAB",
+    "Rasterização"
+   ]
+  },
+  {
+   "titulo": "Maratona Fraldinha 2023",
+   "sem": "extras",
+   "disc": "Maratona Fraldinha 2023",
+   "texto": "14 problemas de maratona de programação resolvidos em Python, cada um com o enunciado.",
+   "tags": [
+    "Python",
+    "Maratona"
+   ]
+  }
+ ],
+ "totais": {
+  "semestres": 8,
+  "disciplinas": 12,
+  "topicos": 72,
+  "arquivos": 535
+ },
+ "gerado_em": "2026-11-14"
+}

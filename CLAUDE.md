@@ -2,20 +2,20 @@
 
 > **Spec viva.** Porta-de-entrada lida pelo agente em toda sessão aberta na raiz. Não duplica o conteúdo das disciplinas — **aponta** pra elas. Atualize no mesmo commit que muda uma regra, disciplina ou convenção.
 >
-> **Última revisão:** 2026-08-30
+> **Última revisão:** 2026-11-14
 > **Foco atual:** 8° Semestre · **Compiladores** → [8° Semestre/Compiladores/CLAUDE.md](8°%20Semestre/Compiladores/CLAUDE.md) · **PSM** → [8° Semestre/PSM/CLAUDE.md](8°%20Semestre/PSM/CLAUDE.md)
 
 ---
 
 ## 0. Para que serve
 
-Registrar, em Markdown versionado, todo o percurso da graduação em Ciência da Computação (IESB) — exercícios, resoluções, anotações de aula e projetos — de forma que o agente consiga retomar qualquer disciplina sem re-explicação.
+Registrar, em Markdown versionado, todo o percurso da graduação em Engenharia da Computação (IESB) — exercícios, resoluções, anotações de aula e projetos — de forma que o agente consiga retomar qualquer disciplina sem re-explicação.
 
 **Placar:** 8 semestres · 6 concluídos · 2 em andamento · 2 disciplinas com spec viva própria (Compiladores e PSM).
 
 ## 1. O que é
 
-Repositório **só de conteúdo** — Markdown, código-fonte de exercícios e material de aula. **Não há aplicação, build, pipeline nem dependências.** O "produto" é a documentação: cada exercício resolvido, com o raciocínio explícito, pronto pra revisão antes de prova.
+Repositório **só de conteúdo** — Markdown, código-fonte de exercícios e material de aula. **Não há build, pipeline nem dependências** — só um site estático (§2) que lê os próprios arquivos do repo. O "produto" é a documentação: cada exercício resolvido, com o raciocínio explícito, pronto pra revisão antes de prova.
 
 Linguagens que aparecem ao longo dos semestres: C, C++, Java, Python, MATLAB e, no 8°, **MineonScript** (linguagem didática criada em aula de Compiladores). O 8° tem também **PSM**, cujas atividades são em MATLAB e cujo entregável é relatório PDF + código `.m`.
 
@@ -30,6 +30,15 @@ git config core.quotepath false  # uma vez por clone: git para de imprimir paths
 ```
 
 Diagramas Mermaid renderizam nativamente no GitHub — validar olhando o arquivo no site depois do push, não só no editor.
+
+**Site (GitHub Pages):** `index.html` + `site/` na raiz publicam o repositório como uma árvore navegável em <https://g2martins.github.io/Faculdade/> (Pages servindo a branch `main`, pasta `/`). O `.nojekyll` na raiz é obrigatório: sem ele o Jekyll converte os `.md` e o site não consegue buscá-los. O mapa (semestres → disciplinas → tópicos → arquivos) vive em `site/dados.json`:
+
+```bash
+python site/sincronizar.py        # depois de adicionar/mover/apagar arquivos: encaixa os novos e tira os que sumiram
+python -m http.server 8000        # testar local em http://localhost:8000 (fetch não funciona abrindo o index.html direto)
+```
+
+Resumos, conceitos e destaques do `dados.json` são escritos à mão e preservados pelo script; `CLAUDE.md`, binários e executáveis ficam fora do site.
 
 ## 3. Mapa de módulos
 
@@ -93,6 +102,7 @@ Diagramas Mermaid renderizam nativamente no GitHub — validar olhando o arquivo
 - [ ] Extensões de sintaxe novas registradas no arquivo de sintaxe da disciplina
 - [ ] `**Última revisão:**` atualizada no topo dos `CLAUDE.md` tocados
 - [ ] Mermaid (se houver) conferido renderizado
+- [ ] Arquivo novo, movido ou apagado → `python site/sincronizar.py` (senão o site não mostra)
 - [ ] Sem commit/push sem pedido explícito · sem trailer de co-author
 
 ## 8. Índice de navegação
